@@ -1,0 +1,36 @@
+.container--history
+  height: auto
+  position: relative
+  margin: 4 * $base-spacing auto
+  display: grid
+  grid-template-columns: repeat(16, 1fr)
+  // grid-template-rows: repeat(16, #{100/16}vw)
+  grid-column-gap: 2 * $base-spacing
+  // grid-row-gap: 2 * $base-spacing
+  grid-auto-flow: dense
+.history-item
+  border-bottom: .1rem solid black
+
+  img
+    width: 100%
+    margin-bottom: $small-spacing
+  grid-column: span 4
+  grid-row: span 2
+  margin-bottom: 2 * $base-spacing
+  overflow: hidden
+  // margin-top: 4 * $base-spacing
+  // font-size: modular-scale(1)
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+
+  &:nth-child(3n-1)
+    grid-column: span 8
+    grid-row: span 4
+    // font-size: modular-scale(1)
+  &:nth-child(3n-2)
+    // margin-top: 2 * $base-spacing
+
+.history-item-title
+  line-height: 2 * $base-spacing
+  font-weight: 900

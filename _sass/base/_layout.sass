@@ -1,0 +1,21 @@
+html
+  box-sizing: border-box
+
+*, *::before, *::after
+  box-sizing: inherit
+
+html, body
+  height: 100%
+  margin: 0
+  padding: 0
+
+.section
+  min-height: calc(100vh - 8vmax)
+  display: flex
+  justify-content: center
+  flex-direction: column
+  margin: 4vmax
+
+.section-title
+  font-size: modular-scale(4)
+  margin-bottom: $base-spacing

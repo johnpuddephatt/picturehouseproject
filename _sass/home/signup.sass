@@ -1,0 +1,35 @@
+.section--signup
+  background-image: url('./images/24-BW.jpg')
+  background-position: 60% center
+  background-size: cover
+  bacground-repeat: no-repeat
+
+.container--signup
+  width: 45%
+  margin-left: auto
+  padding: 2 * $base-spacing
+  color: white
+  text-align: right
+  .section-title
+    font-family: $heading-font-family
+    font-size: modular-scale(8)
+    color: $action-color
+    text-indent: -2em
+    text-align: right
+  form
+    display: flex
+    flex-direction: row
+  input
+    padding: .75 * $small-spacing $base-spacing
+    line-height: $base-spacing
+    margin-bottom: 0
+    margin-top: $base-spacing
+  input[type="email"]
+    border-right: none !important
+    margin-right: -.2em
+    color: white
+  input[type="submit"]
+    color: $base-font-color
+    background-color: $action-color
+    // font-family: $heading-font-family
+    // letter-spacing: $small-heading-letter-spacing

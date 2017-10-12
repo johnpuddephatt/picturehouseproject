@@ -25,9 +25,18 @@ twitter_username: hydeparkph
 header_pages:
 # Build settings
 markdown: kramdown
-theme: minima
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
 plugins:
   - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
+slideshow:
+  - 73-BW.jpg
+  - 10-BW.jpg
+  - 24-BW.jpg
+  - 40-BW.jpg

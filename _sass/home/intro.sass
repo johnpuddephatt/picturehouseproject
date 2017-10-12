@@ -1,0 +1,34 @@
+.section--intro
+  width: calc(100% - 8vmax)
+  @media screen and (min-width: $medium-screen)
+    width: 80%
+  @media screen and (min-width: $xl-screen)
+    width: 66.67%
+  margin: 0 auto
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  .intro-image
+    margin-right: 2 * $base-spacing
+    flex: 0 0 45%
+
+.backers-logos
+  margin-top: .25 * $base-spacing
+  height: 1.75 * $base-spacing
+  max-width: 100%
+
+.hero-logos
+  margin-top: $base-spacing
+
+.hlf-logo
+  width: 3 * $base-spacing
+  display: block
+  float: left
+
+.hpph-logo
+  margin-top: .25em
+  width: 4.5 * $base-spacing
+  display: block
+  float: left
+  margin-right: $base-spacing

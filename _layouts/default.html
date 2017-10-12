@@ -3,16 +3,24 @@
 
   {% include head.html %}
 
-  <body>
-
-    {% include header.html %}
+  <body class="{{ page.layout }}">
 
     <main class="page-content" aria-label="Content">
         {{ content }}
-
     </main>
 
-    <!-- {% include footer.html %} -->
+    <script type="text/javascript" src="/assets/scripts/smoothscroll.min.js"></script>
+    {% if page.layout == 'home' %}
+      <script type="text/javascript" src="/assets/scripts/scrollSpy.js"></script>
+      <script type="text/javascript" src="/assets/scripts/timeline.js"></script>
+      <script type="text/javascript" src="/assets/scripts/updates.js"></script>
+      <script type="text/javascript" src="/assets/scripts/aims.js"></script>
+      <script type="text/javascript" src="/assets/scripts/tweets.js"></script>
+      <script type="text/javascript" src="/assets/scripts/aos.js"></script>
+      <script>
+          AOS.init();
+      </script>
+    {% endif %}
 
   </body>
 

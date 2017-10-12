@@ -1,0 +1,9 @@
+<section class="section section--hero grain slideshow">
+
+  {% for image in site.slideshow %}
+    <div class="slide"></div>
+  {% endfor %}
+
+  <h2 class="home-hero-title">{{site.description | markdownify}}</h2>
+  <h3 class="coming-soon">A Heritage Lottery Fund project with Hyde Park Picture House</h3>
+</section>

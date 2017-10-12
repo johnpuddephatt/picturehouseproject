@@ -1,0 +1,100 @@
+---
+---
+
+@charset "utf-8"
+
+@import "bourbon/bourbon"
+@import "base/base"
+@import "neat/neat"
+
+@import "home/navigation"
+@import "home/hero"
+@import "home/intro"
+@import "home/timeline"
+@import "home/aims"
+@import "home/updates"
+@import "home/history"
+@import "home/tweets"
+@import "home/signup"
+
+@import "aos"
+
+html
+  font-size: .625em
+  @media screen and (min-width: $medium-screen)
+    font-size: .75em
+  @media screen and (min-width: $large-screen)
+    font-size: .875em
+  @media screen and (min-width: $xl-screen)
+    font-size: 1em
+
+
+{% assign duration = 8000 %}
+$slide-duration: {{duration}}ms
+
+{% assign transition = 500 %}
+$slide-transition-duration: {{transition}}ms
+
+.site-footer
+  background-color: $base-font-color
+  color: white
+  margin: 4vmax
+  padding: 4vmax
+  display: flex
+  flex-direction: row
+  align-items: flex-end
+  justify-content: space-between
+  .footer-text
+    flex: 1 1 60%
+  .footer-image
+    flex: 1 1 40%
+    text-align: right
+    .footer-backers-logos
+      display: block
+      margin-left: auto
+      max-height: 2 * $base-spacing
+  address
+    font-style: normal
+    margin-bottom: $base-spacing
+    + p
+      margin-bottom: 0
+
+
+
+.slide
+  position: absolute
+  width: 100%
+  height: 100%
+  opacity: 0
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  animation-name: fade
+  animation-timing-function: linear
+  animation-iteration-count: infinite
+
+{% for image in site.slideshow %}
+  &:nth-child({{forloop.index}})
+    background-image: url(./images/{{ image }})
+    animation-duration: {{forloop.length}} * $slide-duration
+    animation-delay: {{forloop.index}} * $slide-duration
+{% endfor %}
+
+{% assign n = 100 | divided_by: site.slideshow.size %}
+
+
+@keyframes fade
+  0%
+    z-index: 99
+    opacity: 0
+  {{ duration | divided_by: transition | times: n |  divided_by: 100 }}%
+    opacity: 1
+  {{ n }}%
+    z-index: 99
+    opacity: 1
+  {{ n | times: 2 }}%
+    z-index: 0
+    opacity: 1
+  100%
+    z-index: 0
+    opacity: 0

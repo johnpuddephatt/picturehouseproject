@@ -1,0 +1,100 @@
+.aim
+  display: flex
+  flex-direction: column
+  @media screen and (min-width: $large-screen)
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+  position: relative
+  margin: 2 * $base-spacing 0
+  transition: transform $base-duration $base-timing
+  &.slideout
+    transform: translateX(-45%)
+    &:nth-child(2n)
+      transform: translateX(45%)
+  &:nth-child(2n-1)
+    .aim-text
+      margin-left: 15%
+      @media screen and (min-width: $large-screen)
+        margin-left: 0
+        order: 3
+      text-align: right
+    .aim-image
+      @media screen and (min-width: $large-screen)
+        padding-right: 0
+        padding-left: $base-spacing
+
+    .aim-heading
+      @media screen and (min-width: $large-screen)
+        @supports (mix-blend-mode: difference)
+          margin-left: -50%
+          &::after
+            left: 25%
+
+    .aim-number
+      left: -$small-spacing
+      right: auto
+      &::before
+        content: ''
+      &::after
+        content: '-'
+
+  .aim-label
+    font-family: $heading-font-family
+    color: $yellow
+    display: inline-block
+    font-size: modular-scale(2)
+    letter-spacing: $small-heading-letter-spacing
+    -webkit-font-smoothing: antialiased
+  .aim-image
+    @media screen and (min-width: $large-screen)
+      flex: 0 0 55%
+      padding-right: $base-spacing
+      order: 2
+    img
+      width: 100%
+  .aim-text
+    width: 85%
+    @media screen and (min-width: $large-screen)
+      width: auto
+      flex: 0 0 40%
+    position: relative
+    z-index: 99
+    order: 1
+  .aim-heading
+    font-size: modular-scale(6)
+    font-family: $heading-font-family
+    position: relative
+    background-color: transparent
+    -webkit-font-smoothing: antialiased
+    font-weight: 400
+    @media screen and (min-width: $large-screen)
+      @supports (mix-blend-mode: difference)
+        width: 150%
+        color: white
+        &::after
+          content: ''
+          position: absolute
+          display: block
+          left: 0
+          top: 0
+          height: 100%
+          width: 75%
+          background-color: #fff
+          mix-blend-mode: difference
+  .aim-number
+    font-size: modular-scale(14)
+    opacity: .85
+    @media screen and (min-width: $large-screen)
+      z-index: 99
+    color: $yellow
+    position: absolute
+    right: -$small-spacing
+    bottom: -3 * $base-spacing
+    font-family: $heading-font-family
+    margin-bottom: 0
+    line-height: 1
+    &::before
+      content: '-'
+  .button
+    margin-top: $small-spacing

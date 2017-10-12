@@ -1,13 +1,13 @@
 ---
 layout: default
 ---
-
-<div class="home-hero grain flicker">
-
-  <h2 class="home-hero-title">{{site.description | markdownify}}</h2>
-  <h3 class="coming-soon">More information coming late September 2017</h3>
-  <div class="hero-logos">
-    <img src="/assets/images/hpph-logo.png" alt="Hyde Park Picture House. Established 1914." class="hpph-logo" />
-    <img src="/assets/images/hlf-logo.png" alt="Funded by the Heritage Lottery Fund" class="hlf-logo" />
-  </div>
-</div>
+{% include /home/hero.html %}
+{% include header.html %}
+{% include /home/intro.html %}
+{% include /home/timeline.html %}
+{% include /home/aims.html %}
+{% include /home/updates.html %}
+{% include /home/history.html %}
+{% include /home/tweets.html %}
+{% include /home/signup.html %}
+{% include footer.html %}
