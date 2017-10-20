@@ -36,31 +36,32 @@ if (updates) {
 
 
   for (var i = 0; i < updateItems.length; i++) {
-    updateItems[i].addEventListener('click', function(e){
-      e.preventDefault();
-      console.log(dragging);
-      if(!dragging) {
-        if(!this.classList.contains('updates-item-active')) {
-          var oldVideo = document.querySelector('.video-player');
-          if(oldVideo) {
-            oldVideo.parentNode.removeChild(oldVideo);
-            document.querySelector('.updates-item-active').classList.remove('updates-item-active');
-          }
-          videoContainer.innerHTML = '';
-          var iframe = document.createElement('iframe');
-          iframe.src = this.dataset.video;
-          videoContainer.appendChild(iframe);
-          videoContainer.style.width = updateItems[0].clientHeight * (16/9) + 'px';
-          updates.insertBefore(videoContainer, this.nextSibling);
-          this.classList.add('updates-item-active');
-          var newLeft = (videoContainer.offsetLeft + videoContainer.clientWidth/2)- (updates.clientWidth/2);
-          setTimeout(function(){
-            window.smoothScroll(newLeft,500,null,updates,'horizontal');
-          }, 500)
-        }
-      }
-    });
+    if(updateItems[i].dataset.video) {
+      updateItems[i].addEventListener('click', function(e){
+        e.preventDefault();
 
+        if(!dragging) {
+          if(!this.classList.contains('updates-item-active')) {
+            var oldVideo = document.querySelector('.video-player');
+            if(oldVideo) {
+              oldVideo.parentNode.removeChild(oldVideo);
+              document.querySelector('.updates-item-active').classList.remove('updates-item-active');
+            }
+            videoContainer.innerHTML = '';
+            var iframe = document.createElement('iframe');
+            iframe.src = this.dataset.video + '?showinfo=0';
+            videoContainer.appendChild(iframe);
+            videoContainer.style.width = (updateItems[0].clientHeight) * (16/9) + 'px';
+            updates.insertBefore(videoContainer, this.nextSibling);
+            this.classList.add('updates-item-active');
+            var newLeft = (videoContainer.offsetLeft + videoContainer.clientWidth/2)- (updates.clientWidth/2);
+            setTimeout(function(){
+              window.smoothScroll(newLeft,500,null,updates,'horizontal');
+            }, 500)
+          }
+        }
+      });
+    }
   }
 
 }

@@ -1,11 +1,14 @@
 .site-header
   height: 5vmax
-  margin: 0 4vmax
+  margin: 0 3vmax
   line-height: 5vmax
-  // Positioning context for the mobile navigation icon
-  position: sticky  
-  z-index: 999
-  // mix-blend-mode: screen
+  position: sticky
+  z-index: 9999
+  top: 0
+  @media screen and (min-width: $xl-screen)
+    height: 5vmax
+    margin: 0 4vmax
+    line-height: 5vmax
 
 
 .site-title
@@ -26,8 +29,9 @@
 
   .page-link
     // Gaps between nav items, but not on the last one
-    &:not(:last-child)
-      margin-right: $base-spacing
+    @media screen and (min-width: $medium-screen)
+      &:not(:last-child)
+        margin-right: $base-spacing
   a
     color: $base-font-color
     text-transform: lowercase
@@ -37,40 +41,24 @@
   @media screen and (max-width: $medium-screen)
     position: absolute
     display: block
-    top: 9px
-    right: $base-spacing / 2
-    border: 1px solid $medium-gray
-    border-radius: 5px
+    right: $small-spacing
     text-align: right
-    label[for="nav-trigger"]
-      display: block
-      float: right
-      width: 36px
-      height: 36px
-      z-index: 2
-      cursor: pointer
     .menu-icon
       display: block
-      float: right
-      width: 36px
-      height: 26px
-      line-height: 0
-      padding-top: 10px
-      text-align: center
-      > svg path
-        fill: $dark-gray
-
-    input ~ .trigger
+    a ~ .trigger
       clear: both
       display: none
 
-    input:checked ~ .trigger
+    a:focus ~ .trigger
       display: block
-      padding-bottom: 5px
-
-    .page-link
-      display: block
-      padding: 5px 10px
-      margin-left: 20px
-      &:not(:last-child)
-        margin-right: 0
+      @media screen and (max-width: $medium-screen)
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: white
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center

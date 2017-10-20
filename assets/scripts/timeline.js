@@ -9,9 +9,7 @@ if (timeline && current) {
 
   timeline.addEventListener('mousemove', function(e) {
     if (curDown) {
-      //curXPos is where the click begins
       timeline.scrollLeft = curLeft - 1.35 * (e.pageX - curXPos);
-
     }
   });
 

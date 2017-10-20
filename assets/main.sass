@@ -38,8 +38,11 @@ $slide-transition-duration: {{transition}}ms
 .site-footer
   background-color: $base-font-color
   color: white
-  margin: 4vmax
-  padding: 4vmax
+  margin: 3vmax
+  padding: 3vmax
+  @media screen and (min-width: $xl-screen)
+    padding: 4vmax
+    margin: 4vmax
   display: flex
   flex-direction: row
   align-items: flex-end

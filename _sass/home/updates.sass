@@ -30,26 +30,28 @@
   position: relative
   padding: $small-spacing
   flex: 0 0 50%
+  height: 29.26vw
   @media screen and (min-width: $medium-screen)
     flex: 0 0 33.33%
     padding: $small-spacing $base-spacing
   @media screen and (min-width: $large-screen)
     flex: 0 0 25%
-  height: 100%
+  @media screen and (min-width: $xl-screen)
+    height: 26.66vw
+
   border: solid $base-spacing white
   background-size: cover
-  // filter: saturate(0)
   transition: filter .3s
   display: flex
   flex-direction: row
   align-items: flex-end
   justify-content: center
-  &::before
-    content: ''
-    display: block
-    float: left
-    width: 0px
-    padding-top: 133%
+  // &::before
+  //   content: ''
+  //   display: block
+  //   float: left
+  //   width: 0px
+  //   padding-top: 133%
   &::after
     content: ''
     position: absolute
@@ -99,6 +101,7 @@
   border: solid $base-spacing white
   position: relative
   flex: 0 0 auto
+  box-sizing: content-box
   &::after
     content: ''
     display: block

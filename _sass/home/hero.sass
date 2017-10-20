@@ -1,10 +1,12 @@
 .section--hero
   min-height: auto
-  background-color: $dark-gray
-  height: calc(100vh - 9vmax)
-  background-image: url("./images/73-BW.jpg")
+  padding-top: 0
+  height: calc(100vh - 8vmax)
+  @media screen and (min-width: $xl-screen)
+    height: calc(100vh - 9vmax)
+  background-image: url("./images/40-BW.jpg")
   background-size: cover
-  background-color: #eee
+  background-position: center
   margin-bottom: 0
   display: flex
   flex-direction: column
@@ -64,10 +66,12 @@
 
 .home-hero-title
   font-family: $heading-font-family
-  font-size: modular-scale(6)
+  font-size: 7vw
+  @media screen and (min-width: $medium-screen)
+    font-size: modular-scale(6)
   line-height: $base-line-height
   color: #000
-  margin-top: 2 * $base-spacing
+  margin-top: 4 * $base-spacing
   display: flex
   align-items: center
   justify-content: center
@@ -90,6 +94,11 @@
   text-shadow: rgba(0,0,0,.5) 0 0 0.75em
   position: relative
   z-index: 999
+  line-height: $base-line-height
+  @media screen and (min-width: $medium-screen)
+    br
+      display: none
+
 
 .hero-logos
   position: absolute

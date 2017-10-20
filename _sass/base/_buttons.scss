@@ -9,7 +9,7 @@
   font-family: $base-font-family;
   font-size: $base-font-size;
   -webkit-font-smoothing: antialiased;
-  font-weight: 600;
+  font-weight: 4  00;
   line-height: 1;
   padding: $small-spacing $base-spacing;
   text-align: center;
@@ -18,17 +18,14 @@
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-
   &:hover,
   &:focus {
     background-color: $action-color;
     color: #fff;
   }
-
   &:disabled {
     cursor: not-allowed;
     opacity: 0.5;
-
     &:hover {
       background-color: $action-color;
     }

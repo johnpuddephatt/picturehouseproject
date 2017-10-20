@@ -1,6 +1,6 @@
 .timeline-wrapper
   position: relative
-  margin: 2 * $base-spacing 0
+  margin: 3 * $base-spacing 0
   &::after,&::before
     content: ''
     pointer-events: none
@@ -29,11 +29,11 @@
 
 .timeline-item
   pointer-events: none
-  padding: $base-spacing $small-spacing
+  padding: 0 $small-spacing
   flex: 0 0 50%
   @media screen and (min-width: $medium-screen)
     flex: 0 0 33.33%
-    padding: $base-spacing
+    padding: 0 $base-spacing
   @media screen and (min-width: $large-screen)
     flex: 0 0 25%
   height: 100%
@@ -43,16 +43,25 @@
 
 .timeline-item-active
   position: relative
-  &::after, &::before
+  &::after
     content: ''
     display: block
     position: absolute
-    bottom: 0
-    left: $base-spacing
-    // right: $base-spacing
-    width: 60%
-    height: $small-spacing/2
+    width: $small-spacing/3
     background-color: $yellow
+    right: 0
+    top: $small-spacing
+    bottom: $small-spacing
+  // &::after, &::before
+  //   content: ''
+  //   display: block
+  //   position: absolute
+  //   bottom: 0
+  //   left: $base-spacing
+  //   // right: $base-spacing
+  //   width: 60%
+  //   height: $small-spacing/2
+  //   background-color: $yellow
   &::before
     bottom: auto
     top: 0

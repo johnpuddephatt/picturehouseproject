@@ -5,20 +5,34 @@
   bacground-repeat: no-repeat
 
 .container--signup
-  width: 45%
+  @media screen and (min-width: $medium-screen)
+    width: 65%
+  @media screen and (min-width: $large-screen)
+    width: 55%
+  @media screen and (min-width: $xl-screen)
+    width: 45%
   margin-left: auto
-  padding: 2 * $base-spacing
+  padding: 3vmax
+  @media screen and (min-width: $xl-screen)
+    padding: 4vmax
   color: white
   text-align: right
   .section-title
     font-family: $heading-font-family
     font-size: modular-scale(8)
     color: $action-color
-    text-indent: -2em
+    @media screen and (min-width: $medium-screen)
+      text-indent: -4em
+    @media screen and (min-width: $large-screen)
+      text-indent: -2em
+    @media screen and (min-width: $xl-screen)
+      text-indent: -2em
     text-align: right
-  form
+  .signup-box
     display: flex
     flex-direction: row
+    max-width: 75%
+    margin-left: auto
   input
     padding: .75 * $small-spacing $base-spacing
     line-height: $base-spacing
@@ -26,7 +40,7 @@
     margin-top: $base-spacing
   input[type="email"]
     border-right: none !important
-    margin-right: -.2em
+    margin-right: -.4em
     color: white
   input[type="submit"]
     color: $base-font-color

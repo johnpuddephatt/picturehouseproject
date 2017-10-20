@@ -5,16 +5,28 @@ html
   box-sizing: inherit
 
 html, body
-  height: 100%
   margin: 0
   padding: 0
+  width: 100%
+  background-color: white
+
+body
+  overflow-x: hidden
+  overflow-y: auto
 
 .section
-  min-height: calc(100vh - 8vmax)
   display: flex
+  position: relative
   justify-content: center
   flex-direction: column
-  margin: 4vmax
+  margin: 3vmax
+  min-height: calc(100vh - 6vmax)
+  width: calc(100vw - 6vmax)
+  padding-top: 4vmax
+  @media screen and (min-width: $xl-screen)
+    margin: 4vmax
+    min-height: calc(100vh - 8vmax)
+    width: calc(100vw - 8vmax)
 
 .section-title
   font-size: modular-scale(4)
