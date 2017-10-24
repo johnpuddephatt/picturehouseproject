@@ -1,9 +1,6 @@
 <section class="section section--hero">
-
-  <!-- {% for image in site.slideshow %}
-    <div class="slide"></div>
-  {% endfor %} -->
-  <div class="hero-image"></div>
+  {% include cloudinary.html class="hero-image" img="/assets/images/40-BW.jpg" alt="Close up of ornate detailing on lamp post in front of Hyde Park Picture House box office" width="1600" height="800" quality="85" %}
+  <div class="hero-image-fallback"></div>
   <h2 class="home-hero-title">{{site.description | markdownify}}</h2>
   <h3 class="coming-soon">A Hyde Park Picture House project<br /> with the Heritage Lottery Fund</h3>
 </section>
