@@ -120,15 +120,15 @@
     //1 + (translateZ * -1) / perspective = scale.
     &::before
       content: '-'
+  &.slideout .aim-more
+    margin: 0
   .aim-more
     text-align: left
     max-height: 0px
     opacity: 0
     overflow: hidden
     transition: max-height $base-duration $base-timing, opacity $base-duration $base-timing, margin $base-duration $base-timing
-    margin: 0
     @media screen and (min-width: $large-screen)
-      margin: 0
       text-align: right
       max-height: none
       position: absolute
