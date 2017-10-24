@@ -11,11 +11,12 @@
 
     for(var index=0; index<sectionsLength; index++) {
       if (isBelowScroll(sections.item(index))) {
+        selectLink(sections.item(index).id)
         break;
       }
     }
 
-    selectLink(sections.item(index).id)
+
   }
 
   function isBelowScroll(element) {
