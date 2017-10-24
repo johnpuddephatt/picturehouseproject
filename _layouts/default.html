@@ -8,18 +8,30 @@
         {{ content }}
     </main>
 
-    <script type="text/javascript" src="/assets/scripts/smoothscroll.min.js"></script>
+
     {% if page.layout == 'home' %}
+    <script>
+      document.querySelector('body').classList.add('loading');
+    </script>
       <script type="text/javascript" src="/assets/scripts/scrollSpy.js"></script>
       <script type="text/javascript" src="/assets/scripts/timeline.js"></script>
       <script type="text/javascript" src="/assets/scripts/updates.js"></script>
+      <script type="text/javascript" src="/assets/scripts/rellax.js"></script>
       <script type="text/javascript" src="/assets/scripts/aims.js"></script>
       <script type="text/javascript" src="/assets/scripts/tweets.js"></script>
       <script type="text/javascript" src="/assets/scripts/aos.js"></script>
+      <script type="text/javascript" src="/assets/scripts/lazysizes.min.js"></script>
       <script>
+
           AOS.init();
+          var rellax = new Rellax('.aim-number');
+          document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('body').classList.remove('loading');
+          })
       </script>
     {% endif %}
+
+    <script type="text/javascript" src="/assets/scripts/smoothscroll.min.js"></script>
 
   </body>
 

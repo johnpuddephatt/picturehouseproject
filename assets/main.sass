@@ -43,18 +43,24 @@ $slide-transition-duration: {{transition}}ms
   @media screen and (min-width: $xl-screen)
     padding: 4vmax
     margin: 4vmax
-  display: flex
-  flex-direction: row
-  align-items: flex-end
-  justify-content: space-between
+  @media screen and (min-width: $medium-screen)
+    display: flex
+    flex-direction: row
+    align-items: flex-end
+    justify-content: space-between
   .footer-text
-    flex: 1 1 60%
+    @media screen and (min-width: $medium-screen)
+      flex: 1 1 60%
+      margin-right: $base-spacing
   .footer-image
-    flex: 1 1 40%
-    text-align: right
+    @media screen and (min-width: $medium-screen)
+      flex: 1 1 40%
+      text-align: right
     .footer-backers-logos
+      margin-top: $base-spacing
       display: block
-      margin-left: auto
+      @media screen and (min-width: $medium-screen)
+        margin-left: auto
       max-height: 2 * $base-spacing
   address
     font-style: normal

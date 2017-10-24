@@ -18,6 +18,7 @@
     .aim-more
       max-height: 100vh
       opacity: 1
+      margin: 3 * $base-spacing 0
       @media screen and (min-width: $large-screen)
         max-height: none
         transform: translateX(0)
@@ -51,6 +52,7 @@
     .aim-number
       left: -$small-spacing
       right: auto
+
       &::before
         content: ''
       &::after
@@ -70,6 +72,8 @@
       order: 2
     img
       width: 100%
+      display: block
+      background-color: $light-gray
   .aim-text
     width: 85%
     @media screen and (min-width: $large-screen)
@@ -107,10 +111,13 @@
     color: $yellow
     position: absolute
     right: -$small-spacing
-    bottom: -3 * $base-spacing
+    bottom: -2 * $base-spacing
     font-family: $heading-font-family
     margin-bottom: 0
     line-height: 1
+    // transform: translateZ(.1px) scale(.9)
+    // transform-origin: center
+    //1 + (translateZ * -1) / perspective = scale.
     &::before
       content: '-'
   .aim-more
@@ -118,8 +125,8 @@
     max-height: 0px
     opacity: 0
     overflow: hidden
-    transition: max-height $base-duration $base-timing, opacity $base-duration $base-timing
-    margin: 3 * $base-spacing 0
+    transition: max-height $base-duration $base-timing, opacity $base-duration $base-timing, margin $base-duration $base-timing
+    margin: 0
     @media screen and (min-width: $large-screen)
       margin: 0
       text-align: right

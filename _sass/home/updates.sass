@@ -26,18 +26,24 @@
   overflow-y: hidden
   position: relative
   cursor: ew-resize
+
+.updates-scroller::-webkit-scrollbar
+  height: 0
+
 .updates-item
   position: relative
   padding: $small-spacing
   flex: 0 0 50%
-  height: 29.26vw
+  height: 60vw
   @media screen and (min-width: $medium-screen)
     flex: 0 0 33.33%
+    height: 40vw
     padding: $small-spacing $base-spacing
   @media screen and (min-width: $large-screen)
     flex: 0 0 25%
+    height: 31.26vw
   @media screen and (min-width: $xl-screen)
-    height: 26.66vw
+    height: 29.66vw
 
   border: solid $base-spacing white
   background-size: cover

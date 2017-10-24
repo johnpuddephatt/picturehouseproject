@@ -387,11 +387,13 @@ function handleTweets(tweets) {
   var x = tweets.length;
   var n = 0;
   var element = document.querySelector('.container--tweets');
-  var html = '<ul>';
-  while (n < x) {
-    html += '<li>' + tweets[n] + '</li>';
-    n++;
+  if(element) {
+    var html = '<ul>';
+    while (n < x) {
+      html += '<li>' + tweets[n] + '</li>';
+      n++;
+    }
+    html += '</ul>';
+    element.innerHTML = html;
   }
-  html += '</ul>';
-  element.innerHTML = html;
 }

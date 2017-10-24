@@ -20,7 +20,7 @@ description: |
 
   historic picture house.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.thepicturehouseproject.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://thepicturehouseproject.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: hydeparkph
 header_pages:
 # Build settings
@@ -32,8 +32,23 @@ sass:
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 exclude:
   - Gemfile
   - Gemfile.lock
 slideshow:
   - 40-BW.jpg
+
+cloudinary: letsdance
+
+breakpoints:
+  - 320
+  - 480
+  - 640
+  - 960
+  - 1280
+  - 1600
+  - 2000
+
+twitter:
+  username: hydeparkph
