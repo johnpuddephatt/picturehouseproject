@@ -287,8 +287,13 @@
           }
           var op = '';
 
-          if (printUser) {
-            op += '<div class="user">' + strip(authors[n].innerHTML) + '</div>';
+          if (printTime) {
+            if (permalinks) {
+              op += '<p class="timePosted"><a href="' + permalinksURL[n] + '">' + times[n].getAttribute('aria-label') + '</a></p>';
+            } else {
+              op += '<p class="timePosted">' +
+                times[n].getAttribute('aria-label') + '</p>';
+            }
           }
 
           if (parseLinks) {
@@ -299,37 +304,28 @@
               }
             }
 
-
-
-
-
             op += '<p class="tweet">' + strip(tweets[n].innerHTML) + '</p>';
 
           } else {
             if (tweets[n].textContent) {
+              op += '<p class="tweet">' + tweets[n].textContent + '</p>';
               if (printUser) {
                 op += '<p class="user">' + authors[n].textContent + '</p>';
               }
-              op += '<p class="tweet">' + tweets[n].textContent + '</p>';
 
             } else {
+              op += '<p class="tweet">' + tweets[n].textContent + '</p>';
               if (printUser) {
                 op += '<p class="user">' + authors[n].textContent + '</p>';
               }
-              op += '<p class="tweet">' + tweets[n].textContent + '</p>';
             }
           }
 
-
-
-          if (printTime) {
-            if (permalinks) {
-              op += '<p class="timePosted"><a href="' + permalinksURL[n] + '">' + times[n].getAttribute('aria-label') + '</a></p>';
-            } else {
-              op += '<p class="timePosted">' +
-                times[n].getAttribute('aria-label') + '</p>';
-            }
+          if (printUser) {
+            op += '<div class="user">' + strip(authors[n].innerHTML) + '</div>';
           }
+
+
           if (showInteractionLinks) {
             op += '<p class="interact"><a href="https://twitter.com/intent/' + 'tweet?in_reply_to=' + tids[n] + '" class="twitter_reply_icon"' +
               (targetBlank ? ' target="_blank">' : '>') + 'Reply</a><a href="https://twitter.com/intent/retweet?' + 'tweet_id=' + tids[n] + '" class="twitter_retweet_icon"' +

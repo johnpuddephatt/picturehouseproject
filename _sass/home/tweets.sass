@@ -17,13 +17,15 @@
       &:hover
         color: $action-color
   .timePosted
+    margin-bottom: 2 * $base-spacing
     a
       color: $light-gray
       &:hover
         color: $action-color
   .user
-    margin-bottom: 2 * $base-spacing
     font-size: modular-scale(1)
+    font-family: $heading-font-family
+    letter-spacing: $small-heading-letter-spacing
     img
       width: 1.85 * $base-spacing
       border: 1px solid #eee
@@ -31,11 +33,12 @@
       float: left
       border-radius: 50%
       margin-right: .25em
+      display: none
     span
       display: block
       line-height: 1.4
     a
-      color: $medium-gray
+      color: $yellow
       &:hover
         color: $action-color
         img
