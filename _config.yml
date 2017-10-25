@@ -52,3 +52,9 @@ breakpoints:
 
 twitter:
   username: hydeparkph
+
+defaults:
+- scope:
+    path: ""
+  values:
+    image: /assets/images/opengraph.jpg
