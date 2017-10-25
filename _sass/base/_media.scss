@@ -15,13 +15,11 @@ img {
 }
 
 
-.blur-up {
-	-webkit-filter: blur(5px);
-	filter: blur(5px);
-	transition: filter 400ms, -webkit-filter 400ms;
+.fade-in {
+	opacity: 0;
+	transition: opacity $base-duration;
 }
 
-.blur-up.lazyloaded {
-	-webkit-filter: blur(0);
-	filter: blur(0);
+.fade-in.lazyloaded {
+	opacity: 1
 }
