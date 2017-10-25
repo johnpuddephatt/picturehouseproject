@@ -1,14 +1,13 @@
 {% capture img_output %}
 {% if site.local != true %}
 {% if include.pathonly != 'true' %}
-<img alt="{{  include.alt }}" data-src="
+<img alt="{{  include.alt }}" src="
 {% endif %}
 http://res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_{{ include.width | default: "500"}},h_{{ include.height | default: "500"}}{{ include.quality | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }}/{{ site.url }}{{ site.baseurl }}{{ include.img }}
 {% if include.pathonly != 'true' %}"
-src="http://res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_100,q_20/{{ site.url }}{{ site.baseurl }}{{ include.img }}"
 width="{{ include.width | default: 500 }}"
 height="{{ include.height | default: 500}}"
-data-srcset="{% for breakpoint in site.breakpoints %} http://res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_{{ breakpoint }}{{ include.quality | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }}/{{ site.url }}{{ site.baseurl }}{{ include.img }} {{ breakpoint }}w, {% endfor %}"
+srcset="{% for breakpoint in site.breakpoints %} http://res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_{{ breakpoint }}{{ include.quality | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }}/{{ site.url }}{{ site.baseurl }}{{ include.img }} {{ breakpoint }}w, {% endfor %}"
 sizes="{{ include.sizes | default: 100vw }}"
 class="{{ include.class }}"
 />{% endif %}
@@ -16,5 +15,3 @@ class="{{ include.class }}"
 {% if include.pathonly != 'true' %}<img alt="{{  include.alt }}" class="{{ include.class }}" src="{% endif %}{{ site.baseurl }}{{  include.img }}{% if include.pathonly != 'true' %} "/>{% endif %}
 {% endif %}
 {% endcapture %}{{ img_output | strip_newlines }}
-
-<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAQAAAAe/WZNAAAADklEQVR42mNkgAJGDAYAAFEABCaLYqoAAAAASUVORK5CYII=" data-src="/assets/images/history/84-BW.jpg" />
