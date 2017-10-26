@@ -44,12 +44,6 @@
   border: solid $base-spacing white
   background-size: cover
   transition: filter .3s
-  // &::before
-  //   content: ''
-  //   display: block
-  //   float: left
-  //   width: 0px
-  //   padding-top: 133%
   &::after
     content: ''
     position: absolute
@@ -57,7 +51,7 @@
     right: 0
     top: 0
     bottom: 0
-    background-color: rgba(0,0,0,.25)
+    background-color: rgba(50,50,50,.15)
   a
     pointer-events: auto
     cursor: pointer
@@ -95,11 +89,12 @@
 .updates-title
   pointer-events: none
   user-select: none
+  margin-bottom: 0
   font-size: modular-scale(4)
   color: $yellow
   position: relative
   z-index: 99
-  font-family: $heading-font-family  
+  font-family: $heading-font-family
   letter-spacing: $small-heading-letter-spacing
   line-height: $heading-line-height
 
