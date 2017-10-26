@@ -5,7 +5,7 @@
     background-color: $light-gray
     top: 0
     bottom: 0
-    z-index: 9999
+    z-index: 99
     left: calc(45% - 0.04rem)
     position: absolute
     mix-blend-mode: darken
@@ -93,6 +93,13 @@
       width: 100%
       display: block
       background-color: $light-gray
+      &.bw
+        position: absolute
+        transition: opacity $base-duration
+        width: 100%
+        padding-right: 1.6em
+        background-color: transparent
+
   .aim-text
     width: 85%
     @media screen and (min-width: $large-screen)
