@@ -4,15 +4,17 @@
 
   <body class="{{ page.layout }}">
 
+    <script>
+      document.querySelector('body').classList.add('loading');
+    </script>
+
     <main class="page-content" aria-label="Content">
         {{ content }}
     </main>
 
 
     {% if page.layout == 'home' %}
-    <script>
-      document.querySelector('body').classList.add('loading');
-    </script>
+
       <script type="text/javascript" src="/assets/scripts/scrollSpy.js"></script>
       <script type="text/javascript" src="/assets/scripts/timeline.js"></script>
       <script type="text/javascript" src="/assets/scripts/updates.js"></script>

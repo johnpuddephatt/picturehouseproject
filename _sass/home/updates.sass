@@ -32,26 +32,18 @@
 
 .updates-item
   position: relative
-  padding: $small-spacing
   flex: 0 0 50%
-  height: 60vw
   @media screen and (min-width: $medium-screen)
     flex: 0 0 33.33%
-    height: 40vw
-    padding: $small-spacing $base-spacing
   @media screen and (min-width: $large-screen)
     flex: 0 0 25%
-    height: 31.26vw
+
   @media screen and (min-width: $xl-screen)
-    height: 29.66vw
+
 
   border: solid $base-spacing white
   background-size: cover
   transition: filter .3s
-  display: flex
-  flex-direction: row
-  align-items: flex-end
-  justify-content: center
   // &::before
   //   content: ''
   //   display: block
@@ -76,8 +68,18 @@
     color: $yellow
 
 .updates-inner
-  text-align: center
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  padding: $small-spacing
+  display: flex
+  justify-content: flex-end
+  flex-direction: column
 
+.updates-image
+  display: block
 
 .updates-date
   pointer-events: none
@@ -93,12 +95,11 @@
 .updates-title
   pointer-events: none
   user-select: none
-  font-size: modular-scale(2)
+  font-size: modular-scale(4)
+  color: $yellow
   position: relative
   z-index: 99
-  font-family: $heading-font-family
-  margin-bottom: $base-spacing
-  color: white
+  font-family: $heading-font-family  
   letter-spacing: $small-heading-letter-spacing
   line-height: $heading-line-height
 
