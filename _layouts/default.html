@@ -24,16 +24,17 @@
       <script type="text/javascript" src="/assets/scripts/aos.js"></script>
       <script type="text/javascript" src="/assets/scripts/lazysizes.min.js"></script>
       <script>
-
           AOS.init();
           var rellax = new Rellax('.aim-number');
-          document.addEventListener('DOMContentLoaded', function(){
-            document.querySelector('body').classList.remove('loading');
-          })
       </script>
     {% endif %}
 
     <script type="text/javascript" src="/assets/scripts/smoothscroll.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        document.querySelector('body').classList.remove('loading');
+      })
+    </script>
 
   </body>
 
