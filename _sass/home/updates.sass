@@ -37,7 +37,6 @@
     flex: 0 0 33.33%
   @media screen and (min-width: $large-screen)
     flex: 0 0 25%
-  @media screen and (min-width: $xl-screen)
   border: solid $base-spacing white
   background-color: $light-gray
   &::after
@@ -87,7 +86,9 @@
   pointer-events: none
   user-select: none
   margin-bottom: 0
-  font-size: modular-scale(6)
+  font-size: modular-scale(5)
+  @media screen and (min-width: $xl-screen)
+    font-size: modular-scale(6)
   color: $yellow
   position: relative
   z-index: 99
