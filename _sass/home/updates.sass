@@ -47,10 +47,13 @@
     right: 0
     top: 0
     bottom: 0
-    background-color: rgba(25,25,25,.25)
+    background-color: rgba(25,25,25,.5)
+    transform: opacity $base-timing $base-duration
   a
     pointer-events: auto
     cursor: pointer
+  &:hover::after
+    opacity: 0
 
 .updates-item-active
 
