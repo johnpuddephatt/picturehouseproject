@@ -8,7 +8,9 @@ var images = document.querySelectorAll('.aim-image .bw');
 
 var callback =  function(entries, observer) {
   entries.forEach(entry => {
-    entry.target.style.opacity = 1 - Math.round( entry.intersectionRatio * 10 ) / 10;
+    if(entry.intersectionRatio > 0) {
+      entry.target.style.opacity = 1 - Math.round( entry.intersectionRatio * 10 ) / 10;
+    }
   });
 }
 
