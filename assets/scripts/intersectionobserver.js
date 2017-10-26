@@ -1,5 +1,5 @@
 var options = {
-  threshold: [0.85],
+  threshold: [0.1, 0.9],
   rootMargin: '0px'
 
 };
