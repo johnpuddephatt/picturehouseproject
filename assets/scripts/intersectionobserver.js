@@ -1,6 +1,6 @@
 var options = {
   threshold: [0, 0.2, 0.4, 0.6, 0.8, 1],
-  rootMargin: '-250px 0px'
+  rootMargin: '-300px 0px'
 
 };
 
@@ -15,7 +15,6 @@ var callback =  function(entries, observer) {
 }
 
 var observer = new IntersectionObserver(callback, options);
-
 
 images.forEach(image => {
   observer.observe(image);
