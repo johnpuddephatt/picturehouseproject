@@ -57,16 +57,18 @@ $slide-transition-duration: {{transition}}ms
       flex: 1 1 40%
       text-align: right
     .footer-backers-logos
-      margin-top: $base-spacing
+      margin-bottom: $base-spacing
       display: block
       @media screen and (min-width: $medium-screen)
         margin-left: auto
       max-height: 2 * $base-spacing
+    p:last-child
+      margin-bottom: 0
   address
     font-style: normal
     margin-bottom: $base-spacing
-    + p
-      margin-bottom: 0
+  p:last-child
+    margin-bottom: 0
 
 
 

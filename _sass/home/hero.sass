@@ -85,15 +85,18 @@ body.loading
   object-position: center
   // transition: opacity 30 * $base-duration ease-out 20 * $base-duration
   // filter: blur(0)
-  animation: findFocus 6s ease-out forwards
+  animation: findFocus 6s ease-in-out forwards
 
 @keyframes findFocus
-  0%, 60%
+  0%, 45%
     filter: blur(3px)
     opacity: 0
-  80%
+  65%
+    filter: blur(3px)
+    opacity: 0.5
+  85%
     filter: blur(30px)
-    opacity: .5
+    opacity: .75
   100%
     filter: blur(0px)
     opacity: 1
