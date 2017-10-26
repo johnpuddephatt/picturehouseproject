@@ -16,10 +16,14 @@
 body.loading
   height: 100%
   overflow: hidden
-  .home-hero-title
+  .home-hero-title p
     opacity: 0
     transition: opacity 0ms 0ms
-  .hero-image,.home-hero-strapline
+  .hero-image
+    opacity: 0
+    filter: blur(8px)
+    transition: opacity 0ms 0ms, filter 0ms 0ms
+  .home-hero-strapline
     opacity: 0
     transition: opacity 0ms 0ms
   .site-header
@@ -30,6 +34,7 @@ body.loading
 .home-hero-title
   font-family: $heading-font-family
   font-size: 7vw
+  text-transform: uppercase
   @media screen and (min-width: $medium-screen)
     font-size: modular-scale(6)
   line-height: $base-line-height
@@ -42,13 +47,16 @@ body.loading
   max-width: 95%
   position: relative
   z-index: 999
-  transition: opacity 5 * $base-duration 5 * $base-duration
   p
     background-color: #fff
     background-color: rgba(255,255,255,.85)
     display: inline-block
     padding: 0 $small-spacing
     margin: $small-spacing auto 0
+    transition: opacity 5 * $base-duration 5 * $base-duration
+    &:last-child
+      transition-delay: 10 * $base-duration
+
 
 .hero-image, .hero-image-fallback
   position: absolute
@@ -75,7 +83,21 @@ body.loading
 .hero-image
   object-fit: cover
   object-position: center
-  transition: opacity 15 * $base-duration 12 * $base-duration
+  // transition: opacity 30 * $base-duration ease-out 20 * $base-duration
+  // filter: blur(0)
+  animation: findFocus 8s ease-out forwards
+
+@keyframes findFocus
+  0%, 50%
+    filter: blur(8px)
+    opacity: 0
+  75%
+    filter: blur(20px)
+    opacity: .5
+  100%
+    filter: blur(0px)
+    opacity: 1
+
 
 
 .hero-image
@@ -115,7 +137,7 @@ body.loading
   @media screen and (min-width: $medium-screen)
     br
       display: none
-  transition: opacity 10 * $base-duration 20 * $base-duration
+  transition: opacity 10 * $base-duration 40 * $base-duration
 
 .hero-logos
   position: absolute
