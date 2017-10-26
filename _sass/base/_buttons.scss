@@ -18,10 +18,9 @@
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $action-color;
-    color: #fff;
+    color: $base-font-color;
   }
   &:disabled {
     cursor: not-allowed;

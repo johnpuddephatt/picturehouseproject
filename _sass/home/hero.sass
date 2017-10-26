@@ -18,7 +18,8 @@ body.loading
   overflow: hidden
   .home-hero-title p
     opacity: 0
-    transition: opacity 0ms 0ms
+    margin-top: 0
+    transition: opacity 0ms 0ms, margin-top 0ms 0ms
   .hero-image
     opacity: 0
     filter: blur(3px)
@@ -53,9 +54,11 @@ body.loading
     display: inline-block
     padding: 0 $small-spacing
     margin: $small-spacing auto 0
-    transition: opacity 5 * $base-duration 5 * $base-duration
+    margin-top: $small-spacing
+    transition: opacity 5 * $base-duration 5 * $base-duration, margin-top 5 * $base-duration 20 * $base-duration
     &:last-child
-      transition-delay: 10 * $base-duration
+      transition: opacity 5 * $base-duration 10 * $base-duration, margin-top 5 * $base-duration 20 * $base-duration
+
 
 
 .hero-image, .hero-image-fallback
@@ -85,10 +88,10 @@ body.loading
   object-position: center
   // transition: opacity 30 * $base-duration ease-out 20 * $base-duration
   // filter: blur(0)
-  animation: findFocus 6s ease-in-out forwards
+  animation: findFocus 7s ease-in-out forwards
 
 @keyframes findFocus
-  0%, 40%
+  0%, 45%
     filter: blur(3px)
     opacity: 0
   65%

@@ -3,17 +3,35 @@
     content: ''
     width: 1px
     background-color: $light-gray
-    top: 0
-    bottom: 0
-    z-index: 99
+    top: 5 * $base-spacing
+    bottom: -$base-spacing
+    z-index: 999
     left: calc(45% - 1px)
     position: absolute
     mix-blend-mode: darken
   &::after
     left: auto
-    right: 37.5%
-    top: -3 * $base-spacing
-    bottom: -3 * $base-spacing
+    right: calc(45% - 1px)
+
+
+
+.aims-wrapper
+  &::before, &::after
+    content: ''
+    width: 1px
+    background-color: $light-gray
+    top: 5 * $base-spacing
+    bottom: -$base-spacing
+    z-index: 9
+    left: 0
+    position: absolute
+    mix-blend-mode: darken
+  &::after
+    left: auto
+    right: 0
+
+
+
 
 
 .aim
@@ -59,7 +77,7 @@
       text-align: right
       @media screen and (min-width: $large-screen)
         text-align: left
-        padding: 0 2 * $base-spacing
+
 
     .aim-heading
       @media screen and (min-width: $large-screen)
@@ -71,6 +89,7 @@
     .aim-number
       left: -$small-spacing
       right: auto
+      bottom: 0
       &::before
         content: ''
       &::after
@@ -85,8 +104,10 @@
     -webkit-font-smoothing: antialiased
   .aim-image
     position: relative
+    margin-bottom: $base-spacing
     @media screen and (min-width: $large-screen)
       flex: 0 0 55%
+      margin-bottom: 0
       padding-right: $base-spacing
       order: 2
     img
@@ -97,7 +118,8 @@
         position: absolute
         transition: opacity 10 * $base-duration $base-timing
         width: 100%
-        padding-right: 1.6em
+        @media screen and (min-width: $large-screen)
+          padding-right: 1.6em
         background-color: transparent
 
   .aim-text
@@ -106,7 +128,7 @@
       width: auto
       flex: 0 0 40%
     position: relative
-    z-index: 99
+    z-index: 999
     order: 1
   .aim-heading
     font-size: modular-scale(6)
@@ -133,12 +155,11 @@
   .aim-number
     font-size: modular-scale(14)
     opacity: .85
-    @media screen and (min-width: $large-screen)
-      z-index: 99
+    z-index: 99
     color: $yellow
     position: absolute
     right: -$small-spacing
-    bottom: -2 * $base-spacing
+    bottom: -6 * $base-spacing
     font-family: $heading-font-family
     margin-bottom: 0
     line-height: 1
@@ -160,13 +181,13 @@
       position: absolute
       right: 100%
       left: auto
-      width: 122%
+      width: 112.5%
       top: .75 * $small-spacing
-      padding: 0 2 * $base-spacing
+      padding: 0 $base-spacing
       transform: translateX(2 * $base-spacing)
       transition: opacity $base-duration $base-timing 0ms
     @media screen and (min-width: $xl-screen)
-      padding: 0 4 * $base-spacing
+      padding: 0 3 * $base-spacing
     p
       overflow: hidden
       margin-bottom: $base-spacing
