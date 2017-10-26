@@ -49,7 +49,7 @@ if (updates) {
             }
             videoContainer.innerHTML = '';
             var iframe = document.createElement('iframe');
-            iframe.src = this.dataset.video + '?showinfo=0';
+            iframe.src = this.dataset.video + '?showinfo=0&rel=0';
             videoContainer.appendChild(iframe);
             videoContainer.style.width = (updateItems[0].clientHeight) * (16/9) + 'px';
             updates.insertBefore(videoContainer, this.nextSibling);
