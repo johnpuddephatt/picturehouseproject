@@ -23,6 +23,7 @@
       <!-- <script type="text/javascript" src="/assets/scripts/tweets.js"></script> -->
       <script type="text/javascript" src="/assets/scripts/aos.js"></script>
       <script type="text/javascript" src="/assets/scripts/lazysizes.min.js"></script>
+      <script type="text/javascript" src="/assets/scripts/countUp.min.js"></script>
       <script type="text/javascript" src="/assets/scripts/intersectionobserver.js"></script>
 
       <script>
@@ -33,8 +34,35 @@
 
     <script type="text/javascript" src="/assets/scripts/smoothscroll.min.js"></script>
     <script>
+      var easingFn = function (t, b, c, d) {
+      var ts = (t /= d) * t;
+      var tc = ts * t;
+      return b + c * (tc * ts + -5 * ts * ts + 10 * tc + -10 * ts + 5 * t);
+      }
+
+      var options = {
+        useEasing: true,
+        //easingFn: easingFn,
+        useGrouping: false,
+        separator: ',',
+        decimal: '.',
+      };
+
+      myFunction = function myFunction() {
+        var demo = new CountUp(document.querySelector('.home-hero-year'), 2017, 1914, 0, 7, options);
+        if (!demo.error) {
+          demo.start();
+        } else {
+          console.error(demo.error);
+        }
+      }
+
       document.addEventListener('DOMContentLoaded', function(){
         document.querySelector('body').classList.remove('loading');
+        setTimeout(myFunction, 500);
+
+
+
       })
     </script>
 

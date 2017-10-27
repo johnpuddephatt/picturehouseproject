@@ -18,11 +18,15 @@ body.loading
   overflow: hidden
   .home-hero-title p
     opacity: 0
-    margin-top: 0
-    transition: opacity 0ms 0ms, margin-top 0ms 0ms
+    // margin-top: 0
+    // transition: opacity 0ms 0ms, margin-top 0ms 0ms
+    transition: opacity 0ms 0ms, transform 0ms 0ms
+    transform: translate(-100vw)
+    &:last-child
+      transform: translate(100vw)
   .hero-image
     opacity: 0
-    filter: blur(3px)
+    filter: blur(4px)
     transition: opacity 0ms 0ms, filter 0ms 0ms
   .home-hero-strapline
     opacity: 0
@@ -34,13 +38,14 @@ body.loading
 
 .home-hero-title
   font-family: $heading-font-family
+  font-size: modular-scale(4)
   font-size: 7vw
   text-transform: uppercase
   @media screen and (min-width: $medium-screen)
     font-size: modular-scale(6)
   line-height: $base-line-height
   color: #000
-  margin-top: 4 * $base-spacing
+  margin-top: 9 * $base-spacing
   display: flex
   align-items: center
   justify-content: center
@@ -55,10 +60,37 @@ body.loading
     padding: 0 $small-spacing
     margin: $small-spacing auto 0
     margin-top: $small-spacing
-    transition: opacity 5 * $base-duration 5 * $base-duration, margin-top 5 * $base-duration 20 * $base-duration
+    transition: opacity 5 * $base-duration $base-timing 5 * $base-duration, transform 5 * $base-duration $base-timing 5 * $base-duration
+    // transition: opacity 5 * $base-duration 5 * $base-duration, margin-top 5 * $base-duration 20 * $base-duration
     &:last-child
-      transition: opacity 5 * $base-duration 10 * $base-duration, margin-top 5 * $base-duration 20 * $base-duration
+      // transition: opacity 5 * $base-duration 10 * $base-duration, margin-top 5 * $base-duration 20 * $base-duration
+      transition: opacity 5 * $base-duration $base-timing 10 * $base-duration, transform 5 * $base-duration $base-timing 10 * $base-duration
 
+.home-hero-year
+  font-size: 105vh
+  opacity: .5
+  color: $yellow
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 99
+  width: 100%
+  height: 100%
+  font-family: $heading-font-family
+  span
+    display: block
+    float: left
+    width: 25%
+    height: 100%
+    text-align: right
+    line-height: 107vh
+
+
+
+// @supports (mix-blend-mode: soft-light)
+//   .home-hero-year
+//     mix-blend-mode: screen
+//     opacity: .75
 
 
 .hero-image, .hero-image-fallback
@@ -92,14 +124,14 @@ body.loading
 
 @keyframes findFocus
   0%, 45%
-    filter: blur(3px)
+    filter: blur(4px)
     opacity: 0
   65%
-    filter: blur(3px)
+    filter: blur(4px)
     opacity: 0.5
   85%
     filter: blur(30px)
-    opacity: .75
+    opacity: .70
   100%
     filter: blur(0px)
     opacity: 1
@@ -132,7 +164,7 @@ body.loading
 
 
 .home-hero-strapline
-  margin-top: $small-spacing
+  margin-top: 6 * $base-spacing
   font-family: $base-font-family
   color: #fff
   font-weight: 400
