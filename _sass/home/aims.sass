@@ -6,12 +6,13 @@
     top: -8 * $base-spacing
     bottom: -$base-spacing
     z-index: 99999
-    left: calc(37.5% - 1px)
+    left: calc(37.5% + 2px)
     position: absolute
     mix-blend-mode: darken
   &::after
     left: auto
-    right: calc(37.5% + 1px)
+    right: calc(37.5% + 2px)
+    top: 8 * $base-spacing
 
 
 
@@ -23,12 +24,12 @@
     top: 5 * $base-spacing
     bottom: -$base-spacing
     z-index: 9
-    left: 0
+    left: -2px
     position: absolute
     mix-blend-mode: darken
   &::after
     left: auto
-    right: 0
+    right: -1px
 
 
 
