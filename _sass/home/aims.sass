@@ -3,10 +3,10 @@
     content: ''
     width: 1px
     background-color: $light-gray
-    top: 0 * $base-spacing
+    top: -8 * $base-spacing
     bottom: -$base-spacing
     z-index: 99999
-    left: calc(45% - 1px)
+    left: calc(37.5% - 1px)
     position: absolute
     mix-blend-mode: darken
   &::after
@@ -72,7 +72,7 @@
         padding-right: 0
         padding-left: $base-spacing
     .aim-more
-      left: 100%
+      left: 120%
       right: auto
       text-align: right
       @media screen and (min-width: $large-screen)
@@ -112,6 +112,7 @@
       order: 2
     img
       width: 100%
+      backface-visibility: hidden
       display: block
       background-color: $light-gray
       &.bw
@@ -179,15 +180,15 @@
       text-align: right
       max-height: none
       position: absolute
-      right: 100%
+      right: 120%
       left: auto
-      width: 112.5%
+      width: 100%
       top: .75 * $small-spacing
-      padding: 0 $base-spacing
+      padding: 0
       transform: translateX(2 * $base-spacing)
       transition: opacity $base-duration $base-timing 0ms
     @media screen and (min-width: $xl-screen)
-      padding: 0 3 * $base-spacing
+
     p
       overflow: hidden
       margin-bottom: $base-spacing

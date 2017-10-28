@@ -4,7 +4,7 @@
     width: 1px
     background-color: $light-gray
     top: 3 * $base-spacing
-    bottom: -2 * $base-spacing
+    bottom: -4 * $base-spacing
     z-index: 99999
     left: calc(12.5% - 1px)
     position: absolute
@@ -14,8 +14,6 @@
 
 
 .section--intro--inner
-  width: calc(100% - 8vmax)
-  margin: 4vmax auto
   display: flex
   flex-direction: column
   align-items: center
@@ -24,9 +22,9 @@
     flex-direction: row
 
   @media screen and (min-width: $large-screen)
-    width: 80%
-  @media screen and (min-width: $xl-screen)
     width: 75%
+    margin: 0 auto
+
   .intro-text
     margin-left: $base-spacing
   .intro-image
@@ -38,7 +36,7 @@
       display: block
       width: 100%
   .intro-text, .intro-image
-    @media screen and (min-width: $large-screen)
+    @media screen and (min-width: $medium-screen)
       flex: 0 1 50%
 
 .backers-logos
