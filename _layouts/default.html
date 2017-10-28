@@ -6,12 +6,6 @@
 
     <script>
       document.querySelector('body').classList.add('loading');
-
-      // todo: load won't fire on older browsers where we revert to background-image fallback
-      document.querySelector('.hero-image').addEventListener('load', function(){
-        document.querySelector('body').classList.remove('loading');
-        setTimeout(myFunction, 500);
-      });
     </script>
 
     <main class="page-content" aria-label="Content">
@@ -64,7 +58,11 @@
       }
 
 
-
+      // todo: load won't fire on older browsers where we revert to background-image fallback
+      document.addEventListener('DOMContentLoaded', function(){
+        document.querySelector('body').classList.remove('loading');
+        setTimeout(myFunction, 500);
+      });
 
 
 
