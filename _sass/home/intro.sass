@@ -1,4 +1,19 @@
 .section--intro
+  &::before
+    content: ''
+    width: 1px
+    background-color: $light-gray
+    top: 3 * $base-spacing
+    bottom: -2 * $base-spacing
+    z-index: 99999
+    left: calc(12.5% - 1px)
+    position: absolute
+    mix-blend-mode: darken
+
+
+
+
+.section--intro--inner
   width: calc(100% - 8vmax)
   margin: 4vmax auto
   display: flex
@@ -11,17 +26,20 @@
   @media screen and (min-width: $large-screen)
     width: 80%
   @media screen and (min-width: $xl-screen)
-    width: 66.67%
+    width: 75%
+  .intro-text
+    margin-left: $base-spacing
   .intro-image
     margin-bottom: $base-spacing
     @media screen and (min-width: $medium-screen)
-      margin-right: 2 * $base-spacing
+      margin-right: $base-spacing
       margin-bottom: 0
-    @media screen and (min-width: $large-screen)
-      flex: 0 0 45%
     img
       display: block
       width: 100%
+  .intro-text, .intro-image
+    @media screen and (min-width: $large-screen)
+      flex: 0 1 50%
 
 .backers-logos
   margin-top: .25 * $base-spacing

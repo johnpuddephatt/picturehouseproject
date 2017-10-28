@@ -3,7 +3,7 @@
     content: ''
     width: 1px
     background-color: $light-gray
-    top: 5 * $base-spacing
+    top: 0 * $base-spacing
     bottom: -$base-spacing
     z-index: 99999
     left: calc(45% - 1px)
@@ -11,7 +11,7 @@
     mix-blend-mode: darken
   &::after
     left: auto
-    right: calc(45% - 1px)
+    right: calc(37.5% + 1px)
 
 
 
@@ -82,7 +82,7 @@
     .aim-heading
       @media screen and (min-width: $large-screen)
         @supports (mix-blend-mode: difference)
-          margin-left: -50%
+          margin-left: -60%
           &::after
             left: 25%
 
@@ -126,7 +126,7 @@
     width: 85%
     @media screen and (min-width: $large-screen)
       width: auto
-      flex: 0 0 40%
+      flex: 0 0 37.5%
     position: relative
     z-index: 98
     order: 1
@@ -140,7 +140,7 @@
     font-weight: 400
     @media screen and (min-width: $large-screen)
       @supports (mix-blend-mode: difference)
-        width: 150%
+        width: 160%
         color: white
         &::after
           content: ''

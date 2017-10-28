@@ -42,14 +42,14 @@
 
       var options = {
         useEasing: true,
-        //easingFn: easingFn,
+        easingFn: easingFn,
         useGrouping: false,
         separator: ',',
         decimal: '.',
       };
 
       myFunction = function myFunction() {
-        var demo = new CountUp(document.querySelector('.home-hero-year'), 2017, 1914, 0, 7, options);
+        var demo = new CountUp(document.querySelector('.home-hero-year'), 2017, 1914, 0, 5, options);
         if (!demo.error) {
           demo.start();
         } else {
@@ -59,7 +59,7 @@
 
       document.addEventListener('DOMContentLoaded', function(){
         document.querySelector('body').classList.remove('loading');
-        setTimeout(myFunction, 750);
+        setTimeout(myFunction, 500);
 
 
 
