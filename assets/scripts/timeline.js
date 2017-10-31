@@ -17,10 +17,18 @@ if (timeline && current) {
     curXPos = e.pageX;
     curDown = true;
     curLeft = timeline.scrollLeft;
+    timeline.classList.add('grabbing');
   });
 
   timeline.addEventListener('mouseup', function(e) {
     curDown = false;
+    timeline.classList.remove('grabbing');
   });
+
+  timeline.addEventListener('mouseleave', function(e) {
+    curDown = false;
+    timeline.classList.remove('grabbing');
+  });
+
 
 }

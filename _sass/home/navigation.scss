@@ -1,0 +1,110 @@
+.site-header {
+  padding: 0 3vw;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 9999;
+  top: -1px;
+  opacity: 0.95;
+  background-color: white;
+  -webkit-transition: opacity $base-timing (20 * $base-duration) (10 * $base-duration);
+  transition: opacity $base-timing (20 * $base-duration) (10 * $base-duration);
+  margin: 1vw 0;
+  height: 5vw;
+  line-height: 5vw;
+  padding: 0 4vw;
+  @media screen and (orientation: portrait) {
+    height: 6vh;
+    line-height: 6vh;
+    padding: 0 3vh;
+  }
+  @media screen and (min-width: $medium-screen) {
+    height: 3vw;
+    line-height: 3vw;
+  }
+  @media screen and (min-width: $xl-screen) {
+    margin: 1vw 0;
+    padding: 0 4vw;
+  }
+}
+
+.site-title {
+  font-size: modular-scale(1);
+  margin-bottom: 0;
+  float: left;
+
+  &, &:visited {
+    color: $dark-gray;
+  }
+}
+
+.site-nav {
+  float: right;
+
+  .nav-trigger, label[for="nav-trigger"] {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .page-link {
+    // Gaps between nav items, but not on the last one
+    @media screen and (min-width: $medium-screen) {
+      &:not(:last-child) {
+        margin-right: $base-spacing;
+      }
+    }
+  }
+
+  a {
+    color: $base-font-color;
+    text-transform: lowercase;
+
+    &.active {
+      color: $action-color;
+    }
+  }
+
+  @media screen and (max-width: $medium-screen) {
+    position: absolute;
+    display: block;
+    right: 3vw;
+    text-align: right;
+    @media screen and (orientation: portrait) {
+      right: 3vh;
+    }
+    .menu-icon {
+      display: block;
+    }
+
+    .trigger {
+      display: none;
+      position: fixed;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      z-index: 999999;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+      font-size: modular-scale(2);
+      line-height: 2 * $base-spacing;
+
+      &.active {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+    }
+  }
+}

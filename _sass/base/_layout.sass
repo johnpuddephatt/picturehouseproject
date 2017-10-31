@@ -23,14 +23,18 @@ body
   position: relative
   justify-content: center
   flex-direction: column
-  margin: 3vmax
-  min-height: calc(100vh - 6vmax)
-  width: calc(100vw - 6vmax)
-  padding-top: 4vmax
+  padding-top: 4vw
+  margin: 3vw
+  min-height: calc(100vh - 6vw)
+  width: calc(100vw - 6vw)
+  @media screen and (orientation: portrait)
+    margin: 3vh
+    min-height: 94vh
+    width: calc(100vw - 6vh)
   @media screen and (min-width: $xl-screen)
-    margin: 4vmax
-    min-height: calc(100vh - 8vmax)
-    width: calc(100vw - 8vmax)
+    margin: 4vw
+    min-height: calc(100vh - 8vw)
+    width: 92vw
 
 .section-title
   font-size: modular-scale(4)
@@ -45,5 +49,5 @@ body
 //     opacity: .1
 //     font-size: modular-scale(7)
 //     bottom: -2 * $base-spacing
-//     left: -4vmax
+//     left: -4vw
 //     z-index: -1

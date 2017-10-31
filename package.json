@@ -1,0 +1,23 @@
+{
+  "name": "picturehouseproject",
+  "version": "1.0.0",
+  "description": "*Minima is a one-size-fits-all Jekyll theme for writers*. It's Jekyll's default (and first) theme. It's what you get when you run `jekyll new`.",
+  "main": "index.js",
+  "dependencies": {
+    "sass-autoprefixer": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnpuddephatt/picturehouseproject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnpuddephatt/picturehouseproject/issues"
+  },
+  "homepage": "https://github.com/johnpuddephatt/picturehouseproject#readme"
+}

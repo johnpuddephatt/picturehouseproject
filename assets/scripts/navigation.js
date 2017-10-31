@@ -6,4 +6,10 @@ if (menuButton && navigation) {
   menuButton.addEventListener("click", function(){
     navigation.classList.toggle("active");
   });
+
+  navigation.addEventListener("click", function(){
+    navigation.classList.remove("active");
+  });
+
 }
+

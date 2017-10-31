@@ -1,0 +1,140 @@
+.section--timeline {
+  &::before {
+    content: "";
+    width: 1px;
+    background-color: $light-gray;
+    top: 6 * $base-spacing;
+    bottom: 2 * $base-spacing;
+    z-index: 99;
+    left: calc(12.5% - 1px);
+    position: absolute;
+    mix-blend-mode: darken;
+  }
+}
+
+.timeline-wrapper {
+  position: relative;
+  margin: 3 * $base-spacing 0;
+  &::after, &::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2 * $base-spacing;
+    @media screen and (min-width: $medium-screen) {
+      width: 4 * $base-spacing;
+    }
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 1)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    z-index: 99;
+  }
+  &::after {
+    left: auto;
+    right: 0;
+    background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 1)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(270deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+}
+
+.timeline-scroller {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  cursor: -webkit-grab;
+  cursor: grab;
+  counter-reset: timeline;
+  &.grabbing {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+  }
+}
+
+.timeline-scroller::-webkit-scrollbar {
+  height: 0;
+}
+
+.timeline-item {
+  pointer-events: none;
+  padding: 0 $small-spacing;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  counter-increment: timeline;
+  @media screen and (min-width: $medium-screen) {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33%;
+            flex: 0 0 33.33%;
+    padding: 0 $base-spacing;
+  }
+  @media screen and (min-width: $large-screen) {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+  }
+  a {
+    pointer-events: auto;
+    cursor: pointer;
+  }
+  &::before {
+    content: counter(timeline) "-";
+    font-size: modular-scale(9);
+    font-family: $heading-font-family;
+    color: $yellow;
+    margin-bottom: $small-spacing;
+    display: block;
+    opacity: 0.85;
+  }
+  &:first-child {
+    margin-left: 12.5%;
+  }
+  &:last-child {
+    margin-right: 12.5%;
+  }
+}
+
+.timeline-item-active {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    background-color: $light-gray;
+    right: 0;
+    top: $small-spacing;
+    bottom: $small-spacing;
+  }
+}
+
+.timeline-item-active ~ .timeline-item {
+  color: $medium-gray;
+  &::before {
+    color: $light-gray;
+  }
+}
+
+.timeline-date {
+  // font-size: modular-scale(4);
+  font-size: modular-scale(2);
+  color: $medium-gray;
+  margin-top: $small-spacing;
+  // margin-bottom: 2 * $base-spacing;
+  margin-bottom: $base-spacing
+}
+
+.timeline-title {
+  font-size: modular-scale(2);
+  font-family: $heading-font-family;
+  margin-bottom: $base-spacing;
+  letter-spacing: $small-heading-letter-spacing;
+}
