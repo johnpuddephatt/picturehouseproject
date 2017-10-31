@@ -18,69 +18,64 @@ body.loading
   overflow: hidden
   .home-hero-title p
     opacity: 0
-    // margin-top: 0
-    // transition: opacity 0ms 0ms, margin-top 0ms 0ms
     transition: opacity 0ms 0ms, transform 0ms 0ms
-    transform: translate(-100vw)
-    &:last-child
-      transform: translate(100vw)
+    transform: translateY(3vw)
+    // &:last-child
+    //   transform: translate(100vw)
   .hero-image
     opacity: 0
     transition: opacity 0ms 0ms
   .home-hero-strapline
     opacity: 0
     transition: opacity 0ms 0ms
+    animation: none
   .home-hero-year
-    transform: translateY(-110%)
-    transition: transform 0ms 0ms
+    opacity: 0
   .site-header
     opacity: 0
     transition: opacity 0ms 0ms, transform 0ms 0ms
 
 
 .home-hero-title
-  font-family: $heading-font-family
+  // font-family: $heading-font-family
   font-size: modular-scale(4)
   font-size: 7vw
-  text-transform: uppercase
   @media screen and (min-width: $medium-screen)
-    font-size: modular-scale(6)
-  line-height: $base-line-height
-  color: #000
-  margin-top: 9 * $base-spacing
-  display: flex
-  align-items: center
-  justify-content: center
-  flex-direction: column
-  max-width: 95%
-  position: relative
+    font-size: modular-scale(3)
+  font-family: $base-font-family
+  font-size: modular-scale(5)
+  text-align: center
+  width: 90%
+  font-weight: 400
+  position: absolute
+  margin: 0
+  top: 50%
+  left: 50%
   z-index: 999
+  line-height: $base-line-height
   p
-    background-color: #fff
-    background-color: rgba(255,255,255,.85)
-    display: inline-block
-    padding: 0 $small-spacing
-    margin: $small-spacing auto 0
-    margin-top: $small-spacing
-    transition: opacity 5 * $base-duration $base-timing 5 * $base-duration, transform 5 * $base-duration $base-timing 5 * $base-duration
-    // transition: opacity 5 * $base-duration 5 * $base-duration, margin-top 5 * $base-duration 20 * $base-duration
+    display: block
+    text-align: center
+    opacity: 0
+    animation: comeandgo 4s ease-out forwards 4.5s
+    margin-bottom: 0
     &:last-child
-      // transition: opacity 5 * $base-duration 10 * $base-duration, margin-top 5 * $base-duration 20 * $base-duration
-      transition: opacity 5 * $base-duration $base-timing 10 * $base-duration, transform 5 * $base-duration $base-timing 10 * $base-duration
+      animation-delay: 4.95s
 
 .home-hero-year
-  font-size: 112vh
-  opacity: .75
+  display: none
+  font-size: 60vh
+  opacity: .5
   color: $yellow
   position: absolute
-  top: 0
-  left: 0
+  bottom: 20%
+  right: 22.5%
   z-index: 99
-  width: 100%
-  height: 100%
+  width: 56%
+  height: 60%
   font-family: $heading-font-family
-  transform: translateY(110%)
-  transition: transform 5s ease-in
+  transition: opacity 3s ease-in 3s
+  opacity: 0.2
   span
     display: block
     float: left
@@ -88,7 +83,7 @@ body.loading
     width: 25%
     height: 100%
     text-align: center
-    line-height: 93vh
+    line-height: 50vh
 
 
 
@@ -123,10 +118,7 @@ body.loading
 .hero-image
   object-fit: cover
   object-position: center
-  transition: opacity $base-duration $base-timing
-  // transition: opacity 30 * $base-duration ease-out 20 * $base-duration
-  // filter: blur(0)
-  animation: findFocus 8s ease-in-out forwards
+  transition: opacity 10 * $base-duration $base-timing 10s
 
 @keyframes findFocus
   0%, 65%
@@ -166,18 +158,38 @@ body.loading
 
 
 .home-hero-strapline
-  margin-top: 6 * $base-spacing
   font-family: $base-font-family
-  color: #fff
+  font-size: modular-scale(2)
+  text-align: center
+  width: 90%
   font-weight: 400
-  text-shadow: rgba(0,0,0,.5) 0 0 0.75em
-  position: relative
+  position: absolute
+  margin: 0
+  top: 50%
+  left: 50%
   z-index: 999
   line-height: $base-line-height
-  @media screen and (min-width: $medium-screen)
-    br
-      display: none
-  transition: opacity 10 * $base-duration 40 * $base-duration
+  p
+    animation: comeandgo 4s ease-out forwards
+    margin-bottom: 0
+    &:last-child
+      animation-delay: 3 * $base-duration
+  // @media screen and (min-width: $medium-screen)
+  //   br
+  //     display: none
+  // transition: opacity 10 * $base-duration 40 * $base-duration
+
+
+@keyframes comeandgo
+  0%, 25%
+    opacity: 0
+    transform: translate(-50%,0%)
+  50%, 75%
+    opacity: 1
+    transform: translate(-50%,-50%)
+  100%
+    opacity: 0
+    transform: translate(-50%,-100%)
 
 .hero-logos
   position: absolute
@@ -188,7 +200,7 @@ body.loading
 @keyframes flickr
   0%,
   50%
-    opacity: 0
+    opacity: 0.55
 
 @keyframes grain
   0%,

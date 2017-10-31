@@ -12,7 +12,6 @@
         {{ content }}
     </main>
 
-
     {% if page.layout == 'home' %}
 
       <script type="text/javascript" src="/assets/scripts/scrollSpy.js"></script>
@@ -22,6 +21,7 @@
       <script type="text/javascript" src="/assets/scripts/aims.js"></script>
       <!-- <script type="text/javascript" src="/assets/scripts/tweets.js"></script> -->
       <script type="text/javascript" src="/assets/scripts/aos.js"></script>
+      <script type="text/javascript" src="/assets/scripts/navigation.js"></script>
       <script type="text/javascript" src="/assets/scripts/lazysizes.min.js"></script>
       <script type="text/javascript" src="/assets/scripts/countUp.min.js"></script>
       <script type="text/javascript" src="/assets/scripts/intersectionobserver.js"></script>
@@ -49,7 +49,7 @@
       };
 
       myFunction = function myFunction() {
-        var demo = new CountUp(document.querySelector('.home-hero-year'), 2017, 1914, 0, 5, options);
+        var demo = new CountUp(document.querySelector('.home-hero-year'), 1914, 2017, 0, 10, options);
         if (!demo.error) {
           demo.start();
         } else {
@@ -61,7 +61,7 @@
       // todo: load won't fire on older browsers where we revert to background-image fallback
       document.addEventListener('DOMContentLoaded', function(){
         document.querySelector('body').classList.remove('loading');
-        setTimeout(myFunction, 500);
+        setTimeout(myFunction, 4000);
       });
 
 

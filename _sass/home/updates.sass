@@ -33,12 +33,26 @@
 .updates-item
   position: relative
   flex: 0 0 50%
+  height: 450px
+  overflow: hidden
   @media screen and (min-width: $medium-screen)
     flex: 0 0 33.33%
   @media screen and (min-width: $large-screen)
     flex: 0 0 25%
   border: solid $base-spacing white
   background-color: $light-gray
+  &:first-child
+    flex: 0 0 50%
+    .updates-title
+      font-size: modular-scale(7)
+    .updates-date
+      font-size: modular-scale(3)
+  img
+    object-fit: cover
+    height: 100%
+    width: 100%
+    max-width: none
+    max-height: none
   &::after
     content: ''
     position: absolute
