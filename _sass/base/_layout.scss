@@ -11,12 +11,12 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
+  overflow-x: hidden;
 }
 
 body {
-  overflow-x: hidden;
   padding: 0 3vw;
-
+  
   @media screen and (orientation: portrait) {
     padding: 0 3vh;
   }
