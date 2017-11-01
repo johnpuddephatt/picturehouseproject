@@ -170,12 +170,15 @@
       backface-visibility: hidden;
       display: block;
       background-color: $light-gray;
+      position: relative;
+      z-index: 1;
 
       &.bw {
         position: absolute;
         transition: opacity (10 * $base-duration) $base-timing;
         width: 100%;
         background-color: transparent;
+        z-index: 2;
       }
     }
   }
