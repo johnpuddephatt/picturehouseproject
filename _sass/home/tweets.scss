@@ -1,16 +1,13 @@
 .container--tweets ul {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
           flex-direction: row;
   margin: (4 * $base-spacing) 0;
 
   li {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 25%;
             flex: 0 1 25%;
     word-break: break-word;
     margin-right: 2 * $base-spacing;
