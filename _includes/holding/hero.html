@@ -2,12 +2,73 @@
   <a class="site-title" href="/">The Picture House Project.</a>
 </header>
 
-<section class="section section--hero" style="margin-top: 0;">
-  <!-- {% include cloudinary.html class="hero-image hero-image-holding" img="/assets/images/40-BW.jpg" alt="Close up of ornate detailing on lamp post in front of Hyde Park Picture House box office" width="1600" height="800" quality="75" %}
-  <div class="hero-image-fallback"></div> -->
-  <!-- <div role="heading" aria-level="2" class="home-hero-title">{{site.description | markdownify}}</div> -->
-  <h3 class="home-hero-comingsoon">More information coming early November 2017</h3>
+<section class="section section--holding" style="margin-top: 0;">
+  {% include cloudinary.html class="holding-image" img="/assets/images/40-BW.jpg" alt="Close up of ornate detailing on lamp post in front of Hyde Park Picture House box office" width="1600" height="800" quality="75" %}
+  <div role="heading" aria-level="2" class="holding-hero-title">{{site.description | markdownify}}</div>
+  <h3 class="holding-hero-comingsoon">More information coming early November 2017</h3>
   <div class="hero-logos">
-    <img class="backers-logos" src="assets/images/logos.svg#white" alt="The redevelopment of the Hyde Park Picture House is a Heritage Lottery Fund project supported by Leeds City Council">
+    <img class="backers-logos" src="assets/images/logos-white.svg" alt="The redevelopment of the Hyde Park Picture House is a Heritage Lottery Fund project supported by Leeds City Council">
   </div>
 </section>
+
+
+<style>
+
+
+.section--holding {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.site-header {
+  position: fixed;
+  z-index: 9999;
+  animation: none;
+  width: 100%;
+  transition: none;
+  background-color: white;
+  margin: 0;
+  padding-left: 0;
+}
+
+.holding-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+}
+
+.holding-hero-title {
+  margin: 8em 0 1em
+}
+.holding-hero-title p {
+  font-size: 3.8146972656em;
+  font-family: "Aku Kamu",Impact,sans-serif;
+  background-color: rgba(255,255,255,0.85);
+  z-index: 99999;
+  position: relative;
+  text-align: center;
+  padding: 0 .25em;
+  margin-bottom: .2em;
+}
+
+.holding-hero-comingsoon {
+  position: relative;
+  z-index: 99999;
+  color: white;
+
+}
+
+
+
+
+
+
+
+</style>

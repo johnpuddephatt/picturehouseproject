@@ -126,7 +126,7 @@
 .timeline-item-active ~ .timeline-item {
   color: $medium-gray;
   &::before {
-    color: $light-gray;
+    color: $medium-gray;
   }
 }
 
