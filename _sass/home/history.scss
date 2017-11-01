@@ -152,6 +152,7 @@
 
   img {
     width: 100%;
+    display: block;
   }
 }
 
@@ -182,6 +183,12 @@
   display: flex;
   -webkit-box-pack: justify;
           justify-content: space-between;
+
+  @media screen and (orientation:portrait) {
+      -webkit-box-pack: start;
+      justify-content: flex-start;
+  }
+
 }
 
 .lightbox-navigation a {
@@ -203,6 +210,7 @@
   }
   &.previous {
     background-image: url(/assets/images/prev-icon.svg);
+    margin-right: $small-spacing;
   }
 
 }

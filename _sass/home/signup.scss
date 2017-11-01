@@ -67,6 +67,10 @@
     padding: 4vw;
   }
 
+  @media screen and (orientation: portrait) {
+    padding: 3vh;
+  }
+
   color: white;
   text-align: right;
 
