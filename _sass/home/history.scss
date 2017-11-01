@@ -4,15 +4,9 @@
   margin: (3 * $base-spacing) auto;
 
   @media screen and (min-width: $medium-screen) {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-column-gap: $base-spacing;
@@ -30,12 +24,10 @@
   @media screen and (min-width: $medium-screen) {
     float: left;
     width: 25%;
-    -webkit-box-flex: 0;
-        -ms-flex: 1 1 20%;
-            flex: 1 1 20%;
+    flex: 1 1 20%;
     padding: $small-spacing;
   }
-  @supports ((display: -webkit-box) or (display: flex)) {
+  @supports (display: flex) {
     margin-left: $base-spacing;
     margin-right: $base-spacing;
   }
@@ -61,28 +53,19 @@
 
   overflow: hidden;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
 
   &:nth-child(3n-1) {
     grid-column: span 8;
     grid-row: span 4;
-    -webkit-transition-delay: $base-duration;
-            transition-delay: $base-duration;
+    transition-delay: $base-duration;
   }
 
   &:nth-child(3n-2) {
-    -webkit-transition-delay: 2 * $base-duration;
-            transition-delay: 2 * $base-duration;
+    transition-delay: 2 * $base-duration;
   }
 
   &:hover .history-item-title::after {
@@ -106,7 +89,6 @@
     border-radius: 50%;
     content: "";
     display: block;
-    -webkit-transition: background-color $base-duration $base-timing;
     transition: background-color $base-duration $base-timing;
     background-image: url(/assets/images/expand-icon.svg);
     background-size: 40% auto;
@@ -130,22 +112,12 @@
   top: 0;
   bottom: 0;
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
   @media screen and (orientation: landscape) {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
 
@@ -153,19 +125,11 @@
   background-color: $dark-gray;
 
   @media screen and (orientation: landscape) {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 70%;
-            flex: 0 1 70%;
+    flex: 0 1 70%;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
   }
 
   img {
@@ -175,15 +139,11 @@
 
 /* Opened lightbox */
 .lightbox.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .lightbox-text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 30%;
-          flex: 1 0 30%;
+  flex: 1 0 30%;
   padding: $base-spacing;
 
   @media screen and (min-width: $large-screen) {
@@ -198,12 +158,8 @@
 /* Close button */
 
 .lightbox-navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .lightbox-navigation a {
@@ -213,16 +169,18 @@
   height: 2 * $base-spacing;
   width: 2 * $base-spacing;
   border-radius: 50%;
-  -webkit-transition: background-color $base-duration $base-timing;
   transition: background-color $base-duration $base-timing;
   &:hover {
     background-color: $yellow;
   }
-  &.next {
-    background-image: url(/assets/images/open-icon.svg);
+  &.next, &.previous {
+    background-image: url(/assets/images/next-icon.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 25%;
+  }
+  &.previous {
+    background-image: url(/assets/images/prev-icon.svg);
   }
 
 }
@@ -237,7 +195,6 @@
   height: 2 * $base-spacing;
   width: 2 * $base-spacing;
   border-radius: 50%;
-  -webkit-transition: background-color $base-duration $base-timing;
   transition: background-color $base-duration $base-timing;
 
   @media screen and (orientation: landscape) {

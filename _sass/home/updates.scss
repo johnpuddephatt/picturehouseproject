@@ -8,9 +8,6 @@
   background-color: $dark-gray;
   opacity: 0.95;
   z-index: 99999;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   pointer-events: none;
 }
@@ -32,7 +29,6 @@
     @media screen and (min-width: $medium-screen) {
       width: 4 * $base-spacing;
     }
-    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 1)), to(rgba(255, 255, 255, 0)));
     background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     z-index: 99;
   }
@@ -40,26 +36,19 @@
   &::after {
     left: auto;
     right: -1px;
-    background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 1)), to(rgba(255, 255, 255, 0)));
     background: linear-gradient(270deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
   }
 }
 
 .updates-scroller {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
   overflow-x: scroll;
   overflow-y: hidden;
   position: relative;
   cursor: -webkit-grab;
   cursor: grab;
-  counter-reset: timeline;
-
+  counter-reset: updates;
   &.grabbing {
     cursor: -webkit-grabbing;
     cursor: grabbing;
@@ -72,33 +61,22 @@
 
 .updates-item {
   position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
   flex: 0 0 50%;
   height: 60vw;
   overflow: hidden;
   border: solid $small-spacing transparent;
   background-clip: content-box;
   @media screen and (min-width: $medium-screen) {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 33.33%;
     flex: 0 0 33.33%;
     height: 50vw;
   }
   @media screen and (min-width: $large-screen) {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     height: 35vw;
     border: solid $base-spacing transparent;
 
     &:first-child {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
       flex: 0 0 50%;
 
       .updates-title {
@@ -112,7 +90,6 @@
   }
 
   img {
-    -o-object-fit: cover;
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -129,7 +106,6 @@
     bottom: 0;
     background-color: rgba(25, 25, 25, 0.5);
     -webkit-transform: opacity $base-timing $base-duration;
-    -webkit-transition: opacity $base-timing $base-duration;
     transition: opacity $base-timing $base-duration;
   }
 
@@ -162,16 +138,23 @@
   right: 0;
   bottom: 0;
   padding: $small-spacing $base-spacing;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
+  counter-increment: updates;
+  &::before {
+    content: counter(updates) "-";
+    font-size: modular-scale(12);
+    position: relative;
+    z-index: 99;
+    line-height: 1;
+    font-family: $heading-font-family;
+    color: $yellow;
+    margin-bottom: 0;
+    display: block;
+    opacity: 0.5;
+    text-indent: -0.05em;
+  }
 }
 
 .updates-image {
@@ -188,16 +171,12 @@
   font-family: $heading-font-family;
   color: white;
   letter-spacing: $small-heading-letter-spacing;
-  -webkit-transition: color $base-timing $base-duration;
   transition: color $base-timing $base-duration;
 
 }
 
 .updates-title {
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   margin-bottom: 0;
   font-size: modular-scale(5);
@@ -211,12 +190,11 @@
     display: inline-block;
     height: .6em;
     width: .6em;
-    margin-left: .2em;
+    margin-left: .1em;
     margin-bottom: .1em;
     background-color: $light-gray;
     border-radius: 50%;
-    background-image: url(/assets/images/open-icon.svg);
-    -webkit-transition: background-color $base-duration $base-timing;
+    background-image: url(/assets/images/next-icon.svg);
     transition: background-color $base-duration $base-timing;
     background-size: 40% auto;
     background-position: center;
@@ -230,10 +208,7 @@
   z-index: 999999;
   border: solid $small-spacing transparent;
   position: relative;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   @media screen and (min-width: $large-screen) {
     border: solid $base-spacing transparent;
@@ -244,7 +219,6 @@
     display: block;
     width: 100%;
     height: $base-spacing;
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 1)), to(rgba(255, 255, 255, 0)));
     background: linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     left: 0;
     position: absolute;
@@ -258,34 +232,18 @@
     width: 100%;
     height: 100%;
     border: none;
-    -webkit-animation: comeOnIn 1500ms 1000ms ease forwards;
     animation: comeOnIn 1500ms 1000ms ease forwards;
     opacity: 0;
-  }
-}
-@-webkit-keyframes comeOnIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
   }
 }
 @keyframes comeOnIn {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(100%);
     transform: translateY(100%);
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
