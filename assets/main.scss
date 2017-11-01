@@ -40,6 +40,9 @@ html {
   color: white;
   margin: 3vw 0;
   padding: 3vw;
+  @media screen and (orientation: portrait) {
+    padding: 3vh;
+  }
 
   @media screen and (min-width: $xl-screen) {
     padding: 4vw;

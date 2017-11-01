@@ -191,7 +191,7 @@
       flex: 0 0 37.5%;
     }
     position: relative;
-    z-index: 98;
+    z-index: 99;
     -webkit-box-ordinal-group: 2;
     order: 1;
   }
@@ -227,7 +227,7 @@
   .aim-number {
     font-size: modular-scale(14);
     opacity: 0.85;
-    z-index: 99;
+    z-index: 98;
     color: $yellow;
     position: absolute;
     right: -1.5 * $base-spacing;
