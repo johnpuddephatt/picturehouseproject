@@ -75,27 +75,37 @@ body.loading {
       display: block;
       position: absolute;
       left: 0;
-      top: -200vh;
-      bottom: -200vh;
+      top: -50vh;
+      bottom: -50vh;
+      animation-name: containerlines;
+      animation-timing-function: cubic-bezier(.27,.09,.4,.88);
+      animation-duration: 4s;
+      animation-fill-mode: forwards;
+
     }
     &::after {
       right: 0;
       left: auto;
     }
 
+
     p {
       &::after, &::before {
-        content: '';
         width: 1px;
         background-color: $light-gray;
         display: block;
         position: absolute;
         left: 0;
-        top: -200vh;
-        bottom: -200vh;
+        top: -50vh;
+        bottom: -50vh;
+        animation-name: textlines;
+        animation-timing-function: cubic-bezier(.27,.09,.4,.88);
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
       }
       &::after {
         right: 0;
+        content: '';
         left: auto;
       }
     }
@@ -106,6 +116,16 @@ body.loading {
   &--1 {
     animation-delay: 1s;
     left: 0;
+    &::after {
+      animation-delay: .5s;
+    }
+    &::before {
+      animation-delay: 1.5s;
+    }
+    p::after {
+      animation-delay: 1s;
+    }
+
 
   }
   &--2 {
@@ -114,10 +134,33 @@ body.loading {
     p {
       float: right;
     }
+    &::after {
+      animation-delay: 5.5s;
+    }
+    &::before {
+      animation-delay: 4.5s;
+    }
+    p::after {
+      content: none;
+    }
+    p::before {
+      content: '';
+      animation-delay: 5s;
+    }
+
   }
   &--3 {
     animation-delay: 9s;
     left: 0;
+    &::after {
+      animation-delay: 9.5s;
+    }
+    &::before {
+      animation-delay: 8.5s;
+    }
+    p::after {
+      animation-delay: 9s;
+    }
   }
   &--4 {
     font-size: modular-scale(5);
@@ -130,6 +173,10 @@ body.loading {
     p {
       float: right;
       color: white;
+    }
+    &::after, &::before,
+    p::after, p::before {
+      animation-delay: 13s;
     }
   }
 }
@@ -212,5 +259,30 @@ body.loading {
   }
   75%, 100% {
     opacity: 1;
+  }
+}
+
+
+@keyframes textlines {
+  0% {
+    transform: translateY(100%);
+  }
+  65% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes plines {
+  0% {
+    transform: translateY(-100%);
+  }
+  65% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
   }
 }
