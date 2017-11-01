@@ -1,18 +1,17 @@
 .section--hero {
   min-height: auto;
-  padding-top: 0;
+  padding: 0;
   height: 100%;
-  height: calc(100vh - 10vw);
+  height: calc(100vh - 8vw);
+  margin-top: 3vw;
   @media screen and (orientation: portrait) {
-    height: calc(90vh)
-  }
-  @media screen and (min-width: $medium-screen) {
-    height: calc(100vh - 8vw);
+    margin-top: 3vh;
+    height: 91vh;
   }
   @media screen and (min-width: $xl-screen) {
+    margin-top: 4vw;
     height: calc(100vh - 9vw);
   }
-
   margin-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;

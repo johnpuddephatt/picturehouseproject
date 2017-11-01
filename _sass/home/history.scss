@@ -1,9 +1,18 @@
 .container--history {
   height: auto;
   position: relative;
-  margin: (4 * $base-spacing) auto;
+  margin: (3 * $base-spacing) auto;
 
   @media screen and (min-width: $medium-screen) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-column-gap: $base-spacing;
@@ -18,7 +27,27 @@
 }
 
 .history-item {
-  border-bottom: 0.1rem solid $medium-gray;
+  @media screen and (min-width: $medium-screen) {
+    float: left;
+    width: 25%;
+    -webkit-box-flex: 0;
+        -ms-flex: 1 1 20%;
+            flex: 1 1 20%;
+    padding: $small-spacing;
+  }
+  @supports ((display: -webkit-box) or (display: flex)) {
+    margin-left: $base-spacing;
+    margin-right: $base-spacing;
+  }
+  @supports (display: grid) {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+    width: auto;
+    margin-bottom: 2 * $base-spacing;;
+    border-bottom: 0.1rem solid $medium-gray;
+  }
+
 
   img {
     width: 100%;
@@ -29,7 +58,7 @@
 
   grid-column: span 4;
   grid-row: span 2;
-  margin-bottom: 2 * $base-spacing;
+
   overflow: hidden;
   cursor: pointer;
   display: -webkit-box;
@@ -145,7 +174,7 @@
 }
 
 /* Opened lightbox */
-.lightbox:target {
+.lightbox.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -167,19 +196,49 @@
 }
 
 /* Close button */
-.lightbox .close {
-  display: block;
+
+.lightbox-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.lightbox-navigation a {
+  background-color: $light-gray;
+  display: inline-block;
   text-indent: -99999px;
   height: 2 * $base-spacing;
   width: 2 * $base-spacing;
   border-radius: 50%;
-  content: "";
   -webkit-transition: background-color $base-duration $base-timing;
   transition: background-color $base-duration $base-timing;
+  &:hover {
+    background-color: $yellow;
+  }
+  &.next {
+    background-image: url(/assets/images/open-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+  }
+
+}
+
+.lightbox .close {
+  display: block;
   position: absolute;
   bottom: $small-spacing;
   right: $small-spacing;
   background-color: $light-gray;
+  text-indent: -99999px;
+  height: 2 * $base-spacing;
+  width: 2 * $base-spacing;
+  border-radius: 50%;
+  -webkit-transition: background-color $base-duration $base-timing;
+  transition: background-color $base-duration $base-timing;
 
   @media screen and (orientation: landscape) {
     top: $small-spacing;

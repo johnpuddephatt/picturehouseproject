@@ -26,6 +26,7 @@
       <script type="text/javascript" src="/assets/scripts/countUp.min.js"></script>
       <script type="text/javascript" src="/assets/scripts/intersectionobserver.polyfill.js"></script>
       <script type="text/javascript" src="/assets/scripts/intersectionobserver.js"></script>
+      <script type="text/javascript" src="/assets/scripts/lightbox.js"></script>
 
       <script>
           AOS.init();
@@ -35,38 +36,9 @@
 
     <script type="text/javascript" src="/assets/scripts/smoothscroll.min.js"></script>
     <script>
-      var easingFn = function (t, b, c, d) {
-      var ts = (t /= d) * t;
-      var tc = ts * t;
-      return b + c * (tc * ts + -5 * ts * ts + 10 * tc + -10 * ts + 5 * t);
-      }
-
-      var options = {
-        useEasing: true,
-        easingFn: easingFn,
-        useGrouping: false,
-        separator: ',',
-        decimal: '.',
-      };
-
-      myFunction = function myFunction() {
-        var demo = new CountUp(document.querySelector('.home-hero-year'), 1914, 2017, 0, 10, options);
-        if (!demo.error) {
-          demo.start();
-        } else {
-          console.error(demo.error);
-        }
-      }
-
-
-      // todo: load won't fire on older browsers where we revert to background-image fallback
       document.addEventListener('DOMContentLoaded', function(){
         document.querySelector('body').classList.remove('loading');
-        setTimeout(myFunction, 4000);
       });
-
-
-
     </script>
 
   </body>

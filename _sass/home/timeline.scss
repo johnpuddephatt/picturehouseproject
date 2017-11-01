@@ -14,7 +14,7 @@
 
 .timeline-wrapper {
   position: relative;
-  margin: 3 * $base-spacing 0;
+  margin: 2 * $base-spacing 0;
   &::after, &::before {
     content: "";
     pointer-events: none;

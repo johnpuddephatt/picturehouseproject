@@ -1,5 +1,6 @@
 .section--aims {
-  &::before, &::after {
+  &::after,
+  &::before {
     content: "";
     width: 1px;
     background-color: $light-gray;
@@ -19,13 +20,14 @@
 }
 
 .aims-wrapper {
-  &::before, &::after {
+  &::after,
+  &::before {
     content: "";
     width: 1px;
     background-color: $light-gray;
     top: 5 * $base-spacing;
     bottom: -$base-spacing;
-    z-index: 9;
+    z-index: -9;
     left: -1px;
     position: absolute;
     mix-blend-mode: darken;
@@ -38,27 +40,46 @@
 }
 
 .aim {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
-
   @media screen and (min-width: $large-screen) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
-
   position: relative;
   margin: (3 * $base-spacing) 0;
+  -webkit-transition: -webkit-transform $base-duration $base-timing;
+  transition: -webkit-transform $base-duration $base-timing;
   transition: transform $base-duration $base-timing;
+  transition: transform $base-duration $base-timing, -webkit-transform $base-duration $base-timing;
 
   &.slideout {
     @media screen and (min-width: $large-screen) {
+      -webkit-transform: translateX(45%);
       transform: translateX(45%);
-      transition: transform $base-duration $base-timing 0ms;
+      -webkit-transition: -webkit-transform $base-duration $base-timing 0;
+      transition: -webkit-transform $base-duration $base-timing 0;
+      transition: transform $base-duration $base-timing 0;
+      transition: transform $base-duration $base-timing 0, -webkit-transform $base-duration $base-timing 0;
+      transition: transform $base-duration $base-timing 0ms, -webkit-transform $base-duration $base-timing 0;
     }
 
     &:nth-child(2n-1) {
       @media screen and (min-width: $large-screen) {
+        -webkit-transform: translateX(-45%);
         transform: translateX(-45%);
       }
     }
@@ -67,11 +88,12 @@
       max-height: 100vh;
       opacity: 1;
       margin: (3 * $base-spacing) 0;
-
       @media screen and (min-width: $large-screen) {
         max-height: none;
         margin: 0;
+        -webkit-transform: translateX(0);
         transform: translateX(0);
+        -webkit-transition: opacity (2 * $base-duration) $base-timing;
         transition: opacity (2 * $base-duration) $base-timing;
       }
     }
@@ -80,27 +102,24 @@
   &:nth-child(2n-1) {
     .aim-text {
       margin-left: 15%;
-
       @media screen and (min-width: $large-screen) {
         margin-left: 0;
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
         order: 3;
       }
-
       text-align: right;
     }
-
-    .aim-image {
-      @media screen and (min-width: $large-screen) {
-        padding-right: 0;
-        padding-left: $base-spacing;
-      }
-    }
-
+    // .aim-image {
+    //   @media screen and (min-width: $large-screen) {
+    //     padding-right: 0;
+    //     padding-left: $base-spacing;
+    //   }
+    // }
     .aim-more {
       left: 120%;
       right: auto;
       text-align: right;
-
       @media screen and (min-width: $large-screen) {
         text-align: left;
       }
@@ -108,7 +127,7 @@
 
     .aim-heading {
       @media screen and (min-width: $large-screen) {
-        @supports (mix-blend-mode: difference) {
+         @supports (mix-blend-mode: difference){
           margin-left: -60%;
 
           &::after {
@@ -119,7 +138,7 @@
     }
 
     .aim-number {
-      left: -$base-spacing;
+      left: -1.5 * $base-spacing;
       right: auto;
       bottom: 0;
 
@@ -145,29 +164,29 @@
   .aim-image {
     position: relative;
     margin-bottom: $base-spacing;
-
     @media screen and (min-width: $large-screen) {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 55%;
       flex: 0 0 55%;
       margin-bottom: 0;
-      padding-right: $base-spacing;
+      // padding-right: $base-spacing;
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
       order: 2;
     }
 
     img {
       width: 100%;
+      -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       display: block;
       background-color: $light-gray;
 
       &.bw {
         position: absolute;
+        -webkit-transition: opacity (10 * $base-duration) $base-timing;
         transition: opacity (10 * $base-duration) $base-timing;
         width: 100%;
-
-        @media screen and (min-width: $large-screen) {
-          padding-right: 1.6em;
-        }
-
         background-color: transparent;
       }
     }
@@ -175,14 +194,16 @@
 
   .aim-text {
     width: 85%;
-
     @media screen and (min-width: $large-screen) {
       width: auto;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 37.5%;
       flex: 0 0 37.5%;
     }
-
     position: relative;
     z-index: 98;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
   }
 
@@ -194,9 +215,8 @@
     background-color: transparent;
     -webkit-font-smoothing: antialiased;
     font-weight: 400;
-
     @media screen and (min-width: $large-screen) {
-      @supports (mix-blend-mode: difference) {
+       @supports (mix-blend-mode: difference){
         width: 160%;
         color: white;
 
@@ -221,12 +241,11 @@
     z-index: 99;
     color: $yellow;
     position: absolute;
-    right: -$base-spacing;
+    right: -1.5 * $base-spacing;
     bottom: -6 * $base-spacing;
     font-family: $heading-font-family;
     margin-bottom: 0;
     line-height: 1;
-
     // transform: translateZ(.1px) scale(.9)
     // transform-origin: center
     //1 + (translateZ * -1) / perspective = scale.
@@ -237,11 +256,11 @@
 
   .aim-more {
     text-align: left;
-    max-height: 0px;
+    max-height: 0;
     opacity: 0;
     overflow: hidden;
+    -webkit-transition: max-height $base-duration $base-timing, opacity $base-duration $base-timing, margin $base-duration $base-timing;
     transition: max-height $base-duration $base-timing, opacity $base-duration $base-timing, margin $base-duration $base-timing;
-
     @media screen and (min-width: $large-screen) {
       text-align: right;
       max-height: none;
@@ -251,10 +270,11 @@
       width: 100%;
       top: 0.75 * $small-spacing;
       padding: 0;
+      -webkit-transform: translateX(2 * $base-spacing);
       transform: translateX(2 * $base-spacing);
-      transition: opacity $base-duration $base-timing 0ms;
+      -webkit-transition: opacity $base-duration $base-timing 0;
+      transition: opacity $base-duration $base-timing 0;
     }
-
     @media screen and (min-width: $xl-screen) {}
 
     p {

@@ -1,5 +1,6 @@
 .section--signup {
   background-color: $dark-gray;
+
 }
 
 .signup-image, .signup-image-fallback {
@@ -37,6 +38,10 @@
      object-fit: cover;
   -o-object-position: 60% center;
      object-position: 60% center;
+     opacity: .3;
+     @media screen and (min-width: $large-screen) {
+       opacity: 1;
+     }
 }
 
 .container--signup {

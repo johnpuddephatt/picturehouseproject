@@ -17,6 +17,12 @@ label {
   margin-bottom: $small-spacing / 2;
 }
 
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 input,
 select,
 textarea {
@@ -26,14 +32,19 @@ textarea {
 }
 
 #{$all-text-inputs} {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: transparent;
   border: .2em solid $action-color;
   border-radius: $base-border-radius;
-  box-shadow: $form-box-shadow;
-  box-sizing: border-box;
+  -webkit-box-shadow: $form-box-shadow;
+          box-shadow: $form-box-shadow;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-bottom: $small-spacing;
   padding: $base-spacing / 3;
+  -webkit-transition: border-color $base-duration $base-timing;
   transition: border-color $base-duration $base-timing;
   width: 100%;
 
@@ -43,7 +54,8 @@ textarea {
 
   &:focus {
     border-color: $action-color;
-    box-shadow: $form-box-shadow-focus;
+    -webkit-box-shadow: $form-box-shadow-focus;
+            box-shadow: $form-box-shadow-focus;
     outline: none;
   }
 
@@ -54,6 +66,18 @@ textarea {
     &:hover {
       border: $base-border;
     }
+  }
+
+  &::-webkit-input-placeholder {
+    color: tint($base-font-color, 40%);
+  }
+
+  &:-ms-input-placeholder {
+    color: tint($base-font-color, 40%);
+  }
+
+  &::-ms-input-placeholder {
+    color: tint($base-font-color, 40%);
   }
 
   &::placeholder {

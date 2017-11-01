@@ -70,7 +70,7 @@ if (updates) {
             var newLeft = this.offsetLeft;
             setTimeout(function(){
               window.smoothScroll(newLeft,500,null,updates,'horizontal');
-            }, 500)
+            }, 500);
           }
         }
       });
