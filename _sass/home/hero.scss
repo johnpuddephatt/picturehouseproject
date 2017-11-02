@@ -214,6 +214,7 @@ body.loading {
       text-align: right;
       color: white;
       text-shadow: #000 0 0 150px;
+      line-height: $heading-line-height;
     }
     &::after, &::before,
     p::after, p::before {
