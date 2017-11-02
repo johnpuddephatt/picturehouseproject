@@ -4,11 +4,8 @@
   margin: (3 * $base-spacing) auto;
 
   @media screen and (min-width: $medium-screen) {
-    display: -webkit-box;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
+    flex-direction: row;
     flex-wrap: wrap;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -27,11 +24,10 @@
   @media screen and (min-width: $medium-screen) {
     float: left;
     width: 25%;
-    -webkit-box-flex: 1;
-            flex: 1 1 20%;
+    flex: 1 1 20%;
     padding: $small-spacing;
   }
-  @supports ((display: -webkit-box) or (display: flex)) {
+  @supports (display: flex) {
     margin-left: $base-spacing;
     margin-right: $base-spacing;
   }
@@ -57,14 +53,10 @@
 
   overflow: hidden;
   cursor: pointer;
-  display: -webkit-box;
   display: flex;
   position: relative;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  -webkit-box-pack: end;
-          justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
 
   &:nth-child(3n-1) {
     grid-column: span 8;
@@ -120,73 +112,77 @@
   top: 0;
   bottom: 0;
   width: 100%;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 
-  @media screen and (orientation: landscape) {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
+  @media screen and (orientation: portrait) {
+    flex-direction: column;
   }
 }
 
 .lightbox-image {
   background-color: $dark-gray;
-
-  @media screen and (orientation: landscape) {
-    -webkit-box-flex: 0;
-            flex: 0 1 70%;
-    height: 100%;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-            justify-content: center;
+  flex: 1 1 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  @media screen and (orientation:portrait) {
+    flex: 1 1 75vw;
   }
 
   img {
     width: 100%;
+    margin: auto;
     display: block;
   }
 }
 
 /* Opened lightbox */
 .lightbox.active {
-  display: -webkit-box;
   display: flex;
 }
 
 .lightbox-text {
-  -webkit-box-flex: 1;
-          flex: 1 0 30%;
-  padding: $base-spacing;
+  flex: 1 0 30%;
+  height: 100%;
+  padding: $small-spacing $small-spacing/2;
+  display: flex;
+  flex-direction: column;
+  @media screen and (orientation:portrait) {
+    flex: 1 1 55%;
+    padding: $base-spacing $small-spacing
+  }
 
+  @media screen and (min-width: $medium-screen) {
+    padding: $base-spacing $small-spacing $small-spacing;
+  }
   @media screen and (min-width: $large-screen) {
-    padding: 1.5 * $base-spacing;
+    padding: 1.5 * $base-spacing 1.5 * $base-spacing  $small-spacing;
   }
 
   @media screen and (min-width: $xl-screen) {
-    padding: 2 * $base-spacing;
+    padding: 2 * $base-spacing 2 * $base-spacing $base-spacing;
   }
+}
+
+.lightbox-text-inner {
+  flex: 0 1 auto;
+  overflow: auto
 }
 
 /* Close button */
 
 .lightbox-navigation {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
-
+  border-top: 1px solid $light-gray;
+  justify-content: space-between;
+  padding: $small-spacing 0 0;
+  margin-top: auto;
   @media screen and (orientation:portrait) {
-      -webkit-box-pack: start;
-      justify-content: flex-start;
+    justify-content: flex-start;
   }
 
 }
@@ -210,28 +206,23 @@
   }
   &.previous {
     background-image: url(/assets/images/prev-icon.svg);
-    margin-right: $small-spacing;
+    margin-right: $small-spacing/2;
   }
 
 }
 
 .lightbox .close {
   display: block;
-  position: absolute;
-  bottom: $small-spacing;
-  right: $small-spacing;
   background-color: $light-gray;
   text-indent: -99999px;
   height: 2 * $base-spacing;
   width: 2 * $base-spacing;
   border-radius: 50%;
   transition: background-color $base-duration $base-timing;
-
-  @media screen and (orientation: landscape) {
-    top: $small-spacing;
-    bottom: auto;
-  }
-
+  position: relative;
+  margin-left: auto;
+  bottom: 0;
+  right: 0;
   &::after {
     content: "×";
     text-indent: 0;
