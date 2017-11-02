@@ -212,6 +212,7 @@ body.loading {
     p {
       float: right;
       color: white;
+      text-shadow: #000 0 0 150px;
     }
     &::after, &::before,
     p::after, p::before {
