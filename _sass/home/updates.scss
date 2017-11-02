@@ -72,8 +72,8 @@
       -ms-user-select: none;
           user-select: none;
   -webkit-box-flex: 0;
-          flex: 0 0 100%;
-  height: 120vw;
+          flex: 0 0 50%;
+  height: 60vw;
   overflow: hidden;
   border: solid $small-spacing transparent;
   background-clip: content-box;
@@ -81,6 +81,9 @@
     -webkit-box-flex: 0;
             flex: 0 0 50%;
     height: 60vw;
+    &::after {
+
+    }
   }
   @media screen and (min-width: $large-screen) {
     -webkit-box-flex: 0;
@@ -117,7 +120,7 @@
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     right: 0;
@@ -166,18 +169,20 @@
   -webkit-box-direction: normal;
           flex-direction: column;
   counter-increment: updates;
-  &::before {
-    content: counter(updates) "-";
-    font-size: modular-scale(12);
-    position: relative;
-    z-index: 99;
-    line-height: 1;
-    font-family: $heading-font-family;
-    color: $yellow;
-    margin-bottom: 0;
-    display: block;
-    opacity: 0.85;
-    text-indent: -0.05em;
+  @media screen and (min-width: $medium-screen) {
+    &::before {
+      content: counter(updates) "-";
+      font-size: modular-scale(12);
+      position: relative;
+      z-index: 99;
+      line-height: 1;
+      font-family: $heading-font-family;
+      color: $yellow;
+      margin-bottom: 0;
+      display: block;
+      opacity: 0.85;
+      text-indent: -0.05em;
+    }
   }
 }
 

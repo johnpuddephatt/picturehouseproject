@@ -67,7 +67,14 @@ if (updates) {
             updates.insertBefore(videoContainer, this.nextSibling);
             this.classList.add('updates-item-active');
             // var newLeft = (videoContainer.offsetLeft + videoContainer.clientWidth/2)- (updates.clientWidth/2);
-            var newLeft = this.offsetLeft;
+
+            if( window.innerWidth < (videoContainer.clientWidth + this.clientWidth)) {
+              // var newLeft = videoContainer.offsetLeft;  
+              var newLeft = (videoContainer.offsetLeft + videoContainer.clientWidth/2)- (updates.clientWidth/2);
+            }
+            else {
+              var newLeft = this.offsetLeft;
+            }
             setTimeout(function(){
               window.smoothScroll(newLeft,500,null,updates,'horizontal');
             }, 500);
