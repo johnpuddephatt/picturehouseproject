@@ -1,8 +1,8 @@
 html {
   box-sizing: border-box;
   height: 100%;
-  overflow-x: hidden;
-
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 *, *::before, *::after {
@@ -13,6 +13,7 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
+  position: relative;
 }
 
 body {

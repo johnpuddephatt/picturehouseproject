@@ -1,3 +1,25 @@
+.section--aims--inner {
+  position: relative;
+  &::after,
+  &::before {
+    content: "";
+    width: 1px;
+    background-color: $light-gray;
+    top: -5 * $base-spacing;
+    bottom: -$base-spacing;
+    z-index: 99999;
+    left: calc(37.5% + 1px);
+    position: absolute;
+    mix-blend-mode: darken;
+  }
+
+  &::after {
+    left: auto;
+    right: calc(37.5% + 1px);
+    top: 8 * $base-spacing;
+  }
+}
+
 .section--aims {
   margin-left: -3vw;
   padding-left: 3vw;
@@ -18,24 +40,7 @@
     margin-right: -4vw;
     padding-right: 4vw;
   }
-  &::after,
-  &::before {
-    content: "";
-    width: 1px;
-    background-color: $light-gray;
-    top: -5 * $base-spacing;
-    bottom: -$base-spacing;
-    z-index: 99999;
-    left: calc(37.5% + 1px);
-    position: absolute;
-    mix-blend-mode: darken;
-  }
 
-  &::after {
-    left: auto;
-    right: calc(37.5% + 1px);
-    top: 8 * $base-spacing;
-  }
 }
 
 .aims-wrapper {
