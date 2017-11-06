@@ -207,7 +207,7 @@
       -ms-user-select: none;
           user-select: none;
   margin-bottom: 0;
-  font-size: modular-scale(5);
+  font-size: modular-scale(4);
   color: $yellow;
   position: relative;
   z-index: 99;
@@ -215,6 +215,7 @@
   line-height: $heading-line-height;
   opacity: 0.85;
   @media screen and (min-width: $medium-screen) {
+    font-size: modular-scale(5);
     &::after {
       content: '';
       display: inline-block;
