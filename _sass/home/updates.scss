@@ -155,7 +155,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding: $small-spacing $base-spacing;
+  padding: $small-spacing;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: end;
@@ -165,6 +165,7 @@
           flex-direction: column;
   counter-increment: updates;
   @media screen and (min-width: $medium-screen) {
+    padding: $small-spacing $base-spacing;
     &::before {
       content: counter(updates) "-";
       font-size: modular-scale(12);
@@ -213,22 +214,23 @@
   font-family: $heading-font-family;
   line-height: $heading-line-height;
   opacity: 0.85;
-  &::after {
-    content: '';
-    display: inline-block;
-    height: .6em;
-    width: .6em;
-    margin-left: .1em;
-    margin-bottom: .1em;
-    background-color: $light-gray;
-    border-radius: 50%;
-    background-image: url(/assets/images/next-icon.svg);
-    transition: background-color $base-duration $base-timing;
-    background-size: 40% auto;
-    background-position: center;
-    background-repeat: no-repeat;
+  @media screen and (min-width: $medium-screen) {
+    &::after {
+      content: '';
+      display: inline-block;
+      height: .6em;
+      width: .6em;
+      margin-left: .1em;
+      margin-bottom: .1em;
+      background-color: $light-gray;
+      border-radius: 50%;
+      background-image: url(/assets/images/next-icon.svg);
+      transition: background-color $base-duration $base-timing;
+      background-size: 40% auto;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
-
 }
 
 .video-player {
