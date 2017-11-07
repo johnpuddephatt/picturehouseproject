@@ -149,7 +149,7 @@
   overflow: hidden;
   @media screen and (orientation:portrait) {
     -webkit-box-flex: 1;
-            flex: 1 1 75vw;
+            flex: 1 0 75vw;
   }
 
   img {
@@ -177,7 +177,7 @@
           flex-direction: column;
   @media screen and (orientation:portrait) {
     -webkit-box-flex: 1;
-            flex: 1 1 55%;
+            flex: 1 1 auto;
     padding: $base-spacing $small-spacing
   }
 
