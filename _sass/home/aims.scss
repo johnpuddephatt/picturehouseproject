@@ -200,12 +200,12 @@
       position: relative;
       z-index: 1;
 
-      &.aim-bw {
+      &.aim-color {
         position: absolute;
         transition: opacity (10 * $base-duration) $base-timing;
         width: 100%;
         background-color: transparent;
-        z-index: 2;
+        z-index: -1;
       }
     }
   }
