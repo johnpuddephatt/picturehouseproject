@@ -1,6 +1,4 @@
 ---
-pages:
-- _history/thelamppost.md
 hide_body: false
 fields:
 - name: title
