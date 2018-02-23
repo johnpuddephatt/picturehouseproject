@@ -13,3 +13,4 @@ collections:
     default_front_matter_template: timeline
   history:
     default_front_matter_template: history
+---
