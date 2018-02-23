@@ -200,7 +200,7 @@
       position: relative;
       z-index: 1;
 
-      &.bw {
+      &.aim-bw {
         position: absolute;
         transition: opacity (10 * $base-duration) $base-timing;
         width: 100%;
@@ -299,5 +299,18 @@
 
   .button {
     margin-top: $small-spacing;
+  }
+}
+
+.color {
+  opacity: 0;
+}
+
+.in-view {
+  .aim-bw {
+    opacity: 0;
+  }
+  .aim-color {
+    opacity: 1;
   }
 }
