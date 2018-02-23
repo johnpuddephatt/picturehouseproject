@@ -85,6 +85,7 @@
             flex: 0 0 33%;
     height: 45vw;
     border: solid $base-spacing transparent;
+  }
   @media screen and (min-width: $xl-screen) {
       -webkit-box-flex: 0;
               flex: 0 0 25%;
@@ -141,7 +142,6 @@
   &:hover .updates-date {
     color: $yellow
   }
-}
 }
 
 .updates-item-active {
