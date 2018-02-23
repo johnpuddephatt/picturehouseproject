@@ -209,6 +209,16 @@
         opacity: 0;
       }
     }
+
+    &.in-view {
+      .aim-bw {
+        opacity: 0;
+      }
+      .aim-color {
+        opacity: 1;
+        transition: opacity (10 * $base-duration) $base-timing;
+      }
+    }
   }
 
   .aim-text {
@@ -305,14 +315,4 @@
 
 .color {
   opacity: 0;
-}
-
-.in-view {
-  .aim-bw {
-    opacity: 0;
-  }
-  .aim-color {
-    opacity: 1;
-    transition: opacity (10 * $base-duration) $base-timing;
-  }
 }
