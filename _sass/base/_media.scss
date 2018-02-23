@@ -22,11 +22,12 @@ img {
 	opacity: 0;
   filter: blur(25px);
   transform: scale(1.1);
-	transition: opacity $base-duration * 5, filter $base-duration * 5, scale $base-duration * 5;
+	transition: opacity $base-duration * 5, filter $base-duration * 5, transform $base-duration * 5;
 }
 
 .fade-in.lazyloaded {
 	opacity: 1;
   transform: scale(1);
   filter: blur(0px);
+  transition: opacity 0ms, filter 0ms, transform 0ms;
 }
