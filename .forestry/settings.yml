@@ -7,7 +7,6 @@ auto_deploy: false
 admin_path:
 webhook_url:
 collections:
-sections:
   history:
     default_front_matter_template: history
   timeline:
