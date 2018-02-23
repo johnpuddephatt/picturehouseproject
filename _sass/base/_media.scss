@@ -22,7 +22,14 @@ img {
 	opacity: 0;
 	transition: opacity $base-duration * 5;
 }
+.lazyload, .lazyloading, .lazyloaded {
+  transition: opacity $base-duration * 5;
+}
 
-.fade-in.lazyloaded {
+.lazyload, .lazyloading {
+	opacity: 0;
+}
+
+.lazyloaded {
 	opacity: 1;
 }
