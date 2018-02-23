@@ -21,3 +21,6 @@ fields:
   type: datetime
   hidden: false
   default: ''
+- type: boolean
+  name: coming_soon
+  label: Coming soon?
