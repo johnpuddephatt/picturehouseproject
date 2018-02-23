@@ -11,4 +11,3 @@ fields:
   label: Image
   description: Upload a large colour image. It will automatically be resized and made
     black and white when necessary.
----
