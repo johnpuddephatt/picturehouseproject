@@ -40,13 +40,13 @@ slideshow:
   - 40-BW.jpg
 
 collections:
-  _updates:
+  updates:
     output: false
     default_front_matter_template: updates
-  _timeline:
+  timeline:
     output: false
     default_front_matter_template: timeline
-  _history:
+  history:
     output: false
     default_front_matter_template: history
 
