@@ -42,13 +42,13 @@ slideshow:
 collections:
   updates:
     output: false
-    default_front_matter_template: updates
+    default_front_matter_template: 'updates'
   timeline:
     output: false
-    default_front_matter_template: timeline
+    default_front_matter_template: 'timeline'
   history:
     output: false
-    default_front_matter_template: history
+    default_front_matter_template: 'history'
 
 cloudinary: letsdance
 

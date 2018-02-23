@@ -1,7 +1,6 @@
 ---
 title: The lamppost
 image: "/assets/images/41-COLOUR.jpg"
-date: 2018-02-23 15:50:56 +0000
 ---
 Our ornamental lamppost is an iconic part of the Picture House and like the main building, it is also Grade II listed. Originally a gas-lit, the lamp is now powered by electricity.
 
