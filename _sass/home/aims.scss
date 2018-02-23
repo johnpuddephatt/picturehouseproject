@@ -202,10 +202,10 @@
 
       &.aim-color {
         position: absolute;
-        transition: opacity 0ms $base-timing;
+        transition: opacity (10 * $base-duration) $base-timing;
         width: 100%;
         background-color: transparent;
-        z-index: -1;
+        z-index: 2;
         opacity: 0;
       }
     }
@@ -216,7 +216,6 @@
       }
       .aim-color {
         opacity: 1;
-        transition: opacity (10 * $base-duration) $base-timing;
       }
     }
   }
