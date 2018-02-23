@@ -20,11 +20,13 @@ img {
 
 .fade-in {
 	opacity: 0;
-  filter: blur(6px);
-	transition: opacity $base-duration * 5, filter $base-duration * 5;
+  filter: blur(25px);
+  transform: scale(1.1);
+	transition: opacity $base-duration * 5, filter $base-duration * 5, scale $base-duration * 5;
 }
 
 .fade-in.lazyloaded {
 	opacity: 1;
+  transform: scale(1);
   filter: blur(0px);
 }
