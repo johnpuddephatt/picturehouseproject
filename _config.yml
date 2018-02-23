@@ -40,15 +40,15 @@ slideshow:
   - 40-BW.jpg
 
 collections:
-  updates:
+  _updates:
     output: false
-    default_front_matter_template: 'updates'
-  timeline:
+    default_front_matter_template: updates
+  _timeline:
     output: false
-    default_front_matter_template: 'timeline'
-  history:
+    default_front_matter_template: timeline
+  _history:
     output: false
-    default_front_matter_template: 'history'
+    default_front_matter_template: history
 
 cloudinary: letsdance
 
