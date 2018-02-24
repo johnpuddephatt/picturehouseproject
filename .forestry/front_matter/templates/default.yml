@@ -1,0 +1,8 @@
+---
+hide_body: false
+fields:
+- name: image
+  label: Image
+  type: file
+  hidden: false
+  default: "/assets/images/opengraph.jpg"
