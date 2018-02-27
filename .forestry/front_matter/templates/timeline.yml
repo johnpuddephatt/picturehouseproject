@@ -1,0 +1,15 @@
+---
+hide_body: false
+fields:
+- name: title
+  label: Image
+  type: file
+  hidden: false
+  default: "/assets/images/opengraph.jpg"
+- type: datetime
+  name: date
+  label: Date
+  description: Updates are displayed in date order
+  config:
+    date_format: DD.MM.YY
+    required: true
