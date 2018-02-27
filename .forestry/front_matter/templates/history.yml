@@ -10,10 +10,3 @@ fields:
   name: image
   label: Image
   description: This will be auto cropped and resized
-- type: datetime
-  name: date
-  label: Date
-  description: Updates are displayed in date order
-  config:
-    date_format: DD.MM.YY
-    required: true
