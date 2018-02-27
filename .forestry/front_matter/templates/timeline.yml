@@ -8,7 +8,7 @@ fields:
 - type: datetime
   name: date
   label: Date
-  description: Updates are displayed in date order
+  description: Updates are displayed in date order. Times are irrelevant.
   config:
     date_format: DD.MM.YY
     required: true
