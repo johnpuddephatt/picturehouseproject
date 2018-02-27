@@ -7,5 +7,5 @@ auto_deploy: false
 admin_path:
 webhook_url:
 collections:
-  updates:
+  _updates:
     default_front_matter_template: updates
