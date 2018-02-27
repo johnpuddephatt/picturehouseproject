@@ -44,10 +44,20 @@ if(navigationButtons) {
       var item = this.parentNode.parentNode.parentNode;
       item.classList.remove('active');
       if(this.classList.contains('next')) {
-        item.nextElementSibling.classList.add('active');
+        if(item.nextElementSibling != null) {
+          item.nextElementSibling.classList.add('active');
+        }
+        else {
+          item.parentNode.firstElementChild.classList.add('active');
+        }
       }
       else if(this.classList.contains('previous')) {
-        item.previousElementSibling.classList.add('active');
+        if(item.previousElementSibling != null) {
+          item.previousElementSibling.classList.add('active');
+        }
+        else {
+          item.parentNode.lastElementChild.classList.add('active');
+        }
       }
 
     });
