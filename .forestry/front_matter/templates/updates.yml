@@ -6,3 +6,20 @@ fields:
   type: text
   hidden: false
   default: ''
+- type: text
+  label: Video
+  name: video
+  description: Enter youtube embed URL, e.g. https://www.youtube.com/embed/e9Fiazbsk94
+  config:
+    required: false
+- type: file
+  name: image
+  label: Image
+  description: This will be auto cropped and resized
+- type: datetime
+  name: date
+  label: Date
+  description: Updates are displayed in date order
+  config:
+    date_format: DD.MM.YY
+    required: true
