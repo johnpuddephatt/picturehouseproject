@@ -12,3 +12,7 @@ fields:
   config:
     date_format: DD.MM.YY
     required: true
+- type: boolean
+  name: year_only
+  label: Show year only
+  description: Enable this option to hide the date on this milestone
