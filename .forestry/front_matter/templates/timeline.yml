@@ -18,5 +18,5 @@ fields:
   label: Show year only
   description: Enable this option to hide the date on this milestone
 - type: boolean
-  label: Active
+  label: Current
   name: active_entry
