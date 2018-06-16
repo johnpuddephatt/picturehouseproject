@@ -1,5 +1,5 @@
 ---
-title: Backed by our friends
+title: Backed by the friends
 video: https://www.youtube.com/embed/e9Fiazbsk94
 image: "/assets/images/updates/friends.jpg"
 date: 14/11/2017
