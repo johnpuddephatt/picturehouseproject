@@ -3,7 +3,7 @@
 {% if include.pathonly != 'true' %}
 <img alt="{{  include.alt }}" src="
 {% endif %}
-http://res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_{{ include.width | default: "500"}},h_{{ include.height | default: "500"}}{{ include.quality | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }}/{{ site.url }}{{ site.baseurl }}{{ include.img }}
+http://res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_{{ include.width | default: "500"}}{{ include.quality | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }}/{{ site.url }}{{ site.baseurl }}{{ include.img }}
 {% if include.pathonly != 'true' %}"
  srcset="http://res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_100,e_colorize:100,q_1/{{ site.url }}{{ site.baseurl }}{{ include.img }} {{ include.width | default: "500"}}w"
  width="{{ include.width | default: 500 }}"
