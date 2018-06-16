@@ -1,5 +1,6 @@
 ---
-date: 01/12/2018
+date: 2018-06-01 18:00:00 +0100
 title: Planning approval
+year_only: false
 ---
-Following consultation and conversations with the relevant planning and heritage bodies, the project aims to secure planning approval, before formal submission to the Heritage Lottery Fund in the spring for Round 2 approval.
+Following consultation with consultees and the Leeds City planning team, Planning Permission and Listed building Consent have been granted for the Picture House Project.
