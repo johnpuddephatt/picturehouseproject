@@ -1,0 +1,249 @@
+.section--explore {
+
+}
+
+.explore--sidebar {
+  padding-top: 2 * $base-spacing;
+  padding-left: 1.5 * $base-spacing;
+}
+
+.explore--sidebar--heading {
+  font-size: modular-scale(7);
+  font-family: $heading-font-family;
+  text-transform: uppercase;
+}
+
+.explore--video--button {
+  position: absolute;
+  background-color: transparentize($yellow,.25);
+  border-radius: 50%;
+  width: 4 * $base-spacing;
+  height: 4 * $base-spacing;
+  text-indent: -99999px;
+  appearance: none;
+  border: none;
+  z-index: 999;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%,50%) scale(1);
+  color: white;
+  transition: opacity 1s ease-in-out, bottom 1s ease-in-out, right 1s ease-in-out;
+  .playing & {
+    opacity: 0;
+  }
+  [data-stage] & {
+    top: auto;
+    transform: none;
+    left: auto;
+    transform: translate(50%,50%) scale(.75);
+    bottom: 2 * $base-spacing;
+    right: 2 * $base-spacing;
+  }
+  &::before {
+    content: '';
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    border: .15em solid $yellow;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 1s $base-timing, transform 1s $base-timing;
+  }
+  &:hover {
+    background-color: $yellow;
+    &::before {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+  &:hover, &:focus {
+    outline: none;
+  }
+}
+.explore--inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.explore--video-wrapper {
+  flex: 0 0 75%;
+  padding-top: 42.19%;
+  position: relative;
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.hotspots {
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+
+.hotspot {
+  line-height: 1.5 * $base-spacing;
+  height: 1.5 * $base-spacing;
+  width: 1.5 * $base-spacing;
+  background-color: white;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 999;
+  position: absolute;
+  transition: background-color $base-duration $base-timing;
+  &::before, &::after {
+    content: '';
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    border: .15em solid $yellow;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(1);
+  }
+  &::before {
+    animation: pulse 8s 5s linear infinite;
+  }
+  &::after {
+    transition: opacity 1s $base-timing, transform 1s $base-timing;
+  }
+  &:hover {
+    background-color: $yellow;
+    &::after {
+      opacity: 1;
+      transform: scale(1.25);
+    }
+  }
+  &:nth-child(2) {
+    animation-delay: .5s !important;
+    &::before {
+      animation-delay: 6s !important;
+    }
+  }
+  &:nth-child(3) {
+    animation-delay: 1s !important;
+    &::before {
+      animation-delay:7s !important;
+    }
+  }
+  &:nth-child(4) {
+    animation-delay: 1.5s !important;
+    &::before {
+      animation-delay: 8s !important;
+    }
+  }
+  &:nth-child(5) {
+    animation-delay: 2s !important;
+    &::before {
+      animation-delay: 9s !important;
+    }
+  }
+
+}
+
+.hotspots-0 .hotspot {
+  top: 30%;
+  left: 20%;
+  &:nth-child(2) {
+    left: 75%;
+    top: 60%;
+  }
+  &:nth-child(3) {
+    left: 10%;
+    top: 80%;
+  }
+}
+
+.hotspots-1 .hotspot {
+  top: 10%;
+  left: 60%;
+  &:nth-child(2) {
+    left: 50%;
+    top: 50%;
+  }
+  &:nth-child(3) {
+    left: 80%;
+    top: 35%;
+  }
+}
+
+[data-nearstage="0"] .hotspots-0 .hotspot,
+[data-nearstage="1"] .hotspots-1 .hotspot,
+[data-stage="0"] .hotspots-0 .hotspot,
+[data-stage="1"] .hotspots-1 .hotspot {
+  animation: pop-in 1s forwards;
+}
+
+[data-stage="0"] .hotspots-0,
+[data-stage="1"] .hotspots-1 {
+  z-index: 99;
+}
+
+
+
+.playing[data-stage="0"] .hotspots-0 .hotspot,
+.playing[data-stage="1"] .hotspots-1 .hotspot {
+  animation: pop-out 1s forwards;
+  opacity: 1;
+}
+
+.near {
+  opacity: .5;
+}
+
+// .playing .hotspots .hotspot {
+//   opacity: 0 !important;
+//   animation: none;
+// }
+
+
+@keyframes pop-in {
+0% { opacity: 0; transform: scale(0.5); }
+100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pop-out {
+0% { opacity: 1; transform: scale(1); }
+100% { opacity: 0; transform: scale(0.5); }
+}
+
+
+@keyframes pulse-hold {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}

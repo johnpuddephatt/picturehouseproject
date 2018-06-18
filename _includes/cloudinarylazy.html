@@ -3,12 +3,12 @@
 {% if include.pathonly != 'true' %}
 <img alt="{{  include.alt }}" src="
 {% endif %}
-http://res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_{{ include.width | default: "500"}}{{ include.quality | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }}/{{ site.url }}{{ site.baseurl }}{{ include.img | replace: ' ', '%20'}}
+http://res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_{{ include.width | default: "500"}}{% if include.height %},h_{{ include.height }}{% endif %}{{ include.quality | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }}/{{ site.url }}{{ site.baseurl }}{{ include.img | replace: ' ', '%20'}}
 {% if include.pathonly != 'true' %}"
  srcset="http://res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_100,e_colorize:100,q_1/{{ site.url }}{{ site.baseurl }}{{ include.img | replace: ' ', '%20' }} {{ include.width | default: "500"}}w"
  width="{{ include.width | default: 500 }}"
  height="{{ include.height | default: 500}}"
- data-srcset="{% for breakpoint in site.breakpoints %} http://res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_{{ breakpoint }}{{ include.quality | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }}/{{ site.url }}{{ site.baseurl }}{{ include.img | replace: ' ', '%20' }} {{ breakpoint }}w{% if forloop.last == false %}, {% endif %}{% endfor %}"
+ data-srcset="{% for breakpoint in site.breakpoints %} http://res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_{{ breakpoint }}{% if include.height %},h_{{ breakpoint | times: include.height | divided_by: include.width }}{% endif %}{{ include.quality | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }}/{{ site.url }}{{ site.baseurl }}{{ include.img | replace: ' ', '%20' }} {{ breakpoint }}w{% if forloop.last == false %}, {% endif %}{% endfor %}"
  sizes="{{ include.sizes | default: "100vw" }}"
  class="{{include.class}} lazyload"
 />{% endif %}
