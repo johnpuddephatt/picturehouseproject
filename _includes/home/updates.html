@@ -6,7 +6,7 @@
     <div class="updates-scroller">
       {% for update in site.updates | sort: date %}
         <div class="updates-item" {% if (update.video) %}data-video="{{ update.video }}"{% endif %}>
-          {% include cloudinarylazy.html class="updates-image" img=update.image modes="e_grayscale" width="600" height="450" sizes="(min-width: 900px) 30vw, 45vw" quality="85" %}
+          {% include cloudinarylazy.html class="updates-image" img=update.image modes="c_fill,e_grayscale" width="450" height="580" sizes="(min-width: 900px) 30vw, 45vw" quality="85" %}
           <div class="updates-inner">
             <h3 class="updates-date">{% if (update.video == true) %}Coming soon{% else %}{{ update.date | date: "%d.%m.%y" }}{% endif %}</h3>
             <h4 class="updates-title">{{ update.title }}</h4>
