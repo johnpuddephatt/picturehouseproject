@@ -310,8 +310,8 @@ body.loading {
 .hero-image, .hero-video {
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: center 60%;
+     object-position: center 60%;
     transition: opacity 4s 8s ease-out;
 }
 
