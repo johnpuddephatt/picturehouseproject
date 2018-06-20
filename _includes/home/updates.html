@@ -3,7 +3,7 @@
   <h2 class="section-title" data-secondaryheading="updates">Project updates.</h2>
 
   <div class="updates-wrapper">
-    <div class="updates-scroller">
+    <div class="updates-scroller" style="counter-reset: updates {{ site.updates | size | plus: 1 }}">
       {% assign updates = site.updates | sort: date | reverse %}
       {% for update in updates %}
         <div class="updates-item" {% if (update.video) %}data-video="{{ update.video }}"{% endif %}>

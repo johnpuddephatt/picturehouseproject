@@ -49,7 +49,6 @@
   position: relative;
   cursor: -webkit-grab;
   cursor: grab;
-  counter-reset: updates;
   &.grabbing {
     cursor: -webkit-grabbing;
     cursor: grabbing;
@@ -163,7 +162,7 @@
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  counter-increment: updates;
+  counter-increment: updates -1;
   @media screen and (min-width: $medium-screen) {
     padding: $small-spacing $base-spacing;
     &::before {

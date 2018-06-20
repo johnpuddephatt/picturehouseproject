@@ -15,8 +15,8 @@ var modelMakerButton = document.querySelector('.explore--sidebar__model-maker__b
 modelMakerButton.addEventListener('click', function(){
   var videoSection = document.getElementById('updates');
   window.smoothScroll(videoSection,500, function(){
-    document.querySelector('.updates-item[data-video="https://www.youtube.com/embed/XKdnNauPHVc"]').click();
-  });
+    document.querySelector('.updates-item[data-video="https://www.youtube.com/embed/VmAUl2-jXA0"]').click();
+  },null,'vertical', 100);
 
 });
 

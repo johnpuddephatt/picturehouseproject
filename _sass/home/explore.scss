@@ -1,14 +1,23 @@
+.highlight {
+  border-left: $small-spacing/2 solid #ffd80d;
+  display: block;
+  padding: $small-spacing/4 0 $small-spacing/4 $small-spacing/2;
+  margin-top: $base-spacing;
+}
+
 .section--explore {
   counter-reset: hotspot;
 }
 
 .explore--inner {
+  margin-top: 2 * $base-spacing;
+  margin-bottom: 4 * $base-spacing;
   position: relative;
   display: flex;
-  min-height: 90vh;
+  // min-height: 90vh;
   justify-content: center;
   flex-direction: column;
-  @media screen and (orientation: landscape) {
+  @media screen and (orientation: landscape) and (min-width: $large-screen) {
     flex-direction: row;
     justify-content: flex-start;
     min-height: unset;
@@ -18,11 +27,15 @@
 .explore--sidebar {
   padding-top: $base-spacing;
   position: relative;
-  @media screen and (orientation: landscape) {
+  @media screen and (orientation: landscape) and (min-width: $large-screen) {
     position: static;
-    padding-top: 1.5 * $base-spacing;
+    padding-top: 0;
     padding-left: $base-spacing;
   }
+  @media screen and (min-width: $vl-screen) {
+    padding-top: 1.5 * $base-spacing;
+  }
+
   p:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
@@ -34,15 +47,16 @@
   font-family: $heading-font-family;
   text-transform: uppercase;
   margin-bottom: $small-spacing;
-  font-size: modular-scale(5);
+  font-size: modular-scale(4);
   @media screen and (orientation: landscape) {
-    margin-bottom: $base-spacing;
   }
   @media screen and (min-width: $large-screen) {
-    font-size: modular-scale(7);
+    font-size: modular-scale(5);
   }
-  @media screen and (min-width: $xl-screen) {
+  @media screen and (min-width: $vl-screen) {
     font-size: modular-scale(7);
+    margin-bottom: $base-spacing;
+
   }
 }
 
@@ -111,15 +125,11 @@ body.js {
 
 #explore--sidebar__intro {
   p {
-    display: none;
-    @media screen and (min-width: $large-screen) {
-      display: block;
-    }
   }
 }
 #explore--sidebar__instructions {
   position: absolute;
-  top: 100%;
+  top: 0;
   @media screen and (orientation: landscape) {
     bottom: 0;
     top: auto;
@@ -127,13 +137,27 @@ body.js {
 }
 
 #explore--sidebar__model-maker {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  @media screen and (min-width: $vl-screen) {
+    text-align: center;
+    display: block;
+  }
+  p {
+    margin-bottom: 0;
+  }
+
+}
+
+.explore--sidebar__model-maker__image-container {
+  flex: 0 0 20%;
+  margin-right: $small-spacing;
 }
 
 .explore--sidebar__model-maker__image {
   border-radius: 50%;
   width: 4 * $base-spacing;
-  @media screen and (orientation: landscape) {
+  @media screen and (min-width: $vl-screen) {
     width: 6 * $base-spacing;
   }
   display: block;
@@ -144,11 +168,12 @@ body.js {
   font-family: $heading-font-family;
   text-transform: uppercase;
   font-size: modular-scale(3);
-  @media screen and (orientation: landscape) {
+  @media screen and (min-width: $vl-screen) {
     font-size: modular-scale(5);
   }
   margin-bottom: $small-spacing;
 }
+
 
 .explore--sidebar__model-maker__button {
   background-color: transparentize($yellow,.25);
@@ -162,14 +187,16 @@ body.js {
   width: 1.5 * $base-spacing;
   height: 1.5 * $base-spacing;
   line-height: 1.5 * $base-spacing;
-
+  float: right;
+  text-indent: -9999px;
   @media screen and (orientation: landscape) {
     width: 2.5 * $base-spacing;
     height: 2.5 * $base-spacing;
     line-height: 2.5 * $base-spacing;
   }
-
-  text-indent: -9999px;
+  @media screen and (min-width: $vl-screen) {
+    float: none;
+  }
   &::after {
     content: '';
     display: block;
@@ -298,11 +325,14 @@ body.js {
     left: 0;
     top: 100%;
     width: 100%;
-    padding-top: $base-spacing;
-    @media screen and (orientation: landscape) {
+    padding-top:0;
+    @media screen and (orientation: landscape) and (min-width: $large-screen) {
       left: 100%;
       padding-top: 0;
-      width: 33.3%;
+      width: 66.666%;
+      @media screen and (min-width: $vl-screen) {
+        width: 33.3%;
+      }
       padding-left: $base-spacing;
       top: 0;
     }
@@ -314,9 +344,13 @@ body.js {
 .explore--video-wrapper {
   width: 100%;
   padding-top: 56.25%;
-  @media screen and (orientation: landscape) {
-    padding-top: 42.19%;
-    flex: 0 0 75%;
+  @media screen and (orientation: landscape) and (min-width: $large-screen) {
+    padding-top: 33.75%;
+    flex: 0 0 60%;
+    @media screen and (min-width: $vl-screen) {
+      padding-top: 42.19%;
+      flex: 0 0 75%;
+    }
     margin: auto 0;
   }
 
@@ -349,10 +383,13 @@ body.js {
   left: $small-spacing;
   top: 0;
   @media screen and (orientation: landscape) {
-    font-size: modular-scale(4);
-    left: $base-spacing;
-    top: auto;
-    bottom: $small-spacing;
+    font-size: modular-scale(3);
+    @media screen and (min-width: $vl-screen) {
+      font-size: modular-scale(4);
+      left: $base-spacing;
+      top: auto;
+      bottom: $small-spacing;
+    }
   }
   line-height: 2 * $base-spacing;
   color: white;

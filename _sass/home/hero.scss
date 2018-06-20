@@ -65,7 +65,7 @@ body.loading {
   left: 0;
   right: 0;
   z-index: 999;
-  top: 10%;
+  top: 3 * $base-spacing;
   font-size: modular-scale(1);
   p {
     margin-bottom: 0;
@@ -90,8 +90,8 @@ body.loading {
       left: 0;
       top: -50vh;
       bottom: -50vh;
-      -webkit-animation-name: containerlines;
-              animation-name: containerlines;
+      -webkit-animation-name: textlines;
+              animation-name: textlines;
       -webkit-animation-timing-function: cubic-bezier(.27,.09,.4,.88);
               animation-timing-function: cubic-bezier(.27,.09,.4,.88);
       -webkit-animation-duration: 4s;
@@ -139,14 +139,14 @@ body.loading {
             animation-delay: 1s;
     left: 0;
     top: auto;
-    bottom: 15%;
+    bottom: 2 * $base-spacing;
     &::after {
       -webkit-animation-delay: .5s;
               animation-delay: .5s;
     }
     &::before {
-      -webkit-animation-delay: 1.5s;
-              animation-delay: 1.5s;
+      -webkit-animation-delay: 1.75s;
+              animation-delay: 1.75s;
     }
     p::after {
       -webkit-animation-delay: 1s;
@@ -180,29 +180,36 @@ body.loading {
   //   }
   //
   // }
-  // &--3 {
-  //   -webkit-animation-delay: 9s;
-  //           animation-delay: 9s;
-  //   left: 0;
-  //   &::after {
-  //     -webkit-animation-delay: 9.5s;
-  //             animation-delay: 9.5s;
-  //   }
-  //   &::before {
-  //     -webkit-animation-delay: 8.5s;
-  //             animation-delay: 8.5s;
-  //   }
-  //   p::after {
-  //     -webkit-animation-delay: 9s;
-  //             animation-delay: 9s;
-  //   }
-  // }
-  &--4 {
-    font-size: modular-scale(1);
-    // -webkit-animation-delay: 13s;
-    //         animation-delay: 13s;
+  &--3 {
     -webkit-animation-delay: 5s;
             animation-delay: 5s;
+    left: auto;
+    right: $base-spacing;
+    p {
+      float: right;
+      text-align: right;
+    }
+
+    &::after {
+      -webkit-animation-delay: 4.5s;
+              animation-delay: 4.5s;
+    }
+    &::before {
+      -webkit-animation-delay: 4s;
+              animation-delay: 4s;
+    }
+    p::before {
+      content: '';
+      -webkit-animation-delay: 3.5s;
+              animation-delay: 3.5s;
+    }
+  }
+  &--4 {
+    font-size: modular-scale(1);
+    // -webkit-animation-delay: 14s;
+    //         animation-delay: 14s;
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
     right: $base-spacing;
     -webkit-animation-name: justin;
             animation-name: justin;
@@ -215,8 +222,7 @@ body.loading {
     p {
       float: right;
       text-align: right;
-      color: white;
-      text-shadow: #000 0 0 150px;
+      animation: color-change 1s 9s linear forwards;
       line-height: $heading-line-height;
       &::after, &::before {
         width: 1px;
@@ -232,8 +238,8 @@ body.loading {
                 animation-name: textlines;
         -webkit-animation-timing-function: cubic-bezier(.27,.09,.4,.88);
                 animation-timing-function: cubic-bezier(.27,.09,.4,.88);
-        -webkit-animation-duration: 4s;
-                animation-duration: 4s;
+        -webkit-animation-duration: 5s;
+                animation-duration: 5s;
         -webkit-animation-fill-mode: forwards;
                 animation-fill-mode: forwards;
       }
@@ -247,10 +253,15 @@ body.loading {
       font-size: modular-scale(3);
     }
 
-    &::after, &::before,
-    p::after, p::before {
-      -webkit-animation-delay: 5s;
-              animation-delay: 5s;
+    &::after,
+    p::after {
+      -webkit-animation-delay: 10s;
+              animation-delay: 10s;
+    }
+    &::before,
+    p::before {
+      -webkit-animation-delay: 9.5s;
+              animation-delay: 9.5s;
     }
   }
 }
@@ -275,10 +286,10 @@ body.loading {
 }
 
 .hero-image {
-  background-image: url("./images/HPPH_sketch.jpg");
+  // background-image: url("./images/HPPH_sketch.jpg");
   // filter: grayscale(.65);
   background-size: cover;
-  background-position: 50% 66%;
+  background-position: 50% 50%;
 }
 // @supports ((-o-object-fit: cover) or (object-fit: cover)) {
 //   .hero-video, .hero-image {
@@ -296,7 +307,7 @@ body.loading {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  transition: opacity 5s $base-timing 5s;
+    transition: opacity 4s 8s ease-out;
 }
 
 
@@ -440,5 +451,11 @@ body.loading {
   100% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
+  }
+}
+
+@keyframes color-change {
+  100% {
+    color: white;
   }
 }

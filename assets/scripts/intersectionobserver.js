@@ -4,7 +4,7 @@ var options = {
 
 };
 
-var images = document.querySelectorAll('.aim-image .aim-bw');
+var images = document.querySelectorAll('.fadeIntersectionObserver');
 
 var callback =  function(entries, observer) {
   entries.forEach(entry => {
