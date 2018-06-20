@@ -216,12 +216,8 @@ body.js {
 
 
 
-.canplaythrough ~ .explore--video--button {
-  opacity: 1;
-}
 
 .explore--video--button {
-  opacity: 0;
   position: absolute;
   background-color: transparentize($yellow,.25);
   border-radius: 50%;

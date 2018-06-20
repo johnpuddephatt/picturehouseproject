@@ -1,6 +1,6 @@
 // var times = [0,6.6,12,16.5,20.5];
 
-var times = [0,8.2,15,20.35,25.5,32.7];
+var times = [0.01,8.2,15,20.35,25.5,32.7];
 var transition = 1.5;
 var near;
 
@@ -13,9 +13,6 @@ var videoInstructions = document.querySelector('#explore--sidebar__instructions'
 
 var modelMakerButton = document.querySelector('.explore--sidebar__model-maker__button');
 
-video.addEventListener('canplaythrough',function(){
-  video.classList.add('canplaythrough');
-});
 
 modelMakerButton.addEventListener('click', function(){
   var videoSection = document.getElementById('updates');
