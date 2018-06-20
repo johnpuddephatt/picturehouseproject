@@ -10,7 +10,12 @@ var intervalRewind;
 var videoIntro = document.querySelector('#explore--sidebar__intro');
 var videoInstructions = document.querySelector('#explore--sidebar__instructions');
 
+
 var modelMakerButton = document.querySelector('.explore--sidebar__model-maker__button');
+
+video.addEventListener('canplaythrough',function(){
+  video.classList.add('canplaythrough');
+});
 
 modelMakerButton.addEventListener('click', function(){
   var videoSection = document.getElementById('updates');
