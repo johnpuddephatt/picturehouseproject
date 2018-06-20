@@ -219,6 +219,7 @@ body.js {
 
 .explore--video--button {
   position: absolute;
+  padding: 0;
   background-color: transparentize($yellow,.25);
   border-radius: 50%;
   font-size: modular-scale(1);

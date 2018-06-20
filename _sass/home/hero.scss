@@ -252,7 +252,10 @@ body.loading {
       }
     }
     p:last-child {
-      font-size: modular-scale(3);
+      font-size: modular-scale(2);
+      @media screen and (min-width: $large-screen) {
+        font-size: modular-scale(3);
+      }
     }
 
     &::after,
