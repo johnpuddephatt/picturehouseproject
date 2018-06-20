@@ -101,7 +101,7 @@ exploreButton.addEventListener('click', function(){
     var stage = videoWrapper.dataset.stage;
     var target = parseInt(stage) + 1;
     if (target >= times.length) {
-      video.currentTime = 0;
+      video.currentTime = 0.01;
       videoInstructions.classList.add('hidden');
       videoIntro.classList.remove('hidden');
 
