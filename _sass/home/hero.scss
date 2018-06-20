@@ -65,7 +65,7 @@ body.loading {
   left: 0;
   right: 0;
   z-index: 999;
-  top: 15%;
+  top: 10%;
   font-size: modular-scale(1);
   p {
     margin-bottom: 0;
@@ -222,7 +222,7 @@ body.loading {
         width: 1px;
         background-color: $light-gray;
         display: block;
-        opacity: .25;
+        opacity: .15;
         position: absolute;
         content: '';
         right: 0;
@@ -275,10 +275,10 @@ body.loading {
 }
 
 .hero-image {
-  background-image: url("./images/HPPH.jpg");
-  filter: grayscale(.65);
+  background-image: url("./images/HPPH_sketch.jpg");
+  // filter: grayscale(.65);
   background-size: cover;
-  background-position: center;
+  background-position: 50% 66%;
 }
 // @supports ((-o-object-fit: cover) or (object-fit: cover)) {
 //   .hero-video, .hero-image {

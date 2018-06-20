@@ -31,7 +31,9 @@
 
       <script>
         AOS.init();
-        var rellax = new Rellax('.aim-number');
+        var rellax = new Rellax('.aim-number', {
+          center: true
+        });
       </script>
     {% endif %}
 
@@ -39,6 +41,8 @@
     <script>
       document.addEventListener('DOMContentLoaded', function(){
         document.querySelector('body').classList.remove('loading');
+        document.querySelector('body').classList.add('js');
+
       });
     </script>
 
