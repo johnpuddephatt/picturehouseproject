@@ -282,6 +282,7 @@ body.js {
     transition: opacity 1s $base-timing, bottom 0s $base-timing, right 0s $base-timing;
     &::after {
       background-image: url(/assets/images/replay-icon.svg);
+      background-size: 40%;
     }
   }
   &::before {
