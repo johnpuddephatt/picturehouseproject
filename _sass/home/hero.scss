@@ -205,7 +205,9 @@ body.loading {
     }
   }
   &--4 {
-    font-size: modular-scale(1);
+    @media screen and (min-width: $medium-screen) {
+      font-size: modular-scale(1);
+    }
     // -webkit-animation-delay: 14s;
     //         animation-delay: 14s;
     -webkit-animation-delay: 10s;

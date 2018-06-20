@@ -228,6 +228,7 @@ body.js {
   font-size: modular-scale(1);
   width: 2.5 * $base-spacing;
   height: 2.5 * $base-spacing;
+  text-align: center;
   line-height: 2.5 * $base-spacing;
   @media screen and (orientation: landscape) {
     font-size: modular-scale(2);
