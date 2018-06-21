@@ -114,7 +114,10 @@ exploreButton.addEventListener('click', function(){
       seekVideo('forwards',target);
     }
   }
-  gtag('event', 'modelVideo', { 'value' : parseInt(videoWrapper.dataset.stage) + 1 });
+  gtag('event', 'modelVideo', {
+    'event_label': 'stage ' + (parseInt(videoWrapper.dataset.stage) + 1),
+    'value' : parseInt(videoWrapper.dataset.stage) + 1
+  });
 
 
 });
