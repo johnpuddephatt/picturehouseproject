@@ -65,4 +65,4 @@ defaults:
 - scope:
     path: ""
   values:
-    image: /assets/images/opengraph.jpg
+    image: /assets/images/opengraph-new.jpg

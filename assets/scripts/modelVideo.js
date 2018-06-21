@@ -84,6 +84,7 @@ function playUntil(direction,targetTime,target) {
 var exploreButton = document.querySelector('.explore--video--button');
 
 exploreButton.addEventListener('click', function(){
+
   var currentActiveHotspot = document.querySelector('.hotspot.active');
   if(currentActiveHotspot) {
     var currentActiveTarget = document.querySelector('.explore--sidebar--content.active');
@@ -112,8 +113,14 @@ exploreButton.addEventListener('click', function(){
     else {
       seekVideo('forwards',target);
     }
-
   }
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'Videos',
+    eventAction: 'play',
+    eventLabel: 'Model video',
+    eventValue: videoWrapper.dataset.stage
+  });
 
 });
 
