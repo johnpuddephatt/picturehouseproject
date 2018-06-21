@@ -114,13 +114,8 @@ exploreButton.addEventListener('click', function(){
       seekVideo('forwards',target);
     }
   }
-  ga('send', {
-    hitType: 'event',
-    eventCategory: 'Videos',
-    eventAction: 'play',
-    eventLabel: 'Model video',
-    eventValue: videoWrapper.dataset.stage
-  });
+  gtag('event', 'modelVideo', { stage : videoWrapper.dataset.stage });
+
 
 });
 
