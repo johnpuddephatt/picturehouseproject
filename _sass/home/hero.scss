@@ -64,9 +64,8 @@ body.loading {
   position: absolute;
   left: 0;
   right: 0;
-
   z-index: 999;
-  bottom: 40%;
+  top: 3 * $base-spacing;
   font-size: modular-scale(1);
   p {
     margin-bottom: 0;
@@ -91,8 +90,8 @@ body.loading {
       left: 0;
       top: -50vh;
       bottom: -50vh;
-      -webkit-animation-name: containerlines;
-              animation-name: containerlines;
+      -webkit-animation-name: textlines;
+              animation-name: textlines;
       -webkit-animation-timing-function: cubic-bezier(.27,.09,.4,.88);
               animation-timing-function: cubic-bezier(.27,.09,.4,.88);
       -webkit-animation-duration: 4s;
@@ -132,20 +131,22 @@ body.loading {
       }
     }
     p:last-child {
-      font-size: modular-scale(3);
+      font-size: modular-scale(2);
     }
   }
   &--1 {
     -webkit-animation-delay: 1s;
             animation-delay: 1s;
     left: 0;
+    top: auto;
+    bottom: 2 * $base-spacing;
     &::after {
       -webkit-animation-delay: .5s;
               animation-delay: .5s;
     }
     &::before {
-      -webkit-animation-delay: 1.5s;
-              animation-delay: 1.5s;
+      -webkit-animation-delay: 1.75s;
+              animation-delay: 1.75s;
     }
     p::after {
       -webkit-animation-delay: 1s;
@@ -154,52 +155,63 @@ body.loading {
 
 
   }
-  &--2 {
+  // &--2 {
+  //   -webkit-animation-delay: 5s;
+  //           animation-delay: 5s;
+  //   right: 0;
+  //   p {
+  //     float: right;
+  //   }
+  //   &::after {
+  //     -webkit-animation-delay: 5.5s;
+  //             animation-delay: 5.5s;
+  //   }
+  //   &::before {
+  //     -webkit-animation-delay: 4.5s;
+  //             animation-delay: 4.5s;
+  //   }
+  //   p::after {
+  //     content: none;
+  //   }
+  //   p::before {
+  //     content: '';
+  //     -webkit-animation-delay: 5s;
+  //             animation-delay: 5s;
+  //   }
+  //
+  // }
+  &--3 {
     -webkit-animation-delay: 5s;
             animation-delay: 5s;
-    right: 0;
+    left: auto;
+    right: $base-spacing;
     p {
       float: right;
+      text-align: right;
     }
+
     &::after {
-      -webkit-animation-delay: 5.5s;
-              animation-delay: 5.5s;
-    }
-    &::before {
       -webkit-animation-delay: 4.5s;
               animation-delay: 4.5s;
     }
-    p::after {
-      content: none;
+    &::before {
+      -webkit-animation-delay: 4s;
+              animation-delay: 4s;
     }
     p::before {
       content: '';
-      -webkit-animation-delay: 5s;
-              animation-delay: 5s;
-    }
-
-  }
-  &--3 {
-    -webkit-animation-delay: 9s;
-            animation-delay: 9s;
-    left: 0;
-    &::after {
-      -webkit-animation-delay: 9.5s;
-              animation-delay: 9.5s;
-    }
-    &::before {
-      -webkit-animation-delay: 8.5s;
-              animation-delay: 8.5s;
-    }
-    p::after {
-      -webkit-animation-delay: 9s;
-              animation-delay: 9s;
+      -webkit-animation-delay: 3.5s;
+              animation-delay: 3.5s;
     }
   }
   &--4 {
-    font-size: modular-scale(5);
-    -webkit-animation-delay: 13s;
-            animation-delay: 13s;
+    @media screen and (min-width: $medium-screen) {
+      font-size: modular-scale(1);
+    }
+    // -webkit-animation-delay: 14s;
+    //         animation-delay: 14s;
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
     right: $base-spacing;
     -webkit-animation-name: justin;
             animation-name: justin;
@@ -212,14 +224,49 @@ body.loading {
     p {
       float: right;
       text-align: right;
-      color: white;
-      text-shadow: #000 0 0 150px;
+      animation: color-change 1s 9s linear forwards;
       line-height: $heading-line-height;
+      &::after, &::before {
+        width: 1px;
+        background-color: $light-gray;
+        display: block;
+        opacity: .15;
+        position: absolute;
+        content: '';
+        right: 0;
+        top: -50vh;
+        bottom: -50vh;
+        -webkit-animation-name: textlines;
+                animation-name: textlines;
+        -webkit-animation-timing-function: cubic-bezier(.27,.09,.4,.88);
+                animation-timing-function: cubic-bezier(.27,.09,.4,.88);
+        -webkit-animation-duration: 5s;
+                animation-duration: 5s;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+      }
+      &::after {
+        left: 0;
+        content: '';
+        right: auto;
+      }
     }
-    &::after, &::before,
-    p::after, p::before {
-      -webkit-animation-delay: 13s;
-              animation-delay: 13s;
+    p:last-child {
+      font-size: modular-scale(2);
+      @media screen and (min-width: $large-screen) {
+        font-size: modular-scale(3);
+      }
+    }
+
+    &::after,
+    p::after {
+      -webkit-animation-delay: 10s;
+              animation-delay: 10s;
+    }
+    &::before,
+    p::before {
+      -webkit-animation-delay: 9.5s;
+              animation-delay: 9.5s;
     }
   }
 }
@@ -235,7 +282,7 @@ body.loading {
   background-color: $light-gray;
 }
 
-.hero-image, .hero-video {
+.hero-video {
   display: none;
 
   &.hero-image-holding {
@@ -243,28 +290,29 @@ body.loading {
   }
 }
 
-.hero-image-fallback {
-  background-image: url("./images/40-BW.jpg");
+.hero-image {
+  // background-image: url("./images/HPPH_sketch.jpg");
+  // filter: grayscale(.65);
   background-size: cover;
-  background-position: center;
+  background-position: 50% 50%;
 }
-@supports ((-o-object-fit: cover) or (object-fit: cover)) {
-  .hero-video, .hero-image {
-    display: block;
-  }
-
-  .hero-image-fallback {
-    display: none;
-    background-image: none;
-  }
-}
+// @supports ((-o-object-fit: cover) or (object-fit: cover)) {
+//   .hero-video, .hero-image {
+//     display: block;
+//   }
+//
+//   .hero-image-fallback {
+//     display: none;
+//     background-image: none;
+//   }
+// }
 
 .hero-image, .hero-video {
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  transition: opacity 5s $base-timing 13s;
+  -o-object-position: center 60%;
+     object-position: center 60%;
+    transition: opacity 4s 8s ease-out;
 }
 
 
@@ -408,5 +456,11 @@ body.loading {
   100% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
+  }
+}
+
+@keyframes color-change {
+  100% {
+    color: white;
   }
 }

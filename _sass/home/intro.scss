@@ -42,15 +42,28 @@
 
   .intro-image {
     margin-bottom: $base-spacing;
-
+    position: relative;
     @media screen and (min-width: $medium-screen) {
       margin-right: $base-spacing;
       margin-bottom: 0;
+    }
+    .intro-day {
+      position: absolute;
+      transition: opacity (10 * $base-duration) $base-timing;
+      width: 100%;
+      background-color: transparent;
+      z-index: 2;
+      opacity: 0;
     }
 
     img {
       display: block;
       width: 100%;
+    }
+    &.in-view {
+      .intro-day {
+        opacity: 1;
+      }
     }
   }
 

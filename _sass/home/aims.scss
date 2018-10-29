@@ -158,7 +158,8 @@
     .aim-number {
       left: -1.5 * $base-spacing;
       right: auto;
-      bottom: 0;
+      top: auto;
+      bottom: -20 * $base-spacing;
 
       &::before {
         content: "";
@@ -268,7 +269,8 @@
     color: $yellow;
     position: absolute;
     right: -1.5 * $base-spacing;
-    bottom: -6 * $base-spacing;
+    top: -3 * $base-spacing;
+    // bottom: 0;
     font-family: $heading-font-family;
     margin-bottom: 0;
     line-height: 1;
