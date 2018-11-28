@@ -1,4 +1,5 @@
 ---
+label: timeline
 hide_body: false
 is_partial: false
 fields:
@@ -20,3 +21,20 @@ fields:
 - type: boolean
   label: Current
   name: active_entry
+pages:
+- _timeline/feasibility_study.md
+- _timeline/planning_approval.md
+- _timeline/fundraising_planning.md
+- _timeline/engineers_appointed.md
+- _timeline/friends_board_meetings.md
+- _timeline/early_feasibility_study.md
+- _timeline/cinemas_centenary.md
+- _timeline/HLF_round_2_approval.md
+- _timeline/architects_appointed.md
+- _timeline/HLF_midstage_review.md
+- _timeline/friends_pledge_support.md
+- _timeline/structural_surveys.md
+- _timeline/further_appointments.md
+- _timeline/project_tendering.md
+- _timeline/reopening.md
+- _timeline/works_commence.md

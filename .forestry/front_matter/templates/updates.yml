@@ -1,4 +1,5 @@
 ---
+label: updates
 hide_body: true
 is_partial: false
 fields:
@@ -24,3 +25,12 @@ fields:
   config:
     date_format: DD.MM.YY
     required: true
+pages:
+- _updates/meet-the-model-maker.md
+- _updates/conserving-our-building.md
+- _updates/meettheengineers.md
+- _updates/meetthearchitects.md
+- _updates/glasgow-field-trip.md
+- _updates/consulting-with-audiences.md
+- _updates/thestorysofar.md
+- _updates/backedbyfriends.md
