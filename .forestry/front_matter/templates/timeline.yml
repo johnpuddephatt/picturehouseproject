@@ -22,6 +22,7 @@ fields:
   label: Current
   name: active_entry
 pages:
+- _timeline/hlf-confirm-£2-3mil-grant.md
 - _timeline/feasibility_study.md
 - _timeline/planning_approval.md
 - _timeline/fundraising_planning.md
