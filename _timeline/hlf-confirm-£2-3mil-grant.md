@@ -5,4 +5,4 @@ year_only: false
 active_entry: true
 
 ---
-The Heritage Lottery Fund approve the project, confirming the full £2.3million grant and allowing the project to enter its delivery stage. Vital match-funding support also confirmed by Leeds City Council and the Garfield Weston Foundation.
+The Heritage Lottery Fund approve the project, confirming the full £2.3million grant, allowing the project to enter its delivery stage. Vital match-funding support also confirmed by Leeds City Council and the Garfield Weston Foundation.
