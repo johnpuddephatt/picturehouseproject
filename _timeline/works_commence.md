@@ -1,5 +1,5 @@
 ---
-date: 2019-09-01 19:00:00 +0100
+date: 2020-01-02 19:00:00 +0000
 title: Works commence
 year_only: false
 active_entry: false
