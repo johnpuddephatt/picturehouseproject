@@ -21,6 +21,7 @@ fields:
   label: Current
   name: active_entry
 pages:
+- _timeline/project_tendering.md
 - _timeline/HLF_round_2_approval.md
 - _timeline/hlf-confirm-£2-3mil-grant.md
 - _timeline/cinemas_centenary.md
@@ -33,7 +34,6 @@ pages:
 - _timeline/fundraising_planning.md
 - _timeline/works_commence.md
 - _timeline/reopening.md
-- _timeline/project_tendering.md
 - _timeline/further_appointments.md
 - _timeline/structural_surveys.md
 - _timeline/friends_pledge_support.md
