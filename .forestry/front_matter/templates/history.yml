@@ -12,15 +12,15 @@ fields:
   label: Image
   description: This will be auto cropped and resized
 pages:
-- _history/gaslights.md
+- _history/35mmprojectors.md
 - _history/auditorium.md
+- _history/clock.md
 - _history/firehydrant.md
+- _history/fireplace.md
+- _history/gaslights.md
+- _history/managersoffice.md
 - _history/stainedglass.md
+- _history/staircase.md
 - _history/terazzotiles.md
 - _history/thelamppost.md
-- _history/managersoffice.md
-- _history/staircase.md
 - _history/ticketbooth.md
-- _history/35mmprojectors.md
-- _history/fireplace.md
-- _history/clock.md
