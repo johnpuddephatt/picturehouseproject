@@ -6,4 +6,4 @@ active_entry: false
 published: false
 
 ---
-Whilst building works take place at the Picture House, the cinema's On the Road programme begins, with 12 months of pop-up screenings taking place in venues across the city.
+As the Picture House prepares to close, the cinema's On the Road programme begins, with 12 months of pop-up screenings taking place in venues across the city.
