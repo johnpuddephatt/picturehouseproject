@@ -1,8 +1,8 @@
 ---
-date: 2020-01-02 19:00:00 +0000
-title: Works commence
+date: 2020-03-01 19:00:00 +0000
+title: Cinema closes
 year_only: false
 active_entry: false
 
 ---
-Full building works to be carried out, resulting in a period of cinema closure - during which time the cinema will continue to operate across other venues, with a touring film programme.
+The cinema closes its doors for 12 months as restoration and new building works are carried out. 
