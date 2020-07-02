@@ -46,6 +46,8 @@ collections:
     output: false
   history:
     output: false
+  gallery:
+    output: false
 
 cloudinary: letsdance
 

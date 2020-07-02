@@ -1,0 +1,49 @@
+<section class="section section--gallery" id="gallery">
+
+  <h2 class="section-title" data-secondaryheading="gallery">Gallery</h2>
+  <div class="container--gallery">
+    <div class="gallery-wrapper">
+      <div class="gallery-scroller">
+        {% for item in site.gallery %}
+          <div data-target="#gallery-item-{{ forloop.index }}-overlay" class="gallery-item" style="transition-duration: 2000ms">
+            {% include cloudinarylazy.html img=item.image width="600" height="450" sizes="(min-width: 900px) 45vw, 100vw" quality="85" modes="c_fill,e_grayscale" %}
+            <h3 class="gallery-item-title">{{ item.title }}</h3>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-lightboxes">
+    {% for item in site.gallery %}
+      <div class="lightbox" id="gallery-item-{{ forloop.index }}-overlay">
+        {% assign slideIndex = forloop.index %}
+        <div class="lightbox-image">
+          <div style="position: relative;">
+            {% include cloudinarylazy.html img=item.image width="900" height="675" sizes="(min-width: 900px) 70vw, 100vw" quality="85" %}
+            {% for marker in item.markers %}
+              <div class="hotspot gallery-hotspot" data-target="gallery--hotspot-{{slideIndex }}-{{ forloop.index }}" style="left: {{ marker.x}}%; top: {{ marker.y }}%">{{ forloop.index }}</div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="lightbox-text">
+          <h3>{{ item.title }}</h3>
+          <div class="lightbox-text-inner">
+            {{item.content | markdownify }}
+          </div>
+          <div class="lightbox-marker-content">
+            {% for marker in item.markers %}
+              <div class="lightbox-text-marker highlight" id="gallery--hotspot-{{slideIndex }}-{{ forloop.index }}">
+                <h3>{{ marker.title }}</h3>
+                <p>{{ marker.text }}</p>
+              </div>
+            {% endfor %}
+          </div>
+
+          <div class="lightbox-navigation"><a href="#" class="previous">Previous</a><a href="#" class="next">Next</a><a href="#" class="close">Close</a></div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+</section>

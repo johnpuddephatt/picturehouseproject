@@ -138,8 +138,9 @@
   &:hover .updates-title::after {
     background-color: $yellow;
   }
-  &:hover .updates-date {
-    color: $yellow
+  &:hover .updates-date,
+  &:hover::before {
+    color: white
   }
 }
 
@@ -172,10 +173,10 @@
       z-index: 99;
       line-height: 1;
       font-family: $heading-font-family;
-      color: $yellow;
+      color: white;
       margin-bottom: 0;
       display: block;
-      opacity: 0.85;
+      opacity: 0.2;
       text-indent: -0.05em;
     }
   }

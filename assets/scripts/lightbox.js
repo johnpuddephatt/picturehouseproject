@@ -10,7 +10,7 @@ if(!("nextElementSibling" in document.documentElement)){
     });
 }
 
-var historyItems = document.querySelectorAll('.history-item');
+var historyItems = document.querySelectorAll('.gallery-item');
 
 if(historyItems) {
   for(var i = 0; i < historyItems.length; i++) {

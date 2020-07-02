@@ -23,7 +23,7 @@
   grid-auto-flow: dense;
 }
 
-.history-item {
+.gallery-item {
   @media screen and (min-width: $medium-screen) {
     float: left;
     width: 25%;
@@ -76,7 +76,7 @@
     transition-delay: 2 * $base-duration;
   }
 
-  &:hover .history-item-title::after {
+  &:hover .gallery-item-title::after {
     background-color: $yellow;
   }
 
@@ -85,7 +85,7 @@
   }
 }
 
-.history-item-title {
+.gallery-item-title {
   line-height: 2 * $base-spacing;
   font-weight: 400;
   color: $base-font-color;
@@ -196,7 +196,8 @@
 .lightbox-text-inner {
   -webkit-box-flex: 0;
           flex: 0 1 auto;
-  overflow: auto
+  overflow: auto;
+  margin-bottom: auto;
 }
 
 /* Close button */
@@ -208,7 +209,6 @@
   -webkit-box-pack: justify;
           justify-content: space-between;
   padding: $small-spacing 0 0;
-  margin-top: auto;
   @media screen and (orientation:portrait) {
     -webkit-box-pack: start;
             justify-content: flex-start;

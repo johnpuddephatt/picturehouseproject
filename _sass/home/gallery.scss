@@ -1,0 +1,120 @@
+.gallery-wrapper {
+  position: relative;
+  margin: (2 * $base-spacing) (-$base-spacing);
+
+  &::after,
+  &::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    display: block;
+    left: -1px;
+    top: 0;
+    height: 100%;
+    width: 2 * $base-spacing;
+    @media screen and (min-width: $medium-screen) {
+      width: 4 * $base-spacing;
+    }
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    z-index: 99;
+  }
+
+  &::after {
+    left: auto;
+    right: -1px;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+}
+
+.gallery-scroller {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  padding-right: 2 * $base-spacing;
+  cursor: -webkit-grab;
+  cursor: grab;
+  &.grabbing {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+
+    .gallery-item {
+      pointer-events: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 1px;
+    flex: 0 0 1px;
+  }
+
+  .gallery-item {
+    flex: 0 0 60%;
+    margin: 0 $base-spacing;
+    user-select: none;
+
+    &:last-child {
+      margin-right: 2 * $base-spacing;
+    }
+
+    img {
+      transition: 3 * $base-duration $base-timing;
+
+      &:hover {
+        filter: brightness(1.07);
+      }
+    }
+  }
+}
+
+.gallery-scroller::-webkit-scrollbar {
+  height: 0;
+}
+
+
+
+@for $i from 0 through 5 {
+  .lightbox.active .hotspot
+   {
+    animation: pop-in 1s forwards;
+  }
+  .lightbox.inactive .hotspot {
+    animation: pop-out 1s forwards;
+    opacity: 1;
+  }
+}
+
+
+.lightbox-marker-content {
+  position: relative;
+
+  .highlight {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: $small-spacing;
+    opacity: 0;
+    transform: translateY($small-spacing);
+    z-index: -999;
+    transition: all 3 * $base-duration $base-timing;
+
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+      z-index: 9;
+    }
+
+    h3 {
+      margin-bottom: $small-spacing/2;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
