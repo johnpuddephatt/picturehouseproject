@@ -6,7 +6,7 @@
       <div class="gallery-scroller">
         {% for item in site.gallery %}
           <div data-target="#gallery-item-{{ forloop.index }}-overlay" class="gallery-item" style="transition-duration: 2000ms">
-            {% include cloudinarylazy.html img=item.image width="600" height="450" sizes="(min-width: 900px) 45vw, 100vw" quality="85" modes="c_fill,e_grayscale" %}
+            {% include cloudinarylazy.html img=item.image width="600" height="350" sizes="(min-width: 900px) 65vw, 100vw" quality="85" modes="c_fill,e_grayscale" %}
             <h3 class="gallery-item-title">{{ item.title }}</h3>
           </div>
         {% endfor %}
