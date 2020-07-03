@@ -12,33 +12,32 @@
         {{ content }}
     </main>
 
-    {% if page.layout == 'home' %}
 
-      <script type="text/javascript" src="/assets/scripts/scrollSpy.js"></script>
-      <script type="text/javascript" src="/assets/scripts/timeline.js"></script>
-      <script type="text/javascript" src="/assets/scripts/updates.js"></script>
-      <script type="text/javascript" src="/assets/scripts/rellax.js"></script>
-      <script type="text/javascript" src="/assets/scripts/aims.js"></script>
-      <script type="text/javascript" src="/assets/scripts/gallery.js"></script>
-      <script type="text/javascript" src="/assets/scripts/modelVideo.js"></script>
-      <script type="text/javascript" src="/assets/scripts/aos.js"></script>
-      <script type="text/javascript" src="/assets/scripts/navigation.js"></script>
-      <script type="text/javascript" src="/assets/scripts/lazysizes.min.js"></script>
-      <script type="text/javascript" src="/assets/scripts/countUp.min.js"></script>
-      <script type="text/javascript" src="/assets/scripts/intersectionobserver.polyfill.js"></script>
-      <script type="text/javascript" src="/assets/scripts/intersectionobserver.js"></script>
-      <script type="text/javascript" src="/assets/scripts/lightbox.js"></script>
+    <script type="text/javascript" src="/assets/scripts/scrollSpy.js"></script>
+    <script type="text/javascript" src="/assets/scripts/timeline.js"></script>
+    <script type="text/javascript" src="/assets/scripts/updates.js"></script>
+    <script type="text/javascript" src="/assets/scripts/rellax.js"></script>
+    <script type="text/javascript" src="/assets/scripts/aims.js"></script>
+    <script type="text/javascript" src="/assets/scripts/gallery.js"></script>
+    <script type="text/javascript" src="/assets/scripts/modelVideo.js"></script>
+    <script type="text/javascript" src="/assets/scripts/aos.js"></script>
+    <script type="text/javascript" src="/assets/scripts/navigation.js"></script>
+    <script type="text/javascript" src="/assets/scripts/lazysizes.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/countUp.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/intersectionobserver.polyfill.js"></script>
+    <script type="text/javascript" src="/assets/scripts/intersectionobserver.js"></script>
+    <script type="text/javascript" src="/assets/scripts/lightbox.js"></script>
 
-      <script>
-        document.addEventListener('DOMContentLoaded', function(){
-          AOS.init();
-          var rellax = new Rellax('.aim-number', {
-            center: true
-          });
-          setTimeout(function(){AOS.init()},3000);
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        AOS.init();
+        var rellax = new Rellax('.aim-number', {
+          center: true
         });
-      </script>
-    {% endif %}
+        setTimeout(function(){AOS.init()},3000);
+      });
+    </script>
+
 
     <script type="text/javascript" src="/assets/scripts/smoothscroll.min.js"></script>
 

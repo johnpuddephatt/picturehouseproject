@@ -27,7 +27,9 @@
     for(var i=0; i<navLinks.length; i++) {
       navLinks[i].classList.remove(activeClass);
     }
-    document.querySelector('a[href="#'+id+'"]').classList.add(activeClass);
+    if(document.querySelector('a[href="#'+id+'"]')) {
+      document.querySelector('a[href="#'+id+'"]').classList.add(activeClass);
+    }
   }
 
   container.addEventListener('scroll', function(event) {

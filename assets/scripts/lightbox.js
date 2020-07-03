@@ -11,12 +11,13 @@ if(!("nextElementSibling" in document.documentElement)){
 }
 
 var historyItems = document.querySelectorAll('.gallery-item');
-
+console.log(historyItems);
 if(historyItems) {
   for(var i = 0; i < historyItems.length; i++) {
     historyItems[i].addEventListener('click', function(e){
       e.preventDefault();
       var target = document.querySelector(this.dataset.target);
+      console.log(target);
       target.classList.add('active');
     });
   }
