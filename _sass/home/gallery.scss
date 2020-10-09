@@ -82,10 +82,10 @@
 @for $i from 0 through 5 {
   .lightbox.active .hotspot
    {
-    animation: pop-in 1s forwards;
+    animation: hotspot-pop-in 1s forwards;
   }
   .lightbox.inactive .hotspot {
-    animation: pop-out 1s forwards;
+    animation: hotspot-pop-out 1s forwards;
     opacity: 1;
   }
 }

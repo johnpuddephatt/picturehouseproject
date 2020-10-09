@@ -41,7 +41,18 @@ if (gallery) {
 
   galleryLightBoxWrapper = document.querySelector('.gallery-lightboxes');
   if(galleryLightBoxWrapper) {
+
+
+
     galleryLightBoxWrapper.addEventListener('click', function(e){
+      if(galleryLightBoxWrapper.classList.contains('debug')) {
+        if(e.target.tagName == 'IMG') {
+          var rect = e.target.getBoundingClientRect();
+          var xPercent = (((e.clientX - rect.left) / e.target.clientWidth * 100).toFixed(1));
+          var yPercent = (((e.clientY - rect.top) / e.target.clientHeight * 100).toFixed(1));
+          alert(`x: ${xPercent}%, y: ${yPercent}%`);
+        }
+      }
       if(e.target.classList.contains('gallery-hotspot')) {
         var target = document.querySelector('#' + e.target.dataset.target);
 
@@ -67,4 +78,5 @@ if (gallery) {
 
 
 }
+
 

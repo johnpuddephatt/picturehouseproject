@@ -414,6 +414,7 @@ body.js {
   z-index: 999;
   position: absolute;
   box-shadow: 0 0 1.5em transparentize($dark-gray, 0.5);
+  transform: translate(-50%,-50%);
   transition: background-color 1s $base-timing;
   &.active {
     background-color: $yellow;
@@ -542,17 +543,21 @@ body.js {
 
 @for $i from 0 through 5 {
   [data-nearstage="#{$i}"] .hotspot--layer__layer-#{$i} .hotspot,
-  [data-stage="#{$i}"] .hotspot--layer__layer-#{$i} .hotspot,
+  [data-stage="#{$i}"] .hotspot--layer__layer-#{$i} .hotspot {
+    animation: hotspot-pop-in 1s forwards;
+  }
   [data-stage="#{$i}"] .hotspot--layer__layer-#{$i} .hotspot--layer--title,
   [data-nearstage="#{$i}"] .hotspot--layer__layer-#{$i} .hotspot--layer--title
-
-   {
+  {
     animation: pop-in 1s forwards;
   }
   [data-stage="#{$i}"] .hotspot--layer__layer-#{$i} {
     z-index: 99;
   }
-  .playing[data-stage="#{$i}"] .hotspot--layer__layer-#{$i} .hotspot,
+  .playing[data-stage="#{$i}"] .hotspot--layer__layer-#{$i} .hotspot {
+    animation: hotspot-pop-out 1s forwards;
+    opacity: 1;
+  }
   .playing[data-stage="#{$i}"] .hotspot--layer__layer-#{$i} .hotspot--layer--title {
     animation: pop-out 1s forwards;
     opacity: 1;
@@ -560,15 +565,24 @@ body.js {
 }
 
 @keyframes pop-in {
-0% { opacity: 0; transform: scale(0.5); }
-100% { opacity: 1; transform: scale(1); }
+  0% { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 @keyframes pop-out {
-0% { opacity: 1; transform: scale(1); }
-100% { opacity: 0; transform: scale(0.5); }
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.5); }
 }
 
+@keyframes hotspot-pop-in {
+  0% { opacity: 0; transform: translate(-50%,-50%) scale(0.5); }
+  100% { opacity: 1; transform: translate(-50%,-50%) scale(1); }
+}
+
+@keyframes hotspot-pop-out {
+0% { opacity: 1; transform: translate(-50%,-50%) scale(1); }
+100% { opacity: 0; transform: translate(-50%,-50%) scale(0.5); }
+}
 
 @keyframes pulse-hold {
   0% {
