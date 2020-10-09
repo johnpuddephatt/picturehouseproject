@@ -17,23 +17,23 @@ fields:
   - type: file
     name: file
   - type: field_group_list
-      name: markers
-      label: "Image hotspots"
-      fields:
-      - type: text
-        name: title
-        label: "Image title"
-      - type: textarea
-        name: text
-        label: "Image text"
-      - type: text
-        name: x
-        label: "X coordinate"
-        description: Coordinates are percentage based with top left origin.
-      - type: text
-        name: y
-        label: "Y coordinate"
-        description: Coordinates are percentage based with top left origin.
+    name: markers
+    label: "Image hotspots"
+    fields:
+    - type: text
+      name: title
+      label: "Image title"
+    - type: textarea
+      name: text
+      label: "Image text"
+    - type: text
+      name: x
+      label: "X coordinate"
+      description: Coordinates are percentage based with top left origin.
+    - type: text
+      name: y
+      label: "Y coordinate"
+      description: Coordinates are percentage based with top left origin.
   config:
     labelField: title
 pages:
