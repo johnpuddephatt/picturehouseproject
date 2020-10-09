@@ -29,11 +29,11 @@ fields:
     - type: text
       name: x
       label: "X coordinate"
-      description: Coordinates are percentage based with top left origin.
+      description: Coordinates are percentage based. Origin is top left.
     - type: text
       name: y
       label: "Y coordinate"
-      description: Coordinates are percentage based with top left origin.
+      description: Coordinates are percentage based. Origin is top left.
   config:
     labelField: title
 pages:

@@ -59,6 +59,11 @@
     margin: 0 $base-spacing;
     user-select: none;
 
+    @media screen and (orientation: portrait) {
+      flex: 0 0 85%;
+      margin-right: 0;
+    }
+
     &:last-child {
       margin-right: 2 * $base-spacing;
     }
