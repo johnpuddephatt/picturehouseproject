@@ -30,6 +30,10 @@ images:
 - file: "/uploads/renders/entrance_foyer_2.jpg"
   title: ''
   markers:
+  - title: Accessible serving point
+    text: ''
+    x: "65.8"
+    y: "62.3"
   - title: Toilet
     text: New, large, wheelchair accessible toilet.
     x: "50"
@@ -46,4 +50,4 @@ images:
 ---
 The first thing you’ll see when you enter is our new expanded entrance foyer.
 
-Our current foyer is very small and during busy screenings it regularly becomes overwhelmed. This new entrance is double in size, and houses a new accessible box office and bar – as well as a wheelchair accessible toilet.
+Our current foyer is very small and during busy screenings it regularly becomes overwhelmed. This new entrance is double the size, and houses a new accessible box office and bar – as well as a wheelchair accessible toilet.
