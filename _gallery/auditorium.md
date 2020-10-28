@@ -4,7 +4,12 @@ images:
 - file: "/uploads/renders/auditorium_2.jpg"
   title: Image specific title
   markers:
-  - title: Image tile 3
+  - title: Item title 4
+    text: 'The cinema’s two 35mm projectors will be maintained, and a new digital
+      projector installed – accompanied by a new 7.1 surround sound speaker system. '
+    x: "50"
+    y: "23.7"
+  - title: Item title 3
     text: 'Repair work will be carried out to the front of the original ornate balcony. '
     x: " 72.5"
     y: "36.4"
