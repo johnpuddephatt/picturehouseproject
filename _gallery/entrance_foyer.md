@@ -44,7 +44,7 @@ images:
     x: "50"
     y: "50"
   - title: Accessible serving point
-    text: ''
+    text: Ensuring the cinema is welcoming for all audiences.
     x: "65.8"
     y: "62.3"
 
