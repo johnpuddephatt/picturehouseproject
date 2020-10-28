@@ -2,12 +2,12 @@
 title: Basement auditorium
 images:
 - file: "/uploads/renders/basement_cinema.jpg"
-  title: Image one
+  title: ''
   markers:
-  - title: Item title
-    text: foo, bar, baz...
-    x: "60"
-    y: "60"
+  - title: Access
+    text: 'This auditorium will be fully accessible and house two wheelchair spaces. '
+    x: "14"
+    y: "75"
   - title: Item 2 title
     text: something else here...
     x: "10"
