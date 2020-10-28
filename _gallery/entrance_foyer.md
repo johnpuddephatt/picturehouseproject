@@ -4,29 +4,29 @@ images:
 - file: "/uploads/renders/entrance_foyer.jpg"
   title: ''
   markers:
-  - title: Decorative mantle
-    text: Restoration work carried out to decorative mantle above what used to be
-      the cinema's old fireplace.
-    x: "35.5"
-    y: "24"
-  - title: Ticket booth
-    text: 'Existing ticket booth to be kept and brought into use for select shows. '
-    x: "78"
-    y: "55"
-  - title: Floor
-    text: Original and restored terrazzo tiled floor revealed.
-    x: "57"
-    y: "85"
   - title: Box office
     text: 'Larger, accessible box office, allowing up to four customers to be served
       at once – reducing queueing times. '
     x: "27"
     y: "67"
+  - title: Decorative mantle
+    text: Restoration work carried out to decorative mantle above what used to be
+      the cinema's old fireplace.
+    x: "35.5"
+    y: "24"
   - title: Refreshments
     text: 'More substantial food and drink available – including a greater variety
       of hot, cold and alcoholic drinks, as well as sweet and savoury snacks. '
     x: "50"
     y: "50"
+  - title: Floor
+    text: Original and restored terrazzo tiled floor revealed.
+    x: "57"
+    y: "85"
+  - title: Ticket booth
+    text: 'Existing ticket booth to be kept and brought into use for select shows. '
+    x: "78"
+    y: "55"
 - file: "/uploads/renders/entrance_foyer_2.jpg"
   title: ''
   markers:
