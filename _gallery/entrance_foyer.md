@@ -30,6 +30,10 @@ images:
 - file: "/uploads/renders/entrance_foyer_2.jpg"
   title: ''
   markers:
+  - title: Toilet
+    text: New, large, wheelchair accessible toilet.
+    x: "50"
+    y: "50"
   - title: Window
     text: 'Restoration work carried out on original stained glass window. '
     x: "9"
