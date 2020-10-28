@@ -8,10 +8,11 @@ images:
     text: 'This auditorium will be fully accessible and house two wheelchair spaces. '
     x: "14"
     y: "75"
-  - title: Item 2 title
-    text: something else here...
-    x: "10"
-    y: "80"
+  - title: Sound insulation
+    text: Built as a box within a box, lots of hidden engineering will be utilised
+      to ensure that sound travelling to and from this space is as limited possible.
+    x: "50"
+    y: "19"
 - file: "/uploads/renders/basement_cinema_2.jpg"
   title: Image two
   markers:
