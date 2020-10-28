@@ -19,8 +19,8 @@ images:
   - title: Seating
     text: 'This room will be used to provide additional seating at certain busier
       points during the day, when the ground-floor cafe-bar becomes more full. '
-    x: "55.7"
-    y: "67.5"
+    x: "11"
+    y: "78"
 
 ---
 Located on the first floor, this new room will prove invaluable to the cinema. 
