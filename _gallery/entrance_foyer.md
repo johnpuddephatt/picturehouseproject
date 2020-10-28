@@ -4,10 +4,11 @@ images:
 - file: "/uploads/renders/entrance_foyer.jpg"
   title: Image one
   markers:
-  - title: Item title
-    text: foo, bar, baz...
-    x: "60"
-    y: "60"
+  - title: Box office
+    text: 'Larger, accessible box office, allowing up to four customers to be served
+      at once – reducing queueing times. '
+    x: "27"
+    y: "67"
   - title: Item 2 title
     text: something else here...
     x: "10"
