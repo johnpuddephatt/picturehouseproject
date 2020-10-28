@@ -4,10 +4,11 @@ images:
 - file: "/uploads/renders/basement_foyer.jpg"
   title: ''
   markers:
-  - title: Item title
-    text: foo, bar, baz...
-    x: "60"
-    y: "60"
+  - title: Seating
+    text: 'New cosy seating area, allowing any refreshments bought upstairs to be
+      enjoyed before a film. '
+    x: "74"
+    y: "87"
   - title: Item 2 title
     text: something else here...
     x: "10"
