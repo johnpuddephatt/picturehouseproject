@@ -35,9 +35,9 @@ images:
     x: "9"
     y: "25"
   - title: Item 2 title
-    text: something else here...
-    x: "10"
-    y: "80"
+    text: 'New accessible entrance to main auditorium, which includes acoustic lobby. '
+    x: "40"
+    y: "30"
 
 ---
 The first thing you’ll see when you enter is our new expanded entrance foyer.
