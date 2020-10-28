@@ -25,10 +25,10 @@ images:
     text: 'Dedicated serving point, allowing customers to buy and collect refreshments. '
     x: "11"
     y: "34.5"
-  - title: Item 2 title
-    text: something else here...
-    x: "10"
-    y: "80"
+  - title: Original wall
+    text: 'Original exterior wall revealed and incorporated into seating area. '
+    x: "74.5"
+    y: "33"
 
 ---
 One of the biggest improvements to the Picture House will be the creation of a new cafe/bar area, located within a ground-floor extension, which runs alongside the existing building.
