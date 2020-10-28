@@ -14,4 +14,6 @@ images:
     y: "83"
 
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Our existing auditorium will feel largely the same, maintaining the special charm and character which is so important to our building.
+
+Many improvements will still be made however, from restoration and repair work to original heritage features, to a new and improved seating and projection equipment.
