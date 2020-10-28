@@ -21,6 +21,10 @@ images:
 - file: "/uploads/renders/ground_floor_extension.jpg"
   title: ''
   markers:
+  - title: Seating
+    text: 'Seating for up to 20 people in this ground-floor space. '
+    x: "86"
+    y: "60"
   - title: Bar
     text: 'Dedicated serving point, allowing customers to buy and collect refreshments. '
     x: "11"
