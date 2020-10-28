@@ -9,10 +9,11 @@ images:
       toilets to seven.
     x: "43.4"
     y: "50.8"
-  - title: Item 2 title
-    text: something else here...
-    x: "10"
-    y: "80"
+  - title: Seating
+    text: 'This room will be used to provide additional seating at certain busier
+      points during the day, when the ground-floor cafe-bar becomes more full. '
+    x: "55.7"
+    y: "67.5"
 
 ---
 Located on the first floor, this new room will prove invaluable to the cinema. 
