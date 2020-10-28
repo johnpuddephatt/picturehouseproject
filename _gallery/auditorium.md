@@ -7,7 +7,7 @@ images:
   - title: Item title
     text: New seating will be installed throughout – replacing the current seating
       which has come to the end of its 15 year life. The new red seats will be just
-      as comfy and in a respectful and traditional style.
+      as comfy as before, and in a traditional style.
     x: "49"
     y: "72"
   - title: Item 2 title
