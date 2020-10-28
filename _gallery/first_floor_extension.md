@@ -27,6 +27,6 @@ images:
     y: "51.7"
 
 ---
-Located on the first floor, this new room will prove invaluable to the cinema. 
+Located on the first floor, this new room will prove invaluable to the Picture House.
 
 As well as housing new toilets and additional seating, this multi-functional space will also be a place local schools, universities and community groups can use throughout the day.
