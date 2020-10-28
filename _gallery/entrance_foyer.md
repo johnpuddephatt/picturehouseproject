@@ -4,6 +4,14 @@ images:
 - file: "/uploads/renders/entrance_foyer.jpg"
   title: Image one
   markers:
+  - title: Ticket booth
+    text: 'Existing ticket booth to be kept and brought into use for select shows. '
+    x: "78"
+    y: "55"
+  - title: Floor
+    text: Original and restored terrazzo tiled floor revealed.
+    x: "57"
+    y: "85"
   - title: Box office
     text: 'Larger, accessible box office, allowing up to four customers to be served
       at once – reducing queueing times. '
