@@ -21,6 +21,10 @@ images:
 - file: "/uploads/renders/ground_floor_extension.jpg"
   title: ''
   markers:
+  - title: Stairs & lift
+    text: Stairs and platform lift leading to both basement and first-floor areas.
+    x: "64.2"
+    y: "36.2"
   - title: Seating
     text: 'Seating for up to 20 people in this ground-floor space. '
     x: "86"
