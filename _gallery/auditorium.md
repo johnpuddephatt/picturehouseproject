@@ -14,7 +14,7 @@ images:
     text: 'Significant repair work will be carried out to the cinema’s unique gas
       lamps – which we''ll continue to maintain and light every day. '
     x: "9.7"
-    y: "5.5"
+    y: "48.7"
 
 ---
 Our existing auditorium will feel largely the same, maintaining the special charm and character which is so important to our building.
