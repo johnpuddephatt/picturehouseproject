@@ -15,12 +15,12 @@ images:
     x: "55.8"
     y: "40.7"
   - title: Toilets
-    text: Two gender neutral toilets will be located here.
+    text: Two gender neutral toilets will be located in the basement.
     x: "60.5"
     y: "55"
   - title: Seating
     text: 'New cosy seating area, allowing any refreshments bought upstairs to be
-      enjoyed before a film. '
+      enjoyed before the film. '
     x: "74"
     y: "87"
 

@@ -25,4 +25,4 @@ images:
     y: "13"
 
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+This brand-new second screen, located directly underneath the existing building, will transform the Picture House’s film programme – allowing us to show an even greater number of brilliant independent films, as well as host more non-film events including talks and live events.
