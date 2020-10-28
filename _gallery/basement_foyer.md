@@ -4,6 +4,11 @@ images:
 - file: "/uploads/renders/basement_foyer.jpg"
   title: ''
   markers:
+  - title: Entrance
+    text: 'Access to new basement auditorium, which houses the Picture House’s second
+      screen. '
+    x: "14.7"
+    y: "36.5"
   - title: Stairs & lift
     text: 'Stairwell leading up to the ground-floor will be accompanied by a platform
       lift, providing wheelchair access all levels.  '
