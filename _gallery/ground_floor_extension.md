@@ -1,8 +1,12 @@
 ---
 title: Cafe/bar
 images:
-- title: Image one
+- title: ''
   file: "/uploads/2020/10/28/hpph-4-ground-floor-connection.jpg"
+  markers:
+  - text: 'Large windows overlooking new ramped entrance outside. '
+    x: "13"
+    y: "32"
 - file: "/uploads/renders/ground_floor_extension.jpg"
   title: Image two
   markers:
@@ -16,4 +20,6 @@ images:
     y: "80"
 
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+One of the biggest improvements to the Picture House will be the creation of a new cafe/bar area, located within a ground-floor extension, which runs alongside the existing building.
+
+This space will allow visitors to enjoy refreshments before or after the film – or simply pop in for a drink with friends. It means no more waiting outside in the cold if you arrive early – helping to make the cinema more open, accessible and welcoming for our community.
