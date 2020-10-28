@@ -5,8 +5,8 @@ images:
   title: ''
   markers:
   - title: Seating
-    text: 'This room will be used to provide additional seating at certain busier
-      points during the day, when the ground-floor cafe-bar becomes more full. '
+    text: This room will be used to provide additional seating at certain points during
+      the day, when the ground-floor cafe-bar becomes busier.
     x: "11"
     y: "78"
   - title: Stairs & lift
