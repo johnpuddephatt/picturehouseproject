@@ -38,4 +38,4 @@ images:
 ---
 Our existing auditorium will feel largely the same, maintaining the special charm and character which is so important to our building.
 
-Many improvements will still be made however, from restoration and repair work to original heritage features, to a new and improved seating and projection equipment.
+Many improvements will still be made however, from restoration and repair work, to and new projection technologies.
