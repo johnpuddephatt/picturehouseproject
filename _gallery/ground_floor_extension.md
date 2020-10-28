@@ -27,7 +27,7 @@ images:
     y: "34.5"
   - title: Original wall
     text: 'Original exterior wall revealed and incorporated into seating area. '
-    x: "74.5"
+    x: "47.2"
     y: "33"
   - title: Stairs & lift
     text: Stairs and platform lift leading to both basement and first-floor areas,
