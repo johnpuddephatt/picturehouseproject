@@ -9,10 +9,11 @@ images:
       at once – reducing queueing times. '
     x: "27"
     y: "67"
-  - title: Item 2 title
-    text: something else here...
-    x: "10"
-    y: "80"
+  - title: Refreshments
+    text: 'More substantial food and drink available – including a greater variety
+      of hot, cold and alcoholic drinks, as well as sweet and savoury snacks. '
+    x: "50"
+    y: "50"
 - file: "/uploads/renders/entrance_foyer_2.jpg"
   title: Image two
   markers:
