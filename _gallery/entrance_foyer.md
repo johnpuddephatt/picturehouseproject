@@ -20,7 +20,8 @@ images:
     x: "50"
     y: "50"
   - title: Floor
-    text: Original and restored terrazzo tiled floor revealed.
+    text: Original terrazzo tiled floor – which is currently hidden under carpet,
+      will be  revealed and restored.
     x: "57"
     y: "85"
   - title: Ticket booth
