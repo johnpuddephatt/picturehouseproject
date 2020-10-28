@@ -2,12 +2,13 @@
 title: Community room
 images:
 - file: "/uploads/renders/first_floor_extension.jpg"
-  title: Image one
+  title: ''
   markers:
-  - title: Item title
-    text: foo, bar, baz...
-    x: "60"
-    y: "60"
+  - title: Toilets
+    text: Two brand-new, gender-neutral toilets will increase the cinema’s overall
+      toilets to seven.
+    x: "43.4"
+    y: "50.8"
   - title: Item 2 title
     text: something else here...
     x: "10"

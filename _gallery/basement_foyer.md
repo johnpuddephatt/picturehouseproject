@@ -15,7 +15,8 @@ images:
     x: "55.8"
     y: "40.7"
   - title: Toilets
-    text: Two gender neutral toilets will be located in the basement.
+    text: Two brand-new, gender-neutral toilets will increase the cinema’s overall
+      toilets to seven.
     x: "60.5"
     y: "55"
   - title: Seating
