@@ -30,7 +30,8 @@ images:
     x: "74.5"
     y: "33"
   - title: Stairs & lift
-    text: Stairs and platform lift leading to both basement and first-floor areas.
+    text: Stairs and platform lift leading to both basement and first-floor areas,
+      providing wheelchair access all levels.
     x: "64.2"
     y: "36.2"
   - title: Seating
