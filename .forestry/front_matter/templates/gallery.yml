@@ -13,26 +13,26 @@ fields:
   fields:
   - type: text
     name: title
-    label: "Image title"
+    label: Image title
   - type: file
     name: file
   - type: field_group_list
     name: markers
-    label: "Image hotspots"
+    label: Image hotspots
     fields:
     - type: text
       name: title
-      label: "Image title"
+      label: Image title
     - type: textarea
       name: text
-      label: "Image text"
+      label: Image text
     - type: text
       name: x
-      label: "X coordinate"
+      label: X coordinate
       description: Coordinates are percentage based. Origin is top left.
     - type: text
       name: y
-      label: "Y coordinate"
+      label: Y coordinate
       description: Coordinates are percentage based. Origin is top left.
   config:
     labelField: title
