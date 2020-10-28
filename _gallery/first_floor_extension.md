@@ -4,6 +4,10 @@ images:
 - file: "/uploads/renders/first_floor_extension.jpg"
   title: ''
   markers:
+  - title: Stairs & lift
+    text: 'A stairwell and platform lift leading down to the ground-floor cafe/bar. '
+    x: "31"
+    y: "44.7"
   - title: Multi-use
     text: 'This space has been designed to be multi-functional, allowing visitors
       to use it for a number of different activities – from craft sessions and educational
