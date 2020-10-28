@@ -9,8 +9,8 @@ images:
     y: "32"
     title: Window
   - title: Seating
-    text: 'New seating area, available for visitors to enjoy throughout the day and
-      night. '
+    text: New indoor seating area, available for visitors to enjoy throughout the
+      day.
     x: "30"
     y: "73"
   - title: Refreshments
