@@ -19,12 +19,12 @@ images:
     y: "32"
     title: Window
 - file: "/uploads/renders/ground_floor_extension.jpg"
-  title: Image two
+  title: ''
   markers:
-  - title: Item title
-    text: foo, bar, baz...
-    x: "60"
-    y: "60"
+  - title: Bar
+    text: 'Dedicated serving point, allowing customers to buy and collect refreshments. '
+    x: "11"
+    y: "34.5"
   - title: Item 2 title
     text: something else here...
     x: "10"
