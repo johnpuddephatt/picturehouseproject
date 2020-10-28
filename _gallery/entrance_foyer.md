@@ -28,12 +28,12 @@ images:
     x: "50"
     y: "50"
 - file: "/uploads/renders/entrance_foyer_2.jpg"
-  title: Image two
+  title: ''
   markers:
-  - title: Item title
-    text: foo, bar, baz...
-    x: "60"
-    y: "60"
+  - title: Window
+    text: 'Restoration work carried out on original stained glass window. '
+    x: "9"
+    y: "25"
   - title: Item 2 title
     text: something else here...
     x: "10"
