@@ -4,6 +4,13 @@ images:
 - file: "/uploads/renders/first_floor_extension.jpg"
   title: ''
   markers:
+  - title: Multi-use
+    text: 'This space has been designed to be multi-functional, allowing visitors
+      to use it for a number of different activities – from craft sessions and educational
+      workshops with local young people, to a place for local filmmaker meet-ups and
+      socials. '
+    x: "67.2"
+    y: "51.7"
   - title: Toilets
     text: Two brand-new, gender-neutral toilets will increase the cinema’s overall
       toilets to seven.
