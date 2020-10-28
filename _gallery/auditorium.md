@@ -4,6 +4,11 @@ images:
 - file: "/uploads/renders/auditorium_2.jpg"
   title: Image specific title
   markers:
+  - title: Climate
+    text: 'New heating and ventilation systems will result in a building that is far
+      warmer in the winter, and cooler in the summer. '
+    x: "93.7"
+    y: "68.7"
   - title: Back wall
     text: 'The back wall of the auditorium will move into the space slightly, to accommodate
       the larger entrance on the other side. '
