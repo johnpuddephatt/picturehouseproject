@@ -4,6 +4,11 @@ images:
 - file: "/uploads/renders/entrance_foyer.jpg"
   title: Image one
   markers:
+  - title: Decorative mantle
+    text: Restoration work carried out to decorative mantle above what used to be
+      the cinema's old fireplace.
+    x: "35.5"
+    y: "24"
   - title: Ticket booth
     text: 'Existing ticket booth to be kept and brought into use for select shows. '
     x: "78"
