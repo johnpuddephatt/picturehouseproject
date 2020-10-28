@@ -4,6 +4,10 @@ images:
 - file: "/uploads/renders/auditorium_2.jpg"
   title: Image specific title
   markers:
+  - title: Image tile 3
+    text: 'Repair work will be carried out to the front of the original ornate balcony. '
+    x: " 72.5"
+    y: "36.4"
   - title: Item title
     text: New seating will be installed throughout – replacing the current seating
       which has come to the end of its 15 year life. The new red seats will be just
