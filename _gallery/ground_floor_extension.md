@@ -4,9 +4,20 @@ images:
 - title: ''
   file: "/uploads/2020/10/28/hpph-4-ground-floor-connection.jpg"
   markers:
+  - title: Refreshments
+    text: 'More substantial food and drink available – including a greater variety
+      of hot, cold and alcoholic drinks, as well as sweet and savoury snacks. '
+    x: "64"
+    y: "42"
+  - title: Seating
+    text: 'New seating area, available for visitors to enjoy throughout the day and
+      night. '
+    x: "30"
+    y: "73"
   - text: 'Large windows overlooking new ramped entrance outside. '
     x: "13"
     y: "32"
+    title: Window
 - file: "/uploads/renders/ground_floor_extension.jpg"
   title: Image two
   markers:
