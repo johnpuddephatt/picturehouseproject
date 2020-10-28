@@ -16,10 +16,6 @@ images:
 - file: "/uploads/renders/basement_cinema_2.jpg"
   title: ''
   markers:
-  - title: Item title
-    text: foo, bar, baz...
-    x: "5"
-    y: "73"
   - title: Projection
     text: This new screen will be kitted out with a high-spec digital projector and
       immersive surround sound. A 16mm projector will also be housed within the projection
