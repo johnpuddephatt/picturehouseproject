@@ -19,7 +19,7 @@ images:
     x: "43.4"
     y: "50.8"
   - title: Multi-use
-    text: 'This space has been designed to be multi-functional, allowing visitors
+    text: 'This space has been designed to be multi-functional, allowing our community
       to use it for a number of different activities – from craft sessions and educational
       workshops with local young people, to a place for local filmmaker meet-ups and
       socials. '
