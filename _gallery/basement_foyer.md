@@ -4,6 +4,11 @@ images:
 - file: "/uploads/renders/basement_foyer.jpg"
   title: ''
   markers:
+  - title: Stairs & lift
+    text: 'Stairwell leading up to the ground-floor will be accompanied by a platform
+      lift, providing wheelchair access all levels.  '
+    x: "55.8"
+    y: "40.7"
   - title: Seating
     text: 'New cosy seating area, allowing any refreshments bought upstairs to be
       enjoyed before a film. '
