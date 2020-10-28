@@ -30,22 +30,22 @@ images:
 - file: "/uploads/renders/entrance_foyer_2.jpg"
   title: ''
   markers:
-  - title: Accessible serving point
-    text: ''
-    x: "65.8"
-    y: "62.3"
-  - title: Toilet
-    text: New, large, wheelchair accessible toilet.
-    x: "50"
-    y: "50"
   - title: Window
     text: 'Restoration work carried out on original stained glass window. '
     x: "9"
     y: "25"
-  - title: Item 2 title
+  - title: Cinema entrance
     text: 'New accessible entrance to main auditorium, which includes acoustic lobby. '
     x: "40"
     y: "30"
+  - title: Toilet
+    text: New, large, wheelchair accessible toilet.
+    x: "50"
+    y: "50"
+  - title: Accessible serving point
+    text: ''
+    x: "65.8"
+    y: "62.3"
 
 ---
 The first thing you’ll see when you enter is our new expanded entrance foyer.
