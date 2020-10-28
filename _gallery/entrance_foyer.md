@@ -2,7 +2,7 @@
 title: Entrance foyer
 images:
 - file: "/uploads/renders/entrance_foyer.jpg"
-  title: Image one
+  title: ''
   markers:
   - title: Decorative mantle
     text: Restoration work carried out to decorative mantle above what used to be
