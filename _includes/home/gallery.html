@@ -8,7 +8,7 @@
         {% for item in site.gallery %}
           <div data-target="#gallery-item-{{ forloop.index }}-1-overlay" class="gallery-item" style="transition-duration: 2000ms">
             {% assign firstImage = item.images | first %}
-            {% include cloudinarylazy.html img=firstImage.file width="600" height="350" sizes="(min-width: 900px) 65vw, 100vw" quality="85" modes="c_fill,e_grayscale" %}
+            {% include cloudinarylazy.html img=firstImage.file width="600" height="350" sizes="(min-width: 900px) 65vw, 100vw" quality="85" modes="c_fill" %}
             <h3 class="gallery-item-title">{{ item.title }}</h3>
           </div>
         {% endfor %}
@@ -24,7 +24,7 @@
         <div class="lightbox" id="gallery-item-{{areaIndex}}-{{ imageIndex }}-overlay">
           <div class="lightbox-image">
             <div style="position: relative;">
-              {% include cloudinarylazy.html img=image.file width="900" height="675" sizes="(min-width: 900px) 70vw, 100vw" quality="85" %}
+              {% include cloudinarylazy.html img=image.file width="900" height="675" sizes="(min-width: 900px) 70vw, 100vw" quality="85" modes="c_fit" %}
               {% for marker in image.markers %}
                 <div class="hotspot gallery-hotspot" data-target="gallery--hotspot-{{ areaIndex }}-{{ imageIndex }}-{{ forloop.index }}" style="left: {{ marker.x}}%; top: {{ marker.y }}%">{{ forloop.index }}</div>
               {% endfor %}
