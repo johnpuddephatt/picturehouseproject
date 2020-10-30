@@ -1,4 +1,5 @@
 ---
+order: 3
 title: Main auditorium
 images:
 - file: "/uploads/renders/auditorium_2.jpg"

@@ -56,3 +56,8 @@ body {
   margin-bottom: $base-spacing;
   position: relative;
 }
+
+.section-subheading {
+  max-width: $medium-screen;
+  margin-bottom: 0;
+}

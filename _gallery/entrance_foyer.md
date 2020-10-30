@@ -1,4 +1,5 @@
 ---
+order: 1
 title: Entrance foyer
 images:
 - file: "/uploads/renders/entrance_foyer.jpg"

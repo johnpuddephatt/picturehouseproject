@@ -40,9 +40,9 @@ if (gallery) {
   });
 
   galleryLightBoxWrapper = document.querySelector('.gallery-lightboxes');
+
+
   if(galleryLightBoxWrapper) {
-
-
 
     galleryLightBoxWrapper.addEventListener('click', function(e){
       if(galleryLightBoxWrapper.classList.contains('debug')) {
@@ -55,19 +55,25 @@ if (gallery) {
       }
       if(e.target.classList.contains('gallery-hotspot')) {
         var target = document.querySelector('#' + e.target.dataset.target);
-
+        let instructions = document.querySelector('.lightbox.active .lightbox-text-marker--instructions');
 
         if(target.classList.contains('active')) {
           target.classList.remove('active');
           e.target.classList.remove('active');
+
+          instructions.classList.add('active');
         }
         else {
           var currentActiveHotspot = document.querySelector('.gallery-hotspot.active');
           if(currentActiveHotspot) {
-            var currentActiveTarget = document.querySelector('.lightbox-text-marker.active');
-            currentActiveTarget.classList.remove('active');
             currentActiveHotspot.classList.remove('active');
           }
+
+          var currentActiveTarget = document.querySelector('.lightbox.active .lightbox-text-marker.active');
+          if(currentActiveTarget) {
+            currentActiveTarget.classList.remove('active');
+          }
+
           target.classList.add('active');
           e.target.classList.add('active');
         }

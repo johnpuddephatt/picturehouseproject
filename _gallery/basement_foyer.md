@@ -1,4 +1,5 @@
 ---
+order: 4
 title: Basement foyer
 images:
 - file: "/uploads/renders/basement_foyer.jpg"

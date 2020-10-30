@@ -1,4 +1,5 @@
 ---
+order: 6
 title: Community room
 images:
 - file: "/uploads/renders/first_floor_extension.jpg"

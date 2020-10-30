@@ -6,6 +6,10 @@ fields:
   label: Title
   type: text
   hidden: false
+- name: order
+  label: Order
+  type: number
+  hidden: false
 - type: field_group_list
   name: images
   label: Images
