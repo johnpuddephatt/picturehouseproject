@@ -1,7 +1,9 @@
 <section class="section section--gallery" id="gallery">
 
-  <h2 class="section-title" data-secondaryheading="gallery">See inside</h2>
-  <p class="section-subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi facere earum voluptatem velit quibusdam, reiciendis sapiente perspiciatis officia. Repellendus eaque placeat cupiditate vitae voluptatum error ut, a doloremque, sapiente modi?</p>
+  <h2 class="section-title" data-secondaryheading="gallery">See inside.</h2>
+  <p class="section-subheading">
+    Explore the many ways we’ll be improving the Hyde Park Picture House – from vital repair and restoration work on the cinema’s heritage features, to the creation of new accessible facilities, making the Picture House a place that everyone can visit.
+  </p>
   <div class="container--gallery">
     <div class="gallery-wrapper">
       <div class="gallery-scroller">
@@ -28,7 +30,7 @@
   </div>
 
   <div class="gallery-lightboxes debug">
-    {% for item in site.gallery %}
+    {% for item in gallery %}
       {% assign areaIndex = forloop.index %}
       {% assign imageCount = item.images | size %}
       {% for image in item.images %}
