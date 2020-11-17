@@ -3,7 +3,7 @@ order: 5
 title: Basement auditorium
 images:
 - file: "/uploads/renders/basement_cinema.jpg"
-  title: 'View of seating'
+  title: ''
   markers:
   - title: Access
     text: 'This auditorium will be fully accessible and house two wheelchair spaces. '
@@ -15,7 +15,7 @@ images:
     x: "50"
     y: "19"
 - file: "/uploads/renders/basement_cinema_2.jpg"
-  title: 'View of screen'
+  title: ''
   markers:
   - title: Projection
     text: This new screen will be kitted out with a high-spec digital projector and
