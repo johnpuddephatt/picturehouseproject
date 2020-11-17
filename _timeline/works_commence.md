@@ -1,8 +1,10 @@
 ---
-date: 2020-03-01 19:00:00 +0000
+date: '2020-03-01T19:00:00.000+00:00'
 title: Cinema closes
 year_only: false
 active_entry: false
+order: 
+images: []
 
 ---
-The cinema closes its doors for 12 months as restoration and new building works are carried out. 
+The cinema closes its doors for ahead of restoration and new building works taking place.
