@@ -9,6 +9,8 @@ sections:
   label: History
   create: all
   match: "**/*"
+  templates:
+  - history
 - type: directory
   path: _gallery
   label: Gallery
@@ -27,11 +29,15 @@ sections:
   label: Timeline
   create: all
   match: "**/*"
+  templates:
+  - timeline
 - type: directory
   path: _updates
   label: Updates
   create: all
   match: "**/*"
+  templates:
+  - updates
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: "/uploads"
