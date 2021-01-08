@@ -21,5 +21,7 @@ fields:
   label: Current
   name: active_entry
 pages:
+- _timeline/project_tendering.md
+- _timeline/reopening.md
 - _timeline/structural_surveys.md
 - _timeline/the-next-chapter-event.md
