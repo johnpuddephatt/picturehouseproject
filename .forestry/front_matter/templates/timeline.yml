@@ -21,6 +21,9 @@ fields:
   label: Current
   name: active_entry
 pages:
+- _timeline/HLF_round_2_approval.md
+- _timeline/off-site-programme-begins.md
+- _timeline/planning_approval.md
 - _timeline/project_tendering.md
 - _timeline/reopening.md
 - _timeline/structural_surveys.md

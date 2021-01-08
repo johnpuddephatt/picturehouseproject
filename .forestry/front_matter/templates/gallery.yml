@@ -42,7 +42,6 @@ fields:
     labelField: title
 pages:
 - _timeline/HLF_midstage_review.md
-- _timeline/HLF_round_2_approval.md
 - _timeline/architects_appointed.md
 - _timeline/cinemas_centenary.md
 - _timeline/early_feasibility_study.md
@@ -54,6 +53,4 @@ pages:
 - _timeline/further_appointments.md
 - _timeline/hlf-confirm-£2-3mil-grant.md
 - _timeline/hlf-round-1-approval.md
-- _timeline/off-site-programme-begins.md
-- _timeline/planning_approval.md
 - _timeline/works_commence.md
