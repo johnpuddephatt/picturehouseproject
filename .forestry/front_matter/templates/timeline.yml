@@ -20,3 +20,6 @@ fields:
 - type: boolean
   label: Current
   name: active_entry
+pages:
+- _timeline/structural_surveys.md
+- _timeline/the-next-chapter-event.md
