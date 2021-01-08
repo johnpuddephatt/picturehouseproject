@@ -1,8 +1,6 @@
 ---
 date: 01/05/2017
 title: Fundraising planning
-order: 
-images: []
 year_only: false
 active_entry: false
 

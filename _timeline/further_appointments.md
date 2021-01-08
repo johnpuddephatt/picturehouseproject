@@ -1,8 +1,6 @@
 ---
 title: Further appointments
 date: 02.03.2017
-order: 
-images: []
 year_only: false
 active_entry: false
 

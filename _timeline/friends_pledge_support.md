@@ -1,8 +1,6 @@
 ---
 title: Friend’s pledge support
 date: 01.05.2015
-order: 
-images: []
 year_only: false
 active_entry: false
 

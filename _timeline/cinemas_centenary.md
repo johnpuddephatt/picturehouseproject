@@ -1,8 +1,6 @@
 ---
 title: Cinema’s Centenary
 date: 01.11.2014
-order: 
-images: []
 year_only: false
 active_entry: false
 

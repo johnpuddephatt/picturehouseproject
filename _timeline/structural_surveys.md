@@ -1,8 +1,6 @@
 ---
 title: Structural surveys
 date: 01.07.2017
-order: 
-images: []
 year_only: false
 active_entry: false
 

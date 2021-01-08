@@ -2,8 +2,6 @@
 title: HLF mid-stage review
 date: 2017-10-01T17:00:00.000+01:00
 year_only: false
-order: 
-images: []
 active_entry: false
 
 ---

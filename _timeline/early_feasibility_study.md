@@ -1,8 +1,6 @@
 ---
 date: 01/12/2005
 title: Early feasibility study
-order: 
-images: []
 year_only: false
 active_entry: false
 
