@@ -41,7 +41,6 @@ fields:
   config:
     labelField: title
 pages:
-- _timeline/HLF_midstage_review.md
 - _timeline/architects_appointed.md
 - _timeline/cinemas_centenary.md
 - _timeline/early_feasibility_study.md
@@ -50,5 +49,4 @@ pages:
 - _timeline/friends_board_meetings.md
 - _timeline/friends_pledge_support.md
 - _timeline/fundraising_planning.md
-- _timeline/further_appointments.md
 - _timeline/works_commence.md
