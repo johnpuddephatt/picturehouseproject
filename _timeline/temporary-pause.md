@@ -5,4 +5,4 @@ year_only: false
 active_entry: true
 
 ---
-As a result of COVID-19 and the effects of the pandemic on the delivery of the project, work on site is currently paused, with the aim to resume this in early 2021.
+As a result of COVID-19 and the effects of the pandemic on the delivery of the project, work on site is currently paused, with the aim to resume in early 2021.
