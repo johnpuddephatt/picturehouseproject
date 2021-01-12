@@ -1,6 +1,6 @@
 ---
 title: Re-opening
-date: 2021-03-01T19:00:00.000+00:00
+date: 2022-03-01 19:00:00 +0000
 year_only: false
 active_entry: false
 
