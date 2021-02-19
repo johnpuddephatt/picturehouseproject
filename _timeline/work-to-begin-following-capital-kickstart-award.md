@@ -5,4 +5,4 @@ year_only: false
 active_entry: true
 
 ---
-Thanks to new funding support from the National Lottery Heritage Fund and DCMS, work is now set to begin in April.
+Thanks to new funding support from the National Lottery Heritage Fund and the Culture Recovery Fund, work on the project will now begin this April – with completion expected in May 2022.
