@@ -39,6 +39,29 @@ html {
   }
 }
 
+.section--funders {
+  margin-top: 2 * $base-spacing;
+
+  .funders {
+    image-rendering: auto;
+    max-width: $large-screen * 0.9;
+    margin-top: $base-spacing;
+
+    &__portrait {
+      display: none;
+    }
+
+    @media screen and (orientation: portrait) {
+      &__landscape {
+        display: none;
+      }
+      &__portrait {
+        display: block;
+      }
+    }
+  }
+}
+
 .site-footer {
   background-color: $base-font-color;
   color: white;

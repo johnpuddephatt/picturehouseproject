@@ -1,5 +1,4 @@
 .site-header {
-  position: -webkit-sticky;
   position: sticky;
   z-index: 9999;
   top: -1px;
@@ -10,12 +9,14 @@
   line-height: 4vw;
   margin: .5vw -3vw;
   padding: 0 3vw;
+
   @media screen and (orientation: portrait) {
     height: 6vh;
     line-height: 6vh;
     margin: .5vw -3vh;
     padding: 0 3vh;
   }
+
   @media screen and (min-width: $xl-screen) {
     margin: .5vw -4vw;
     padding: 0 4vw;
@@ -27,7 +28,7 @@
   margin-bottom: 0;
   float: left;
 
-  &, &:visited {
+  &:visited {
     color: $dark-gray;
   }
 }
@@ -44,7 +45,7 @@
   }
 
   .page-link {
-    // Gaps between nav items, but not on the last one
+
     @media screen and (min-width: $medium-screen) {
       &:not(:last-child) {
         margin-right: $base-spacing;
@@ -66,9 +67,11 @@
     display: block;
     right: 3vw;
     text-align: right;
+
     @media screen and (orientation: portrait) {
       right: 3vh;
     }
+
     .menu-icon {
       display: block;
     }
@@ -76,13 +79,9 @@
     .trigger {
       display: none;
       position: fixed;
-      -webkit-box-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-              justify-content: center;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-              flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       z-index: 999999;
       top: 0;
       right: 0;
@@ -93,7 +92,6 @@
       line-height: 2 * $base-spacing;
 
       &.active {
-        display: -webkit-box;
         display: flex;
       }
     }
