@@ -41,7 +41,7 @@ slideshow:
 
 collections:
   updates:
-    output: false
+    output: true
   timeline:
     output: false
   history:
@@ -68,3 +68,8 @@ defaults:
     path: ""
   values:
     image: /assets/images/opengraph-new.jpg
+- scope:
+    path: ""
+    type: "updates"
+  values:
+    layout: "update"

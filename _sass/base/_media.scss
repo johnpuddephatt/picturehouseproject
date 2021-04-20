@@ -17,6 +17,21 @@ img {
       image-rendering: pixelated;
 }
 
+.video-wrapper {
+  margin: 0 0 $base-spacing;
+  padding-top: 56.25%;
+  position: relative;
+
+  video, iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
 
 .fade-in {
 	opacity: 0;

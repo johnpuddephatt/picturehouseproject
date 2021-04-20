@@ -28,6 +28,16 @@ body {
   }
 }
 
+.container {
+  padding: 0 $base-spacing;
+  margin: 0 auto;
+  max-width: $vl-screen;
+
+  &__narrow {
+    max-width: 48em;
+  }
+}
+
 .section {
   display: -webkit-box;
   display: flex;

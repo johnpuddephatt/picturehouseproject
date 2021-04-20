@@ -10,7 +10,7 @@ if(!("nextElementSibling" in document.documentElement)){
     });
 }
 
-var historyItems = document.querySelectorAll('.gallery-item');
+var historyItems = document.querySelectorAll('.lightbox-trigger');
 console.log(historyItems);
 if(historyItems) {
   for(var i = 0; i < historyItems.length; i++) {

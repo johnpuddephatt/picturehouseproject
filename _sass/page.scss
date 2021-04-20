@@ -1,0 +1,28 @@
+.back-link {
+  display: inline-block;
+  margin-top: $base-spacing;
+  color: $dark-gray;
+  margin-bottom: $small-spacing;
+}
+
+.page-title {
+  margin-top: 2.5 * $base-spacing;
+  font-size: modular-scale(6);
+  text-transform: none;
+  font-family: $base-font-family;
+}
+
+.page-date {
+  margin-bottom: 1.5 * $base-spacing;
+}
+
+.page-body {
+
+  margin: 0 auto 4 * $base-spacing;
+  font-size: modular-scale(1);
+  line-height: 2;
+
+  p {
+    margin-bottom: 1.5 * $base-spacing;
+  }
+}

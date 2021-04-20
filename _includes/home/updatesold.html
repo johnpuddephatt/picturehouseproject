@@ -1,0 +1,20 @@
+<section class="section section--updates" id="updates">
+
+  <h2 class="section-title" data-secondaryheading="updates">Project updates.</h2>
+
+  <div class="updates-wrapper">
+    <div class="updates-scroller" style="counter-reset: updates {{ site.updates | size | plus: 1 }}">
+      {% assign updates = site.updates | sort: date | reverse %}
+      {% for update in updates %}
+        <div class="updates-item" {% if (update.video) %}data-video="{{ update.video }}"{% endif %}>
+          {% include cloudinarylazy.html class="updates-image" img=update.image modes="c_fill,e_grayscale" width="450" height="580" sizes="(min-width: 900px) 30vw, 45vw" quality="85" %}
+          <div class="updates-inner">
+            <h3 class="updates-date">{% if (update.video == true) %}Coming soon{% else %}{{ update.date | date: "%d.%m.%y" }}{% endif %}</h3>
+            <h4 class="updates-title">{{ update.title }}</h4>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</section>

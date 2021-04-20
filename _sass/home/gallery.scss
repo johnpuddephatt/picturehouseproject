@@ -98,6 +98,8 @@
   }
 
   img {
+    width: 100%;
+    height: auto;
     transition: filter 3 * $base-duration $base-timing;
 
     &:hover {

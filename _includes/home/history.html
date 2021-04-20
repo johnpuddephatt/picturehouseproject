@@ -3,16 +3,16 @@
   <h2 class="section-title" data-secondaryheading="history">Explore our history</h2>
   <div class="container--history">
     {% for item in site.history %}
-      <a href="#" data-target="#gallery-item-{{ forloop.index }}history-overlay" class="gallery-item" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+      <button data-target="#history-item-{{ forloop.index }}history-overlay" class="history-item lightbox-trigger" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
         {% include cloudinarylazy.html img=item.image width="600" height="450" sizes="(min-width: 900px) 45vw, 100vw" quality="85" modes="c_fill,e_grayscale" %}
-        <h3 class="gallery-item-title">{{ item.title }}</h3>
-      </a>
+        <h3 class="history-item-title">{{ item.title }}</h3>
+      </button>
     {% endfor %}
   </div>
 
   <div class="lightboxes">
     {% for item in site.history %}
-      <div class="lightbox" id="gallery-item-{{ forloop.index }}history-overlay">
+      <div class="lightbox" id="history-item-{{ forloop.index }}history-overlay">
         <div class="lightbox-image">
           {% include cloudinarylazy.html img=item.image width="900" height="675" sizes="(min-width: 900px) 70vw, 100vw" quality="85" %}
         </div>

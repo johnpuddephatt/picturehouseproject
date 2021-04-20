@@ -17,13 +17,21 @@
 
   @media screen and (min-width: $large-screen) {
     grid-template-columns: repeat(16, 1fr);
-    grid-column-gap: 2 * $base-spacing;
+    grid-column-gap: 1.5 * $base-spacing;
   }
 
   grid-auto-flow: dense;
 }
 
-.gallery-item {
+.history-item {
+  background: none;
+  border: none;
+  display: block;
+  box-shadow: none;
+  outline: none;
+  text-align: left;
+  font-family: inherit;
+
   @media screen and (min-width: $medium-screen) {
     float: left;
     width: 25%;
@@ -76,7 +84,7 @@
     transition-delay: 2 * $base-duration;
   }
 
-  &:hover .gallery-item-title::after {
+  &:hover .history-item-title::after {
     background-color: $yellow;
   }
 
@@ -85,7 +93,8 @@
   }
 }
 
-.gallery-item-title {
+.history-item-title {
+  width: 100%;
   line-height: 2 * $base-spacing;
   font-weight: 400;
   color: $base-font-color;

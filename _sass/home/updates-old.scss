@@ -1,0 +1,297 @@
+.updates-scroller.blackout::after {
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: $dark-gray;
+  opacity: 0.95;
+  z-index: 99999;
+}
+
+.updates-wrapper {
+  position: relative;
+  margin: (2 * $base-spacing) (-$base-spacing);
+
+  &::after,
+  &::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    display: block;
+    left: -1px;
+    top: 0;
+    height: 100%;
+    width: 2 * $base-spacing;
+    @media screen and (min-width: $medium-screen) {
+      width: 4 * $base-spacing;
+    }
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    z-index: 99;
+  }
+
+  &::after {
+    left: auto;
+    right: -1px;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+}
+
+.updates-scroller {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  cursor: -webkit-grab;
+  cursor: grab;
+  &.grabbing {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+  }
+}
+
+.updates-scroller::-webkit-scrollbar {
+  height: 0;
+}
+
+.updates-item {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-box-flex: 0;
+          flex: 0 0 50%;
+  height: 70vw;
+  overflow: hidden;
+  border: solid $small-spacing transparent;
+  background-clip: content-box;
+  @media screen and (min-width: $medium-screen) {
+    -webkit-box-flex: 0;
+            flex: 0 0 50%;
+    height: 60vw;
+    &::after {
+
+    }
+  }
+  @media screen and (min-width: $large-screen) {
+    -webkit-box-flex: 0;
+            flex: 0 0 33%;
+    height: 45vw;
+    border: solid $base-spacing transparent;
+  }
+  @media screen and (min-width: $xl-screen) {
+      -webkit-box-flex: 0;
+              flex: 0 0 25%;
+      height: 35vw;
+      border: solid $base-spacing transparent;
+
+    &:first-child {
+      -webkit-box-flex: 0;
+              flex: 0 0 50%;
+
+      .updates-title {
+        font-size: modular-scale(7);
+      }
+
+      .updates-date {
+        font-size: modular-scale(3);
+      }
+    }
+  }
+
+  img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+    width: 100%;
+    max-width: none;
+    max-height: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(25, 25, 25, 0.5);
+    -webkit-transform: opacity $base-timing $base-duration;
+    transition: opacity $base-timing $base-duration;
+  }
+
+  a {
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  &:hover::after {
+    opacity: 0;
+  }
+
+  &:hover .updates-title::after {
+    background-color: $yellow;
+  }
+  &:hover .updates-date,
+  &:hover::before {
+    color: white
+  }
+}
+
+.updates-item-active {
+  position: relative;
+  z-index: 999999;
+}
+
+.updates-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: $small-spacing;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  counter-increment: updates -1;
+  @media screen and (min-width: $medium-screen) {
+    padding: $small-spacing $base-spacing;
+    &::before {
+      content: counter(updates) "-";
+      font-size: modular-scale(12);
+      position: relative;
+      z-index: 99;
+      line-height: 1;
+      font-family: $heading-font-family;
+      color: white;
+      margin-bottom: 0;
+      display: block;
+      opacity: 0.2;
+      text-indent: -0.05em;
+    }
+  }
+}
+
+.updates-image {
+  display: block;
+}
+
+.updates-date {
+  pointer-events: none;
+  font-size: modular-scale(1);
+  position: relative;
+  z-index: 99;
+  margin-bottom: $small-spacing;
+  color: white;
+  font-family: $heading-font-family;
+  color: white;
+  letter-spacing: $small-heading-letter-spacing;
+  transition: color $base-timing $base-duration;
+
+}
+
+.updates-title {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-bottom: 0;
+  font-size: modular-scale(4);
+  color: $yellow;
+  position: relative;
+  z-index: 99;
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+  opacity: 0.85;
+  @media screen and (min-width: $medium-screen) {
+    font-size: modular-scale(5);
+    &::after {
+      content: '';
+      display: inline-block;
+      height: .6em;
+      width: .6em;
+      margin-left: .1em;
+      margin-bottom: .1em;
+      background-color: $light-gray;
+      border-radius: 50%;
+      background-image: url(/assets/images/next-icon.svg);
+      transition: background-color $base-duration $base-timing;
+      background-size: 40% auto;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.video-player {
+  position: relative;
+  z-index: 999999;
+  border: solid $small-spacing transparent;
+  position: relative;
+  -webkit-box-flex: 0;
+          flex: 0 0 auto;
+  box-sizing: content-box;
+  @media screen and (min-width: $large-screen) {
+    border: solid $base-spacing transparent;
+  }
+
+  &::after {
+    // content: "";
+    display: block;
+    width: 100%;
+    height: $base-spacing;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    left: 0;
+    position: absolute;
+    top: 100%;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    -webkit-animation: comeOnIn 1500ms 1000ms ease forwards;
+            animation: comeOnIn 1500ms 1000ms ease forwards;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes comeOnIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes comeOnIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}

@@ -32,7 +32,7 @@ if (gallery) {
   });
 
   body.addEventListener('click', function(e){
-    if(gallery.classList.contains('blackout') && !(e.target.classList.contains('gallery-item') || e.target.parentNode.classList.contains('gallery-item') || e.target.parentNode.parentNode.classList.contains('gallery-item'))) {
+    if(gallery.classList.contains('blackout') && !(e.target.classList.contains('lightbox-trigger') || e.target.parentNode.classList.contains('lightbox-trigger') || e.target.parentNode.parentNode.classList.contains('lightbox-trigger'))) {
       gallery.classList.remove('blackout');
       videoContainer.parentNode.removeChild(videoContainer);
       document.querySelector('.gallery-item-active').classList.remove('gallery-item-active');

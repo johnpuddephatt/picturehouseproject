@@ -9,7 +9,7 @@
       <div class="gallery-scroller">
         {% assign gallery = site.gallery | sort: 'order'%}
         {% for item in gallery %}
-          <div data-target="#gallery-item-{{ forloop.index }}-1-overlay" class="gallery-item" style="transition-duration: 2000ms">
+          <div data-target="#gallery-item-{{ forloop.index }}-1-overlay" class="gallery-item lightbox-trigger" style="transition-duration: 2000ms">
             {% assign firstImage = item.images | first %}
             {% include cloudinarylazy.html img=firstImage.file width="600" height="350" sizes="(min-width: 900px) 65vw, 100vw" quality="85" modes="c_fill" %}
 
