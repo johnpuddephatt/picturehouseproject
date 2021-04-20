@@ -20,7 +20,7 @@ description: |
 
   historic picture house.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://thepicturehouseproject.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://thepicturehouseproject.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: hydeparkph
 header_pages:
 # Build settings
