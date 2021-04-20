@@ -18,6 +18,12 @@
   grid-row-gap: $base-spacing;
   // height: calc(50vw + #{$base-spacing});
 
+  @media screen and (orientation: portrait) {
+    grid-template-columns: repeat(2, calc(50% - #{$base-spacing/1.33} ));
+    grid-template-rows: 50vw;
+
+  }
+
   &__first {
     .updates-item:first-child {
       grid-column-end: span 2;
@@ -54,6 +60,8 @@
     width: 100%;
     max-width: none;
     max-height: none;
+    filter: saturate(0.2);
+
   }
 
   &::after {
@@ -70,6 +78,12 @@
   a {
     pointer-events: auto;
     cursor: pointer;
+  }
+
+  &:hover {
+    img {
+      filter: saturate(1);
+    }
   }
 
   &:hover::after {
