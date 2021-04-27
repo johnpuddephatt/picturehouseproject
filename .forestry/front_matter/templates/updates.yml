@@ -17,6 +17,8 @@ fields:
   name: image
   label: Image
   description: This will be auto cropped and resized
+  config:
+    required: true
 - type: datetime
   name: date
   label: Date
