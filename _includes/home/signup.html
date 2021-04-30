@@ -1,31 +1,45 @@
 <section class="section section--signup" id="signup">
 
   {% include cloudinarylazy.html class="signup-image" img="/assets/images/24-BW.jpg" alt="Behind the scenes at Hyde Park Picture House" width="1600" height="800" quality="85" %}
+
   <div class="signup-image-fallback"></div>
 
   <div class="container--signup">
     <h2 class="section-title">Sign up &amp; follow our progress</h2>
-    <p>To keep up to date with the latest news and events relating to the project, including upcoming consultation and fundraising opportunities – please join our dedicated mailing list.</p>
+    <p>Join the Hyde Park Picture House newsletter to keep up to date with the latest news and events relating to the cinema.</p>
 
-    <form action="https://hydeparkpicturehouse.us4.list-manage.com/subscribe/post?u=8bc4f3836ccb9012c150eda87&amp;id=671b22d637" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <!-- <form action="https://hydeparkpicturehouse.us4.list-manage.com/subscribe/post?u=8bc4f3836ccb9012c150eda87&amp;id=671b22d637" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
       <div class="signup-box">
         <input type="email" placeholder="enter your email address" value="" name="EMAIL" class="required email" id="mce-EMAIL">
         <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
       </div>
       <label for="mce-group[1]-1-0"><input type="checkbox" value="1" name="group[1][1]" id="mce-group[1]-1-0">Send me the Hyde Park Picture House programme email each week</label>
-      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
       <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8bc4f3836ccb9012c150eda87_671b22d637" tabindex="-1" value=""></div>
+    </form>
+    -->
 
+    <form
+      action="https://system.spektrix.com/hydeparkpicturehouse/website/secure/signup.aspx"
+      method="POST">
+      <div class="signup-box">
+        <div class="field">
+          <label class="sr-only" for="firstNameSubscribe">First name</label>
+          <input placeholder="First name" id="firstNameSubscribe" name="FirstName" required type="text" maxlength="30"/>
+          <label class="sr-only" for="lastNameSubscribe">Last name</label>
+          <input placeholder="Last name" id="lastNameSubscribe" name="LastName" required type="text" maxlength="80"/>
+        </div>
+        <div class="field">
+          <label class="sr-only" for="emailSubscribe">Email address</label>
+          <input placeholder="Email" id="emailSubscribe" name="Email" required type="email" maxlength="255" />
+          <input
+            type="hidden"
+            name="ReturnUrl"
+            value="https://hydeparkpicturehouse.co.uk/signedup"/>
+          <input type="submit" value="Subscribe"  class="button button__ghost button__black">
+        </div>
+      </div>
     </form>
 
-
-
-
   </div>
-
-
-
-
-
 
 </section>

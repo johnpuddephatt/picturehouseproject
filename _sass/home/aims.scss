@@ -159,7 +159,7 @@
       left: -1.5 * $base-spacing;
       right: auto;
       top: auto;
-      bottom: -20 * $base-spacing;
+      bottom: -5rem;
 
       &::before {
         content: "";
@@ -269,7 +269,7 @@
     color: $yellow;
     position: absolute;
     right: -1.5 * $base-spacing;
-    top: -3 * $base-spacing;
+    top: 10rem;
     // bottom: 0;
     font-family: $heading-font-family;
     margin-bottom: 0;

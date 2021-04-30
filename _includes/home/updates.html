@@ -1,7 +1,9 @@
 <section class="section section--updates" id="updates">
 
   <h2 class="section-title" data-secondaryheading="updates">Project updates.</h2>
-
+  <p class="section-subheading">
+    Stay up to date with the latest building and conservation work as it happen on site, and follow the journey of The Picture House Project so far.
+  </p>
   <div class="updates-wrapper">
     <div class="updates-scroller" style="counter-reset: updates {{ site.updates | size | plus: 1 }}">
       {% assign updates = site.updates | sort: date | reverse %}

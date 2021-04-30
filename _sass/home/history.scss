@@ -1,14 +1,12 @@
 .container--history {
   height: auto;
   position: relative;
+  width: 100%;
   margin: (3 * $base-spacing) auto;
 
   @media screen and (min-width: $medium-screen) {
-    display: -webkit-box;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
+    flex-direction: row;
     flex-wrap: wrap;
     display: grid;
     grid-template-columns: repeat(8, 1fr);

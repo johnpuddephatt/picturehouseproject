@@ -14,6 +14,25 @@
     background-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
   }
 
+  .sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+    -webkit-clip-path: inset(50%) !important;
+    	clip-path: inset(50%) !important;  /* 2 */
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;            /* 3 */
+    }
+
+  .field {
+    display: flex;
+    flex-direction: row;
+  }
+
 }
 
 .signup-image, .signup-image-fallback {
@@ -116,11 +135,6 @@
   }
 
   .signup-box {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
     width: 92%;
     margin-left: auto;
   }
@@ -130,24 +144,21 @@
     line-height: $base-spacing;
     margin-bottom: 0;
     margin-top: $base-spacing;
-  }
-
-  input[type="email"] {
-    border-right: none !important;
-    margin-right: -0.4em;
     color: white;
-    &::-webkit-input-placeholder {
-      color: $light-gray;
-    }
-    &:-ms-input-placeholder {
-      color: $light-gray;
-    }
-    &::-ms-input-placeholder {
-      color: $light-gray;
-    }
+
     &::placeholder {
       color: $light-gray;
     }
+
+    &[type="text"] {
+      margin-left: $small-spacing;
+    }
+  }
+
+  input[type="email"] {
+    margin-left: $small-spacing;
+    border-right: none !important;
+    margin-right: -0.4em;
   }
 
   input[type="submit"] {

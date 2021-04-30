@@ -44,6 +44,7 @@ html {
 
   .funders {
     image-rendering: auto;
+    width: 100%;
     max-width: $large-screen * 0.9;
     margin-top: $base-spacing;
 
@@ -69,6 +70,7 @@ html {
   padding: 3vw;
   @media screen and (orientation: portrait) {
     padding: 3vh;
+    margin: 3vw (-3vh);
   }
 
   @media screen and (min-width: $xl-screen) {
@@ -91,27 +93,28 @@ html {
   .footer-text {
     @media screen and (min-width: $medium-screen) {
       -webkit-box-flex: 1;
-              flex: 1 1 60%;
-      margin-right: $base-spacing;
+              flex: 1 1 40%;
+      margin-right: 4 * $base-spacing;
     }
   }
 
   .footer-image {
     @media screen and (min-width: $medium-screen) {
       -webkit-box-flex: 1;
-              flex: 1 1 40%;
+              flex: 1 1 50%;
       text-align: right;
     }
 
     .footer-backers-logos {
-      margin: $base-spacing 0;
+      margin: $base-spacing 0 0;
       display: block;
+      image-rendering: auto;
 
       @media screen and (min-width: $medium-screen) {
         margin-left: auto;
       }
 
-      max-height: 2 * $base-spacing;
+
     }
 
     p:last-child {
