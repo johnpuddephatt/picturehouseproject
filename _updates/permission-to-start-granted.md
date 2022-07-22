@@ -1,8 +1,8 @@
 ---
-title: Permission to start granted
+title: Project gets the go-head
 video: ''
 image: "/uploads/2022/07/22/hpph-day-external-brick-edit-2021.jpg"
-date: 2018-06-21 00:00:00 +0100
+date: 2018-06-21T00:00:00.000+01:00
 
 ---
 Today we're thrilled to announce that after two years of development, the National Lottery Heritage Fund have given the green-light to The Picture House Project.
