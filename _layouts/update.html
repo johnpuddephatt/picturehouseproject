@@ -10,7 +10,7 @@ layout: default
       <iframe frameborder="0" src="{{ page.video }}?modestbranding=1&showinfo=0&rel=0&autoplay=1"></iframe>
     </div>
     {% else %}
-    <img src="{{page.image}}" />
+      {% include cloudinarylazy.html class="" img=page.image modes="c_fill" width="1600" height="1280" sizes="90vw" quality="85" %}
     {% endif %}
   </div>
   <div class="container container__narrow">
