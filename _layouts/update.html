@@ -5,7 +5,7 @@ layout: default
 
   <div class="container">
     <a class="back-link" href="/">&larr; Back to homepage</a>
-    {% if page.video %}
+    {% if page.video and page.video != '' %}
     <div class="video-wrapper">
       <iframe frameborder="0" src="{{ page.video }}?modestbranding=1&showinfo=0&rel=0&autoplay=1"></iframe>
     </div>
