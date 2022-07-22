@@ -1,7 +1,7 @@
 ---
 title: New lost cinemas project launches!
 video: ''
-image: "/uploads/2022/07/22/launch-graphic-with-cinemas-and-logos.jpg"
+image: "/uploads/2022/07/22/tower.png"
 date: 2020-08-14 00:00:00 +0100
 
 ---
