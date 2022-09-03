@@ -27,6 +27,7 @@ fields:
     date_format: DD.MM.YY
     required: true
 pages:
+- _updates/a-film-by-joe-goff.md
 - _updates/backedbyfriends.md
 - _updates/basement-screen-update.md
 - _updates/conserving-our-building.md
