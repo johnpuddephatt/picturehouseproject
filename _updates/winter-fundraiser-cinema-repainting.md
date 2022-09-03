@@ -1,5 +1,5 @@
 ---
-title: Winter Fundraiser | Cinema repainting
+title: 'Winter Fundraiser: Cinema repainting'
 video: https://www.youtube.com/embed/UW13CRJ04T0
 image: "/uploads/2022/09/03/screenshot-2021-11-15-at-18-36-34.jpg"
 date: 2021-11-18 00:00:00 +0000

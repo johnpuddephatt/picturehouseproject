@@ -1,5 +1,5 @@
 ---
-title: Winter Fundraiser | Lamppost restoration
+title: 'Winter Fundraiser: Lamppost restoration'
 video: https://www.youtube.com/embed/j-zhHIEL1JE
 image: "/uploads/2022/09/03/screenshot-2021-11-15-at-18-33-03.jpg"
 date: 2021-12-05 00:00:00 +0000

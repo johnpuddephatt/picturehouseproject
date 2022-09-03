@@ -1,5 +1,5 @@
 ---
-title: 'Winter Fundraiser | Façade repair '
+title: 'Winter Fundraiser: Façade repair '
 video: https://www.youtube.com/embed/7eOwpvRtz9k
 image: "/uploads/2022/09/03/facade-repair.jpg"
 date: 2021-11-18 00:00:00 +0000
