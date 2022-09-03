@@ -11,4 +11,6 @@ Research into the books by the Picture House revealed evidence of how the cinema
 
 [The full article is available here](https://www.bbc.co.uk/news/uk-england-leeds-59685437 "BBC News").
 
+ 
+
 ![](/uploads/2022/09/03/image-0.jpg)
