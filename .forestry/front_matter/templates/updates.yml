@@ -28,6 +28,7 @@ fields:
     required: true
 pages:
 - _updates/backedbyfriends.md
+- _updates/basement-screen-update.md
 - _updates/conserving-our-building.md
 - _updates/consulting-with-audiences.md
 - _updates/foundations-progress-with-mark.md
