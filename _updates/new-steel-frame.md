@@ -1,5 +1,5 @@
 ---
-title: New steel frame
+title: New extension springs to life
 video: https://www.youtube.com/embed/_uvcLIQ_d7I
 image: "/uploads/2022/09/03/6-1.jpeg"
 date: 2022-03-31 00:00:00 +0100
