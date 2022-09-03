@@ -1,7 +1,7 @@
 ---
 title: Late summer update
 video: ''
-image: "/uploads/2022/09/03/dscf9089.jpg"
+image: "/uploads/2022/09/03/dscf9118.jpg"
 date: 2022-09-02 00:00:00 +0100
 
 ---
