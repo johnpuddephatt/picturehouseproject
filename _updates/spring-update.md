@@ -5,7 +5,7 @@ image: "/uploads/2022/09/03/dscf7809.jpg"
 date: 2022-03-13 00:00:00 +0000
 
 ---
-The very latest from week’s site visit: [#PictureHouseProject](https://www.instagram.com/explore/tags/picturehouseproject/) site visit:
+The very latest from week’s site visit.
 
 The basement groundworks are nearing completion, ahead of the steel frame for the new extension going up from next week.
 
