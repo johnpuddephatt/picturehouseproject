@@ -1,6 +1,6 @@
 ---
 title: One month in...
-video: https://www.youtube.com/watch?v=cGQ_rln7NtM
+video: https://www.youtube.com/embed/cGQ_rln7NtM
 image: ''
 date: 2021-06-25 00:00:00 +0100
 
