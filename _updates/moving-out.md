@@ -2,7 +2,7 @@
 title: Moving out
 video: ''
 image: "/uploads/2022/07/22/moving-out-4.jpeg"
-date: 2020-03-22 00:00:00 +0000
+date: 2021-03-22 00:00:00 +0000
 
 ---
 With two weeks to go before work on The Picture House Project properly begins – we’re busy sorting through an Aladdin’s cave of ‘stuff’ we’ve accumulated over the years.   
