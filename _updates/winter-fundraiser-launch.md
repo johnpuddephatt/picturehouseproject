@@ -1,5 +1,5 @@
 ---
-title: 'Winter Fundraiser: Launch'
+title: Winter Fundraiser launches
 video: ''
 image: "/uploads/2022/09/03/generic-artwork.jpg"
 date: 2021-11-16 00:00:00 +0000
