@@ -1,7 +1,7 @@
 ---
 title: Logbooks featured on BBC News
 video: ''
-image: "/uploads/2022/09/03/image-0.jpg"
+image: "/uploads/2022/09/04/image-0.jpg"
 date: 2021-12-26 00:00:00 +0000
 
 ---
