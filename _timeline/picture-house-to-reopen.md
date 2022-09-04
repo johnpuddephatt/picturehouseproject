@@ -1,6 +1,6 @@
 ---
 title: 'Picture House to reopen '
-date: 2022-11-01 00:00:00 +0000
+date: 2023-01-01 00:00:00 +0000
 year_only: false
 active_entry: false
 
